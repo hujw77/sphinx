@@ -1574,7 +1574,7 @@ export const fetchNetworkConfigFromDeploymentConfig = (
   return networkConfig
 }
 
-const isDirectory = (path: string): boolean =>
+export const isDirectory = (path: string): boolean =>
   existsSync(path) && fs.statSync(path).isDirectory()
 
 export const readDeploymentArtifactsForNetwork = (
