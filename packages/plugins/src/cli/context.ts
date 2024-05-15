@@ -24,6 +24,7 @@ import {
 } from '../foundry/utils'
 import { ProposeArgs, buildNetworkConfigArray, propose } from './propose'
 import { DeployArgs, deploy } from './deploy'
+import { ExecuteArgs, execute } from './execute'
 import {
   AssertNoLinkedLibraries,
   BuildNetworkConfigArray,
@@ -57,6 +58,7 @@ export type SphinxContext = {
     receipts?: Array<SphinxTransactionReceipt>
     configArtifacts?: ConfigArtifacts
   }>
+  execute: (args: ExecuteArgs) => Promise<void>
   getNetworkGasEstimate: GetNetworkGasEstimate
   buildNetworkConfigArray: BuildNetworkConfigArray
   storeDeploymentConfig: StoreDeploymentConfig
@@ -72,6 +74,7 @@ export const makeSphinxContext = (): SphinxContext => {
     isLiveNetwork,
     propose,
     deploy,
+    execute,
     getNetworkGasEstimate,
     buildNetworkConfigArray,
     storeDeploymentConfig,

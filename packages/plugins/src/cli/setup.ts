@@ -9,6 +9,7 @@ import {
   ArtifactsCommandArgs,
   DeployCommandArgs,
   ProposeCommandArgs,
+  ExecuteCommandArgs,
 } from './types'
 import {
   BothNetworksSpecifiedError,
@@ -275,6 +276,19 @@ export const makeCLI = (
           .hide('version'),
       async (argv) => deployCommandHandler(argv, sphinxContext)
     )
+    .command(
+      'execute <proposalPath>',
+      `Executes a proposal.`,
+      (y) =>
+        y
+          .usage('Usage: sphinx execute <proposalPath>')
+          .positional('proposalPath', {
+            describe: 'Path to the proposal file.',
+            type: 'string',
+            demandOption: true,
+          }),
+      async (argv) => executeCommandHandler(argv, sphinxContext)
+    )
     // The following command displays the help menu when `npx sphinx` is called with an incorrect
     // argument, e.g. `npx sphinx asdf`.
     .command('*', '', ({ argv }) => {
@@ -353,6 +367,15 @@ const deployCommandHandler = async (
     targetContract,
     sig,
   })
+}
+
+const executeCommandHandler = async (
+  argv: ExecuteCommandArgs,
+  sphinxContext: SphinxContext
+): Promise<void> => {
+  const { proposalPath} = argv
+
+  await sphinxContext.execute({ proposalPath })
 }
 
 const artifactsCommandHandler = async (

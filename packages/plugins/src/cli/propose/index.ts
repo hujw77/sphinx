@@ -1,5 +1,5 @@
 import { join, relative } from 'path'
-import { existsSync, readFileSync, unlinkSync } from 'fs'
+import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs'
 
 import {
   ProjectDeployment,
@@ -13,6 +13,7 @@ import {
   isLegacyTransactionsRequiredForNetwork,
   SphinxJsonRpcProvider,
   isFile,
+  isDirectory,
   MAX_UINT64,
   makeDeploymentConfig,
   DEFAULT_CALL_DEPTH,
@@ -241,6 +242,19 @@ export const propose = async (
   const sig = args.sig === undefined ? ['run()'] : args.sig
 
   const projectRoot = process.cwd()
+
+  const proposePath = join(
+    projectRoot,
+    'proposal'
+  )
+
+  if (!isDirectory(proposePath)) {
+    throw new Error(
+      `Directory does not exist at: ${proposePath}\n` +
+        `Please make sure this is a valid directory path.`
+    )
+  }
+
 
   // Normalize the script path to be in the format "path/to/file.sol". This isn't strictly
   // necessary, but we're less likely to introduce a bug if it's always in the same format.
@@ -471,6 +485,10 @@ export const propose = async (
   if (isDryRun) {
     spinner.succeed(`Proposal dry run succeeded.`)
   } else {
+
+    const proposalFile = `${merkleTree.root}.json`
+    writeFileSync(join(proposePath, proposalFile), deploymentConfigData);
+
     const deploymentConfigId = await sphinxContext.storeDeploymentConfig(
       apiKey,
       newConfig.orgId,

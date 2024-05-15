@@ -32,6 +32,10 @@ export interface DeployCommandArgs {
   sig?: Array<string>
 }
 
+export interface ExecuteCommandArgs {
+  proposalPath: string
+}
+
 export interface FetchArtifactsArgs {
   apiKey: string
   orgId: string
