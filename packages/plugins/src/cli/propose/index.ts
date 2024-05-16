@@ -489,20 +489,24 @@ export const propose = async (
     const proposalFile = `${merkleTree.root}.json`
     writeFileSync(join(proposePath, proposalFile), deploymentConfigData);
 
-    const deploymentConfigId = await sphinxContext.storeDeploymentConfig(
-      apiKey,
-      newConfig.orgId,
-      deploymentConfigData
-    )
-    proposalRequest.deploymentConfigId = deploymentConfigId
-    proposalRequest.compilerConfigId = deploymentConfigId
-
-    await sphinxContext.relayProposal(proposalRequest)
     spinner.succeed(
-      `Proposal succeeded! Go to ${blue.underline(
-        WEBSITE_URL
-      )} to approve the deployment.`
+      `Proposal succeeded! Check ${proposalFile} to approve the deployment.`
     )
+
+    // const deploymentConfigId = await sphinxContext.storeDeploymentConfig(
+    //   apiKey,
+    //   newConfig.orgId,
+    //   deploymentConfigData
+    // )
+    // proposalRequest.deploymentConfigId = deploymentConfigId
+    // proposalRequest.compilerConfigId = deploymentConfigId
+    //
+    // await sphinxContext.relayProposal(proposalRequest)
+    // spinner.succeed(
+    //   `Proposal succeeded! Go to ${blue.underline(
+    //     WEBSITE_URL
+    //   )} to approve the deployment.`
+    // )
   }
   return {
     proposalRequest,

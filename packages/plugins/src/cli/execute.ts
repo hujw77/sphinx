@@ -5,6 +5,7 @@ import {
   isFile,
   signMerkleRoot,
   fetchNameForNetwork,
+  fetchSupportedNetworkByName,
   SphinxJsonRpcProvider,
   DeploymentConfig,
   DeploymentContext,
@@ -15,9 +16,13 @@ import {
   RemoveRoles,
   executeTransactionViaSigner,
   Deployment,
+  fetchExecutionTransactionReceipts,
+  convertEthersTransactionReceipt,
+  SphinxTransactionReceipt,
 } from '@sphinx-labs/core'
 import { ethers } from 'ethers'
 import { red } from 'chalk'
+import { Logger } from '@eth-optimism/common-ts'
 import ora from 'ora'
 
 import { getFoundryToml } from '../foundry/options'
@@ -31,6 +36,9 @@ export const execute = async ( args: ExecuteArgs) => {
   const projectRoot = process.cwd()
 
   const spinner = ora({ isSilent: false })
+  const logger = new Logger({
+    name: 'Logger',
+  })
 
   const deploymentConfigPath = relative(projectRoot, args.proposalPath)
 
@@ -54,34 +62,17 @@ export const execute = async ( args: ExecuteArgs) => {
   const merkleTree = deploymentConfig.merkleTree
 
   for (const networkConfig of networkConfigs) {
-    const network = fetchNameForNetwork(BigInt(networkConfig.chainId))
-    const foundryToml = await getFoundryToml()
-    const { rpcEndpoints } = foundryToml
-    const forkUrl = rpcEndpoints[network]
-    if (!forkUrl) {
-      console.error(
-        red(
-          `No RPC endpoint specified in your foundry.toml for the network: ${network}.`
-        )
-      )
-      process.exit(1)
-    }
+    const networkName = fetchNameForNetwork(BigInt(networkConfig.chainId))
+    const supportedNetwork = fetchSupportedNetworkByName(networkName)
 
-    const provider = new SphinxJsonRpcProvider(forkUrl)
+    const provider = new SphinxJsonRpcProvider(await supportedNetwork.rpcUrl())
+
     let signer = new ethers.Wallet(privateKey, provider)
 
     const treeSigner = {
       signer: signer.address,
       signature: await signMerkleRoot(merkleTree.root, signer),
     }
-
-    const sphinxModuleReadOnly = new ethers.Contract(
-      networkConfig.moduleAddress,
-      SphinxModuleABI,
-      provider
-    )
-
-    const merkleRootState = await sphinxModuleReadOnly.merkleRootStates(merkleTree.root)
 
     // We use no role injection when deploying on the live network since that obviously would not work
     let inject: InjectRoles = async () => {
@@ -91,16 +82,17 @@ export const execute = async ( args: ExecuteArgs) => {
       return
     }
 
+    let receipts: Array<SphinxTransactionReceipt> | undefined
     const deployment: Deployment = {
       id: 'only required on website',
       multichainDeploymentId: 'only required on website',
       projectId: 'only required on website',
       chainId: networkConfig.chainId,
-      status: merkleRootState.status,
+      status: 'approved',
       moduleAddress: networkConfig.moduleAddress,
       safeAddress: networkConfig.safeAddress,
       deploymentConfig,
-      networkName: network,
+      networkName,
       treeSigners: [treeSigner],
     }
     const deploymentContext: DeploymentContext = {
@@ -110,10 +102,15 @@ export const execute = async ( args: ExecuteArgs) => {
       handleError: (e) => {
         throw e
       },
-      handleAlreadyExecutedDeployment: () => {
-        throw new Error(
-          'Deployment has already been executed. This is a bug. Please report it to the developers.'
-        )
+      handleAlreadyExecutedDeployment: async (deploymentContext) => {
+        receipts = (
+          await fetchExecutionTransactionReceipts(
+            [],
+            deploymentContext.deployment.moduleAddress,
+            deploymentContext.deployment.deploymentConfig.merkleTree.root,
+            deploymentContext.provider
+          )
+        ).map(convertEthersTransactionReceipt)
       },
       handleExecutionFailure: (
         _deploymentContext: DeploymentContext,
@@ -134,16 +131,22 @@ export const execute = async ( args: ExecuteArgs) => {
       wallet: signer,
       provider,
       spinner,
+      logger,
     }
+
     const result = await attemptDeployment(deploymentContext)
 
-    if (!result) {
+    console.log(receipts)
+    if (result) {
+      receipts = result?.receipts
+    }
+
+    if (!receipts) {
       throw new Error(
-        'Simulation failed for an unexpected reason. This is a bug. Please report it to the developers.'
+        'Execution failed for an unexpected reason. This is a bug. Please report it to the developers.'
       )
     }
 
-    const { receipts } = result
     console.log(receipts)
 
     // spinner.start(`Building deployment artifacts...`)
