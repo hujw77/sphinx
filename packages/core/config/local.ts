@@ -1,7 +1,7 @@
 import { SphinxSystemConfig } from '../src'
 
 const config: SphinxSystemConfig = {
-  relayers: ['0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'],
+  relayers: ['0xd70a2e6eacbdeda77a5d4bbae3bc70239a0e088f'],
 }
 
 export default config
