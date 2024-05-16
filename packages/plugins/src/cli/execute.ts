@@ -77,7 +77,8 @@ export const execute = async ( args: ExecuteArgs) => {
 
     const sphinxModuleReadOnly = new ethers.Contract(
       networkConfig.moduleAddress,
-      SphinxModuleABI
+      SphinxModuleABI,
+      provider
     )
 
     const merkleRootState = await sphinxModuleReadOnly.merkleRootStates(merkleTree.root)
