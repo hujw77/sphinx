@@ -196,12 +196,16 @@ export const getGasPriceOverrides = async (
     // cause an error due to the fact that the transaction's gas limit exceeds the block gas limit.
     // This occurred when simulating a deployment on Polygon.
     overridden.gasLimit = (maxGasLimit + block.gasLimit) / BigInt(2)
+
     return overridden
   }
 
   const { maxFeePerGas, maxPriorityFeePerGas, gasPrice } = feeData
 
   switch (Number(network.chainId)) {
+    case 43:
+      delete overridden.chainId
+
     // Overrides the gasPrice for Fantom Opera
     case 250:
       if (gasPrice !== null) {

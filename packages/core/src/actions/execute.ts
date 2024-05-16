@@ -521,15 +521,15 @@ export const executeTransactionViaSigner: ExecuteTransaction = async (
     )
   }
 
+  const overridden = await getGasPriceOverrides(
+    deploymentContext.provider,
+    wallet,
+    executionMode,
+    transaction
+  )
+  console.log(overridden)
   const txReceipt = await (
-    await wallet.sendTransaction(
-      await getGasPriceOverrides(
-        deploymentContext.provider,
-        wallet,
-        executionMode,
-        transaction
-      )
-    )
+    await wallet.sendTransaction(overridden)
   ).wait()
 
   if (txReceipt === null) {
@@ -1258,6 +1258,7 @@ export const attemptDeployment = async (
   const targetNetworkNetworkConfig = deploymentConfig.networkConfigs.find(
     (config) => config.chainId === deployment.chainId.toString()
   )
+
   if (!targetNetworkNetworkConfig) {
     await deploymentContext.throwError(
       `[Executor ${networkName}]: Error could not find target network config. This should never happen please report it to the developers.`,
