@@ -373,7 +373,7 @@ const executeCommandHandler = async (
   argv: ExecuteCommandArgs,
   sphinxContext: SphinxContext
 ): Promise<void> => {
-  const { proposalPath} = argv
+  const { proposalPath } = argv
 
   await sphinxContext.execute({ proposalPath })
 }

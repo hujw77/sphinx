@@ -14,10 +14,7 @@ import {
   sphinxCoreUtils,
 } from '@hujw77/core'
 import { ethers } from 'ethers'
-import {
-  SPHINX_NETWORKS,
-  getGnosisSafeProxyAddress,
-} from '@hujw77/contracts'
+import { SPHINX_NETWORKS, getGnosisSafeProxyAddress } from '@hujw77/contracts'
 import sinon from 'sinon'
 import { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider'
 import sinonChai from 'sinon-chai'

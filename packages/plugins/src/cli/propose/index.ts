@@ -1,10 +1,16 @@
 import { join, relative } from 'path'
-import { existsSync, readFileSync, unlinkSync, writeFileSync, mkdirSync } from 'fs'
+import {
+  existsSync,
+  readFileSync,
+  unlinkSync,
+  writeFileSync,
+  mkdirSync,
+} from 'fs'
 
 import {
   ProjectDeployment,
   ProposalRequest,
-  WEBSITE_URL,
+  // WEBSITE_URL,
   elementsEqual,
   getPreview,
   getPreviewString,
@@ -20,7 +26,7 @@ import {
   syncSphinxLock,
 } from '@hujw77/core'
 import ora from 'ora'
-import { blue } from 'chalk'
+// import { blue } from 'chalk'
 import { ethers } from 'ethers'
 import {
   BuildInfos,
@@ -243,10 +249,7 @@ export const propose = async (
 
   const projectRoot = process.cwd()
 
-  const proposalPath = join(
-    projectRoot,
-    'proposal'
-  )
+  const proposalPath = join(projectRoot, 'proposal')
 
   if (!existsSync(proposalPath)) {
     mkdirSync(proposalPath)
@@ -258,7 +261,6 @@ export const propose = async (
         `Please make sure this is a valid directory path.`
     )
   }
-
 
   // Normalize the script path to be in the format "path/to/file.sol". This isn't strictly
   // necessary, but we're less likely to introduce a bug if it's always in the same format.
@@ -489,14 +491,13 @@ export const propose = async (
   if (isDryRun) {
     spinner.succeed(`Proposal dry run succeeded.`)
   } else {
-
     const deploymentPath = join(proposalPath, merkleTree.root)
     if (!existsSync(deploymentPath)) {
       mkdirSync(deploymentPath)
     }
-    const deploymentFile = join(deploymentPath, "deployment.json")
+    const deploymentFile = join(deploymentPath, 'deployment.json')
 
-    writeFileSync(deploymentFile, deploymentConfigData);
+    writeFileSync(deploymentFile, deploymentConfigData)
 
     spinner.succeed(
       `Proposal succeeded! Check ${merkleTree.root} to approve the deployment.`

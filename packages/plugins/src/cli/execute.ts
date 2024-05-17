@@ -1,13 +1,11 @@
 import { relative, join } from 'path'
 import { readFileSync } from 'fs'
-import { SphinxModuleABI } from '@hujw77/contracts'
+
 import {
   isFile,
-  signMerkleRoot,
   fetchNameForNetwork,
   fetchSupportedNetworkByName,
   SphinxJsonRpcProvider,
-  DeploymentConfig,
   DeploymentContext,
   NetworkConfig,
   HumanReadableAction,
@@ -23,21 +21,17 @@ import {
   makeDeploymentArtifacts,
   writeDeploymentArtifacts,
   displayDeploymentTable,
-  verifyDeploymentWithRetries,
+  // verifyDeploymentWithRetries,
 } from '@hujw77/core'
 import { ethers } from 'ethers'
-import { red } from 'chalk'
 import { Logger } from '@eth-optimism/common-ts'
 import ora from 'ora'
-
-import { getFoundryToml } from '../foundry/options'
 
 export interface ExecuteArgs {
   proposalPath: string
 }
 
-export const execute = async ( args: ExecuteArgs) => {
-
+export const execute = async (args: ExecuteArgs) => {
   const projectRoot = process.cwd()
 
   const spinner = ora({ isSilent: false })
@@ -46,8 +40,8 @@ export const execute = async ( args: ExecuteArgs) => {
   })
 
   const deploymentPath = relative(projectRoot, args.proposalPath)
-  const deploymentConfigFile = join(deploymentPath, "deployment.json")
-  const deploymentSigFile = join(deploymentPath, "signature.json")
+  const deploymentConfigFile = join(deploymentPath, 'deployment.json')
+  const deploymentSigFile = join(deploymentPath, 'signature.json')
 
   if (!isFile(deploymentConfigFile) || !isFile(deploymentSigFile)) {
     throw new Error(
@@ -56,7 +50,9 @@ export const execute = async ( args: ExecuteArgs) => {
     )
   }
 
-  const deploymentConfig = JSON.parse(readFileSync(deploymentConfigFile, 'utf-8'))
+  const deploymentConfig = JSON.parse(
+    readFileSync(deploymentConfigFile, 'utf-8')
+  )
   const treeSigners = JSON.parse(readFileSync(deploymentSigFile, 'utf-8'))
 
   const privateKey = process.env.PRIVATE_KEY
@@ -76,13 +72,13 @@ export const execute = async ( args: ExecuteArgs) => {
 
     const provider = new SphinxJsonRpcProvider(await supportedNetwork.rpcUrl())
 
-    let signer = new ethers.Wallet(privateKey, provider)
+    const signer = new ethers.Wallet(privateKey, provider)
 
     // We use no role injection when deploying on the live network since that obviously would not work
-    let inject: InjectRoles = async () => {
+    const inject: InjectRoles = async () => {
       return
     }
-    let remove: RemoveRoles = async () => {
+    const remove: RemoveRoles = async () => {
       return
     }
 
@@ -106,13 +102,13 @@ export const execute = async ( args: ExecuteArgs) => {
       handleError: (e) => {
         throw e
       },
-      handleAlreadyExecutedDeployment: async (deploymentContext) => {
+      handleAlreadyExecutedDeployment: async (context) => {
         receipts = (
           await fetchExecutionTransactionReceipts(
             [],
-            deploymentContext.deployment.moduleAddress,
-            deploymentContext.deployment.deploymentConfig.merkleTree.root,
-            deploymentContext.provider
+            context.deployment.moduleAddress,
+            context.deployment.deploymentConfig.merkleTree.root,
+            context.provider
           )
         ).map(convertEthersTransactionReceipt)
       },
@@ -215,7 +211,6 @@ export const execute = async ( args: ExecuteArgs) => {
     //     etherscanApiKey
     //   )
     // }
-
   }
 
   // return {
