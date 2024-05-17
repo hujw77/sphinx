@@ -1,4 +1,4 @@
-import { relative } from 'path'
+import { relative, join } from 'path'
 import { readFileSync } from 'fs'
 import { SphinxModuleABI } from '@sphinx-labs/contracts'
 import {
@@ -19,6 +19,11 @@ import {
   fetchExecutionTransactionReceipts,
   convertEthersTransactionReceipt,
   SphinxTransactionReceipt,
+  readDeploymentArtifactsForNetwork,
+  makeDeploymentArtifacts,
+  writeDeploymentArtifacts,
+  displayDeploymentTable,
+  verifyDeploymentWithRetries,
 } from '@sphinx-labs/core'
 import { ethers } from 'ethers'
 import { red } from 'chalk'
@@ -40,16 +45,19 @@ export const execute = async ( args: ExecuteArgs) => {
     name: 'Logger',
   })
 
-  const deploymentConfigPath = relative(projectRoot, args.proposalPath)
+  const deploymentPath = relative(projectRoot, args.proposalPath)
+  const deploymentConfigFile = join(deploymentPath, "deployment.json")
+  const deploymentSigFile = join(deploymentPath, "signature.json")
 
-  if (!isFile(deploymentConfigPath)) {
+  if (!isFile(deploymentConfigFile) || !isFile(deploymentSigFile)) {
     throw new Error(
-      `File does not exist at: ${deploymentConfigPath}\n` +
+      `File does not exist at: ${deploymentConfigFile} or ${deploymentSigFile}\n` +
         `Please make sure this is a valid file path.`
     )
   }
 
-  const deploymentConfig = JSON.parse(readFileSync(deploymentConfigPath, 'utf-8'))
+  const deploymentConfig = JSON.parse(readFileSync(deploymentConfigFile, 'utf-8'))
+  const treeSigners = JSON.parse(readFileSync(deploymentSigFile, 'utf-8'))
 
   const privateKey = process.env.PRIVATE_KEY
   // Check if the private key exists. It should always exist because we checked that it's defined
@@ -62,17 +70,13 @@ export const execute = async ( args: ExecuteArgs) => {
   const merkleTree = deploymentConfig.merkleTree
 
   for (const networkConfig of networkConfigs) {
-    const networkName = fetchNameForNetwork(BigInt(networkConfig.chainId))
+    const chainId = networkConfig.chainId
+    const networkName = fetchNameForNetwork(BigInt(chainId))
     const supportedNetwork = fetchSupportedNetworkByName(networkName)
 
     const provider = new SphinxJsonRpcProvider(await supportedNetwork.rpcUrl())
 
     let signer = new ethers.Wallet(privateKey, provider)
-
-    const treeSigner = {
-      signer: signer.address,
-      signature: await signMerkleRoot(merkleTree.root, signer),
-    }
 
     // We use no role injection when deploying on the live network since that obviously would not work
     let inject: InjectRoles = async () => {
@@ -87,13 +91,13 @@ export const execute = async ( args: ExecuteArgs) => {
       id: 'only required on website',
       multichainDeploymentId: 'only required on website',
       projectId: 'only required on website',
-      chainId: networkConfig.chainId,
+      chainId,
       status: 'approved',
       moduleAddress: networkConfig.moduleAddress,
       safeAddress: networkConfig.safeAddress,
       deploymentConfig,
       networkName,
-      treeSigners: [treeSigner],
+      treeSigners,
     }
     const deploymentContext: DeploymentContext = {
       throwError: (message: string) => {
@@ -136,7 +140,6 @@ export const execute = async ( args: ExecuteArgs) => {
 
     const result = await attemptDeployment(deploymentContext)
 
-    console.log(receipts)
     if (result) {
       receipts = result?.receipts
     }
@@ -147,57 +150,71 @@ export const execute = async ( args: ExecuteArgs) => {
       )
     }
 
-    console.log(receipts)
+    spinner.start(`Building deployment artifacts...`)
 
-    // spinner.start(`Building deployment artifacts...`)
+    const { projectName } = networkConfig.newConfig
+
+    // Get the existing contract deployment artifacts and execution artifacts for the current network.
+    // This object will potentially be modified when we make the new deployment artifacts.
+    // Specifically, the `history` field of the contract deployment artifacts could be modified. Even
+    // though we don't currently modify the execution artifacts, we include them anyways in case we
+    // add logic in the future that modifies them. We don't include the compiler input artifacts
+    // mainly as a performance optimization and because we don't expect to modify them in the future.
+    const networkArtifacts = readDeploymentArtifactsForNetwork(
+      projectName,
+      chainId,
+      networkConfig.executionMode
+    )
+    const deploymentArtifacts = {
+      networks: {
+        [chainId.toString()]: networkArtifacts,
+      },
+      compilerInputs: {},
+    }
+
+    await makeDeploymentArtifacts(
+      {
+        [chainId.toString()]: {
+          provider,
+          deploymentConfig,
+          receipts,
+        },
+      },
+      merkleTree.root,
+      deploymentConfig.configArtifacts,
+      deploymentArtifacts
+    )
+
+    spinner.succeed(`Built deployment artifacts.`)
+    spinner.start(`Writing deployment artifacts...`)
+
+    writeDeploymentArtifacts(
+      projectName,
+      networkConfig.executionMode,
+      deploymentArtifacts
+    )
+
+    // Note that we don't display the artifact paths for the deployment artifacts because we may not
+    // modify all of the artifacts that we read from the file system earlier.
+    spinner.succeed(`Wrote deployment artifacts.`)
+
+    displayDeploymentTable(networkConfig)
+
+    // if (true) {
+    //   spinner.info(`Verifying contracts on Etherscan.`)
     //
-    // const { projectName } = networkConfig.newConfig
+    //   const etherscanApiEnvKey = supportedNetwork.blockexplorers.etherscan?.envKey
+    //   if (!etherscanApiEnvKey) {
+    //     continue
+    //   }
+    //   const etherscanApiKey = eval(`process.env.${etherscanApiEnvKey}`)
     //
-    // // Get the existing contract deployment artifacts and execution artifacts for the current network.
-    // // This object will potentially be modified when we make the new deployment artifacts.
-    // // Specifically, the `history` field of the contract deployment artifacts could be modified. Even
-    // // though we don't currently modify the execution artifacts, we include them anyways in case we
-    // // add logic in the future that modifies them. We don't include the compiler input artifacts
-    // // mainly as a performance optimization and because we don't expect to modify them in the future.
-    // const networkArtifacts = readDeploymentArtifactsForNetwork(
-    //   projectName,
-    //   chainId,
-    //   executionMode
-    // )
-    // const deploymentArtifacts = {
-    //   networks: {
-    //     [chainId.toString()]: networkArtifacts,
-    //   },
-    //   compilerInputs: {},
+    //   await verifyDeploymentWithRetries(
+    //     deploymentConfig,
+    //     provider,
+    //     etherscanApiKey
+    //   )
     // }
-    //
-    // await makeDeploymentArtifacts(
-    //   {
-    //     [chainId.toString()]: {
-    //       provider,
-    //       deploymentConfig,
-    //       receipts,
-    //     },
-    //   },
-    //   merkleTree.root,
-    //   configArtifacts,
-    //   deploymentArtifacts
-    // )
-    //
-    // spinner.succeed(`Built deployment artifacts.`)
-    // spinner.start(`Writing deployment artifacts...`)
-    //
-    // writeDeploymentArtifacts(
-    //   projectName,
-    //   networkConfig.executionMode,
-    //   deploymentArtifacts
-    // )
-    //
-    // // Note that we don't display the artifact paths for the deployment artifacts because we may not
-    // // modify all of the artifacts that we read from the file system earlier.
-    // spinner.succeed(`Wrote deployment artifacts.`)
-    //
-    // displayDeploymentTable(networkConfig)
 
   }
 

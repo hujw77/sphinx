@@ -1,5 +1,5 @@
 import { join, relative } from 'path'
-import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs'
+import { existsSync, readFileSync, unlinkSync, writeFileSync, mkdirSync } from 'fs'
 
 import {
   ProjectDeployment,
@@ -243,14 +243,18 @@ export const propose = async (
 
   const projectRoot = process.cwd()
 
-  const proposePath = join(
+  const proposalPath = join(
     projectRoot,
     'proposal'
   )
 
-  if (!isDirectory(proposePath)) {
+  if (!existsSync(proposalPath)) {
+    mkdirSync(proposalPath)
+  }
+
+  if (!isDirectory(proposalPath)) {
     throw new Error(
-      `Directory does not exist at: ${proposePath}\n` +
+      `Directory does not exist at: ${proposalPath}\n` +
         `Please make sure this is a valid directory path.`
     )
   }
@@ -486,11 +490,16 @@ export const propose = async (
     spinner.succeed(`Proposal dry run succeeded.`)
   } else {
 
-    const proposalFile = `${merkleTree.root}.json`
-    writeFileSync(join(proposePath, proposalFile), deploymentConfigData);
+    const deploymentPath = join(proposalPath, merkleTree.root)
+    if (!existsSync(deploymentPath)) {
+      mkdirSync(deploymentPath)
+    }
+    const deploymentFile = join(deploymentPath, "deployment.json")
+
+    writeFileSync(deploymentFile, deploymentConfigData);
 
     spinner.succeed(
-      `Proposal succeeded! Check ${proposalFile} to approve the deployment.`
+      `Proposal succeeded! Check ${merkleTree.root} to approve the deployment.`
     )
 
     // const deploymentConfigId = await sphinxContext.storeDeploymentConfig(
