@@ -1,6 +1,6 @@
 {
   "name": "@hujw77/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sphinx core library",
   "main": "dist/index",
   "types": "dist/index",
