@@ -66,4 +66,4 @@ You'll also notice that each Merkle leaf has an `index`. The Merkle leaves must 
 
 ## Further Reading
 
-If you'd like to learn more about Sphinx's architecture, we recommend reading our [specifications](https://github.com/sphinx-labs/sphinx/blob/main/README.md#specifications).
+If you'd like to learn more about Sphinx's architecture, we recommend reading our [specifications](https://github.com/hujw77/sphinx/blob/main/README.md#specifications).

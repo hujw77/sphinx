@@ -1,10 +1,16 @@
 import { join, relative } from 'path'
-import { existsSync, readFileSync, unlinkSync } from 'fs'
+import {
+  existsSync,
+  readFileSync,
+  unlinkSync,
+  writeFileSync,
+  mkdirSync,
+} from 'fs'
 
 import {
   ProjectDeployment,
   ProposalRequest,
-  WEBSITE_URL,
+  // WEBSITE_URL,
   elementsEqual,
   getPreview,
   getPreviewString,
@@ -13,13 +19,14 @@ import {
   isLegacyTransactionsRequiredForNetwork,
   SphinxJsonRpcProvider,
   isFile,
+  isDirectory,
   MAX_UINT64,
   makeDeploymentConfig,
   DEFAULT_CALL_DEPTH,
   syncSphinxLock,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import ora from 'ora'
-import { blue } from 'chalk'
+// import { blue } from 'chalk'
 import { ethers } from 'ethers'
 import {
   BuildInfos,
@@ -27,12 +34,12 @@ import {
   DeploymentInfo,
   GetConfigArtifacts,
   NetworkConfig,
-} from '@sphinx-labs/core/dist/config/types'
+} from '@hujw77/core/dist/config/types'
 import {
   SphinxLeafType,
   SphinxMerkleTree,
   makeSphinxMerkleTree,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import { makeNetworkConfig, decodeDeploymentInfo } from '../../foundry/decode'
 import { getFoundryToml } from '../../foundry/options'
@@ -241,6 +248,19 @@ export const propose = async (
   const sig = args.sig === undefined ? ['run()'] : args.sig
 
   const projectRoot = process.cwd()
+
+  const proposalPath = join(projectRoot, 'proposal')
+
+  if (!existsSync(proposalPath)) {
+    mkdirSync(proposalPath)
+  }
+
+  if (!isDirectory(proposalPath)) {
+    throw new Error(
+      `Directory does not exist at: ${proposalPath}\n` +
+        `Please make sure this is a valid directory path.`
+    )
+  }
 
   // Normalize the script path to be in the format "path/to/file.sol". This isn't strictly
   // necessary, but we're less likely to introduce a bug if it's always in the same format.
@@ -471,20 +491,32 @@ export const propose = async (
   if (isDryRun) {
     spinner.succeed(`Proposal dry run succeeded.`)
   } else {
-    const deploymentConfigId = await sphinxContext.storeDeploymentConfig(
-      apiKey,
-      newConfig.orgId,
-      deploymentConfigData
-    )
-    proposalRequest.deploymentConfigId = deploymentConfigId
-    proposalRequest.compilerConfigId = deploymentConfigId
+    const deploymentPath = join(proposalPath, merkleTree.root)
+    if (!existsSync(deploymentPath)) {
+      mkdirSync(deploymentPath)
+    }
+    const deploymentFile = join(deploymentPath, 'deployment.json')
 
-    await sphinxContext.relayProposal(proposalRequest)
+    writeFileSync(deploymentFile, deploymentConfigData)
+
     spinner.succeed(
-      `Proposal succeeded! Go to ${blue.underline(
-        WEBSITE_URL
-      )} to approve the deployment.`
+      `Proposal succeeded! Check ${merkleTree.root} to approve the deployment.`
     )
+
+    // const deploymentConfigId = await sphinxContext.storeDeploymentConfig(
+    //   apiKey,
+    //   newConfig.orgId,
+    //   deploymentConfigData
+    // )
+    // proposalRequest.deploymentConfigId = deploymentConfigId
+    // proposalRequest.compilerConfigId = deploymentConfigId
+    //
+    // await sphinxContext.relayProposal(proposalRequest)
+    // spinner.succeed(
+    //   `Proposal succeeded! Go to ${blue.underline(
+    //     WEBSITE_URL
+    //   )} to approve the deployment.`
+    // )
   }
   return {
     proposalRequest,

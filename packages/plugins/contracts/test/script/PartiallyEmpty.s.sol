@@ -2,9 +2,9 @@
 pragma solidity ^0.8.0;
 
 import { Script } from "sphinx-forge-std/Script.sol";
-import { Network } from "@sphinx-labs/contracts/contracts/foundry/SphinxPluginTypes.sol";
+import { Network } from "@hujw77/contracts/contracts/foundry/SphinxPluginTypes.sol";
 import { MyContract2 } from "../../../contracts/test/MyContracts.sol";
-import { Sphinx } from "@sphinx-labs/contracts/contracts/foundry/Sphinx.sol";
+import { Sphinx } from "@hujw77/contracts/contracts/foundry/Sphinx.sol";
 
 contract PartiallyEmpty is Script, Sphinx {
     function configureSphinx() public override {

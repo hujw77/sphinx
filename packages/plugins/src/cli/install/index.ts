@@ -1,7 +1,7 @@
 import { execSync } from 'child_process'
 
-import { CONTRACTS_LIBRARY_VERSION } from '@sphinx-labs/contracts'
-import { spawnAsync } from '@sphinx-labs/core'
+import { CONTRACTS_LIBRARY_VERSION } from '@hujw77/contracts'
+import { spawnAsync } from '@hujw77/core'
 import ora from 'ora'
 
 const installWithUpdate = async (spinner: ora.Ora) => {
@@ -9,7 +9,7 @@ const installWithUpdate = async (spinner: ora.Ora) => {
 
   const args = [
     'install',
-    `sphinx-labs/sphinx@${CONTRACTS_LIBRARY_VERSION}`,
+    `hujw77/sphinx@${CONTRACTS_LIBRARY_VERSION}`,
     // We always use --no-commit here because it's necessary if the user has any files that have been changed, but not committed.
     // This will almost always be the case during installation b/c the user first needs to install our CLI.
     '--no-commit',
@@ -41,7 +41,7 @@ const installWithUpdate = async (spinner: ora.Ora) => {
     }
 
     // Run forge update to fetch the latest branches
-    const update = await spawnAsync('forge', ['update', 'sphinx-labs/sphinx'])
+    const update = await spawnAsync('forge', ['update', 'hujw77/sphinx'])
     if (update.code !== 0) {
       // The `stdout` contains the trace of the error.
       console.log(update.stdout)

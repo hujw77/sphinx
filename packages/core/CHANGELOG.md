@@ -1,4 +1,4 @@
-# @sphinx-labs/core
+# @hujw77/core
 
 ## 0.25.2
 
@@ -21,7 +21,7 @@
 ### Patch Changes
 
 - Updated dependencies [a978b3b]
-  - @sphinx-labs/contracts@0.22.0
+  - @hujw77/contracts@0.22.0
 
 ## 0.24.9
 
@@ -31,7 +31,7 @@
 - b54c683: Stop hiding API call error if response code unexpected
 - Updated dependencies [01f4d34]
 - Updated dependencies [89d421b]
-  - @sphinx-labs/contracts@0.21.11
+  - @hujw77/contracts@0.21.11
 
 ## 0.24.8
 
@@ -40,7 +40,7 @@
 - 4052629: Disable transaction batching on Arbitrum Sepolia
 - 9fa2e5c: Temporarily remove tx data from proposal requests
 - Updated dependencies [4052629]
-  - @sphinx-labs/contracts@0.21.10
+  - @hujw77/contracts@0.21.10
 
 ## 0.24.7
 
@@ -48,7 +48,7 @@
 
 - 6656771: Allow generating artifacts for deprecated networks
 - Updated dependencies [6656771]
-  - @sphinx-labs/contracts@0.21.9
+  - @hujw77/contracts@0.21.9
 
 ## 0.24.6
 
@@ -57,7 +57,7 @@
 - cc5e9e6: Bump Merkle leaf gas values on networks other than Rootstock
 - Updated dependencies [cc5e9e6]
 - Updated dependencies [f6e0e06]
-  - @sphinx-labs/contracts@0.21.8
+  - @hujw77/contracts@0.21.8
 
 ## 0.24.5
 
@@ -66,7 +66,7 @@
 - 50162e5: Disable action batching on Polygon ZKEVM
 - Updated dependencies [50162e5]
 - Updated dependencies [caf22d4]
-  - @sphinx-labs/contracts@0.21.7
+  - @hujw77/contracts@0.21.7
 
 ## 0.24.4
 
@@ -80,7 +80,7 @@
 
 - ddfec4c: Update gas heuristics to support large contracts on Rootstock
 - Updated dependencies [ddfec4c]
-  - @sphinx-labs/contracts@0.21.4
+  - @hujw77/contracts@0.21.4
 
 ## 0.24.2
 
@@ -89,7 +89,7 @@
 - 0c375c0: Handle alreay verified response after successful verification submission
 - 72f363e: Hardcode merkle leaf gas on Darwinia Pangolin
 - Updated dependencies [72f363e]
-  - @sphinx-labs/contracts@0.21.3
+  - @hujw77/contracts@0.21.3
 
 ## 0.24.1
 
@@ -100,7 +100,7 @@
 - 4f5a1fc: Remove `vm.getCode` to deploy `SphinxUtils` and `SphinxConstants`
 - Updated dependencies [c7af7ef]
 - Updated dependencies [4f5a1fc]
-  - @sphinx-labs/contracts@0.21.2
+  - @hujw77/contracts@0.21.2
 
 ## 0.24.0
 
@@ -117,7 +117,7 @@
 - Updated dependencies [dd0cfcc]
 - Updated dependencies [28b6111]
 - Updated dependencies [dead3ae]
-  - @sphinx-labs/contracts@0.21.0
+  - @hujw77/contracts@0.21.0
 
 ## 0.23.10
 
@@ -125,7 +125,7 @@
 
 - 8e2d3fe: Add support for Support Taiko Katla, Darwinia Pangolin, Mode, Mode Sepolia, Polygon ZKEVM Cardona, Linea Sepolia
 - Updated dependencies [8e2d3fe]
-  - @sphinx-labs/contracts@0.20.8
+  - @hujw77/contracts@0.20.8
 
 ## 0.23.9
 
@@ -139,7 +139,7 @@
 
 - 3446011: Support sending funds to Safe during deployment
 - Updated dependencies [3446011]
-  - @sphinx-labs/contracts@0.20.7
+  - @hujw77/contracts@0.20.7
 
 ## 0.23.7
 
@@ -149,7 +149,7 @@
 - Updated dependencies [f176e46]
 - Updated dependencies [d8ffb22]
 - Updated dependencies [c8e5320]
-  - @sphinx-labs/contracts@0.20.6
+  - @hujw77/contracts@0.20.6
 
 ## 0.23.6
 
@@ -158,7 +158,7 @@
 - 643bcb4: Remove gas limit override on Gnosis
 - d3057c7: Hardcode Merkle leaf gas field on Moonbeam networks
 - Updated dependencies [d3057c7]
-  - @sphinx-labs/contracts@0.20.5
+  - @hujw77/contracts@0.20.5
 
 ## 0.23.5
 
@@ -178,7 +178,7 @@
 - Updated dependencies [edf33c0]
 - Updated dependencies [4e2ae6d]
 - Updated dependencies [ff4a186]
-  - @sphinx-labs/contracts@0.20.4
+  - @hujw77/contracts@0.20.4
 
 ## 0.23.3
 
@@ -190,7 +190,7 @@
 - Updated dependencies [a38b587]
 - Updated dependencies [f33d464]
 - Updated dependencies [bdfb0d1]
-  - @sphinx-labs/contracts@0.20.3
+  - @hujw77/contracts@0.20.3
 
 ## 0.23.2
 
@@ -199,7 +199,7 @@
 - 0d8af8f: Fetch artifacts via presigned url
 - Updated dependencies [a6e1473]
 - Updated dependencies [caa8515]
-  - @sphinx-labs/contracts@0.20.2
+  - @hujw77/contracts@0.20.2
 
 ## 0.23.1
 
@@ -226,7 +226,7 @@
 - Updated dependencies [dc2b2a6]
 - Updated dependencies [5b6ae62]
 - Updated dependencies [8e5a590]
-  - @sphinx-labs/contracts@0.20.0
+  - @hujw77/contracts@0.20.0
 
 ## 0.22.4
 
@@ -237,7 +237,7 @@
 - Updated dependencies [51087d6]
 - Updated dependencies [650a858]
 - Updated dependencies [94c4ecc]
-  - @sphinx-labs/contracts@0.19.2
+  - @hujw77/contracts@0.19.2
 
 ## 0.22.3
 
@@ -274,7 +274,7 @@
 - Updated dependencies [151b2e2]
 - Updated dependencies [cbab29e]
 - Updated dependencies [f5fac9c]
-  - @sphinx-labs/contracts@0.19.0
+  - @hujw77/contracts@0.19.0
 
 ## 0.21.5
 
@@ -283,7 +283,7 @@
 - 437e2d3: Prevent Foundry from serializing strings as numbers
 - e1445ae: Set max block gas limit in Forge script during collection
 - Updated dependencies [437e2d3]
-  - @sphinx-labs/contracts@0.18.1
+  - @hujw77/contracts@0.18.1
 
 ## 0.21.4
 
@@ -297,7 +297,7 @@
 - Updated dependencies [0e3ecd8]
 - Updated dependencies [ce65752]
 - Updated dependencies [bca86ea]
-  - @sphinx-labs/contracts@0.18.0
+  - @hujw77/contracts@0.18.0
 
 ## 0.21.3
 
@@ -305,7 +305,7 @@
 
 - e00aa7c: Support Celo, Fuse, Evmos, Kava, Scroll, Moonbeam, Moonriver, OKC, and associated testnets
 - Updated dependencies [e00aa7c]
-  - @sphinx-labs/contracts@0.17.1
+  - @hujw77/contracts@0.17.1
 
 ## 0.21.2
 
@@ -318,7 +318,7 @@
 ### Patch Changes
 
 - Updated dependencies [952f4bb]
-  - @sphinx-labs/contracts@0.17.0
+  - @hujw77/contracts@0.17.0
 
 ## 0.21.0
 
@@ -332,7 +332,7 @@
 - Updated dependencies [e6b4e01]
 - Updated dependencies [9107c65]
 - Updated dependencies [3094d17]
-  - @sphinx-labs/contracts@0.16.0
+  - @hujw77/contracts@0.16.0
 
 ## 0.20.5
 
@@ -355,7 +355,7 @@
 - Updated dependencies [f6ad422]
 - Updated dependencies [b802adf]
 - Updated dependencies [9b987df]
-  - @sphinx-labs/contracts@0.15.2
+  - @hujw77/contracts@0.15.2
 
 ## 0.20.3
 
@@ -388,7 +388,7 @@
 
 - 187c913: Allow disabling gas price overrides
 - Updated dependencies [ace53d7]
-  - @sphinx-labs/contracts@0.15.0
+  - @hujw77/contracts@0.15.0
 
 ## 0.19.1
 
@@ -397,7 +397,7 @@
 - 4a57beb: Support IR compilation pipeline
 - Updated dependencies [5aa6895]
 - Updated dependencies [4a57beb]
-  - @sphinx-labs/contracts@0.14.2
+  - @hujw77/contracts@0.14.2
 
 ## 0.19.0
 
@@ -416,7 +416,7 @@
 - Updated dependencies [0adc1e1]
 - Updated dependencies [5b511e9]
 - Updated dependencies [9d5d0a4]
-  - @sphinx-labs/contracts@0.14.0
+  - @hujw77/contracts@0.14.0
 
 ## 0.18.3
 
@@ -425,7 +425,7 @@
 - 77a18fac: Change all docs to link to the main branch instead of develop
 - 22581a16: Fix etherscan verification utility
 - Updated dependencies [77a18fac]
-  - @sphinx-labs/contracts@0.13.3
+  - @hujw77/contracts@0.13.3
 
 ## 0.18.2
 
@@ -433,7 +433,7 @@
 
 - 0ea4e001: Support native forge scripts
 - Updated dependencies [0ea4e001]
-  - @sphinx-labs/contracts@0.13.2
+  - @hujw77/contracts@0.13.2
 
 ## 0.18.1
 
@@ -442,7 +442,7 @@
 - 431d6ef0: Use broadcast file instead of events to get transaction receipts for deployment artifacts
 - f2c5d280: Remove @eth-optimism/contracts-bedrock dependency due to a breaking change in a minor version update in their package
 - Updated dependencies [f2c5d280]
-  - @sphinx-labs/contracts@0.13.1
+  - @hujw77/contracts@0.13.1
 
 ## 0.18.0
 
@@ -453,7 +453,7 @@
 ### Patch Changes
 
 - Updated dependencies [330dcc28]
-  - @sphinx-labs/contracts@0.13.0
+  - @hujw77/contracts@0.13.0
 
 ## 0.17.0
 
@@ -465,7 +465,7 @@
 
 - 767b7c0f: Cancel active deployments via proposals
 - Updated dependencies [275ca040]
-  - @sphinx-labs/contracts@0.12.0
+  - @hujw77/contracts@0.12.0
 
 ## 0.16.4
 
@@ -491,7 +491,7 @@
 
 - 3151b899: Add a `callHash` field to the `CallExecuted` event in the `SphinxManager` contract
 - Updated dependencies [3151b899]
-  - @sphinx-labs/contracts@0.11.1
+  - @hujw77/contracts@0.11.1
 
 ## 0.16.0
 
@@ -515,7 +515,7 @@
 - Updated dependencies [1c27b462]
 - Updated dependencies [5de8fa58]
 - Updated dependencies [385bd8b8]
-  - @sphinx-labs/contracts@0.11.0
+  - @hujw77/contracts@0.11.0
 
 ## 0.15.1
 
@@ -537,7 +537,7 @@
 - eb0cc1c3: Add support for multisigs in the Sphinx config
 - Updated dependencies [eb0cc1c3]
 - Updated dependencies [2b80792b]
-  - @sphinx-labs/contracts@0.10.0
+  - @hujw77/contracts@0.10.0
 
 ## 0.14.2
 
@@ -603,7 +603,7 @@
 - 99fd9f09: Remove dependency on inherited forge-std contracts in Sphinx.sol
 - Updated dependencies [ec24a7b6]
 - Updated dependencies [99fd9f09]
-  - @sphinx-labs/contracts@0.9.4
+  - @hujw77/contracts@0.9.4
 
 ## 0.12.3
 
@@ -618,17 +618,17 @@
 
 - a778e4ff: Include build during release process
 - Updated dependencies [a778e4ff]
-  - @sphinx-labs/contracts@0.9.2
+  - @hujw77/contracts@0.9.2
 
 ## 0.12.1
 
 ### Patch Changes
 
 - 02674b8e: Include readme in release
-- edf822d7: Rename scope to sphinx-labs
+- edf822d7: Rename scope to hujw77
 - Updated dependencies [02674b8e]
 - Updated dependencies [edf822d7]
-  - @sphinx-labs/contracts@0.9.1
+  - @hujw77/contracts@0.9.1
 
 ## 0.12.0
 
@@ -657,7 +657,7 @@
 - Updated dependencies [227da3f8]
 - Updated dependencies [1ce34a93]
 - Updated dependencies [21e3702f]
-  - @sphinx-labs/contracts@0.9.0
+  - @hujw77/contracts@0.9.0
 
 ## 0.11.0
 
@@ -668,7 +668,7 @@
 ### Patch Changes
 
 - Updated dependencies [b6d1f76]
-  - @sphinx-labs/contracts@0.8.0
+  - @hujw77/contracts@0.8.0
 
 ## 0.10.1
 
@@ -786,7 +786,7 @@
 - Updated dependencies [f433bc2]
 - Updated dependencies [11fd15c]
 - Updated dependencies [ac40b0b]
-  - @sphinx-labs/contracts@0.7.0
+  - @hujw77/contracts@0.7.0
 
 ## 0.8.1
 
@@ -812,7 +812,7 @@
 - Updated dependencies [3e923a0]
 - Updated dependencies [c76142e]
 - Updated dependencies [35c7a63]
-  - @sphinx-labs/contracts@0.6.0
+  - @hujw77/contracts@0.6.0
 
 ## 0.7.0
 
@@ -831,7 +831,7 @@
 - Updated dependencies [20f1a7e]
 - Updated dependencies [c8af97c]
 - Updated dependencies [736b859]
-  - @sphinx-labs/contracts@0.5.2
+  - @hujw77/contracts@0.5.2
 
 ## 0.6.1
 
@@ -839,7 +839,7 @@
 
 - ca6d384: Bump contracts
 - Updated dependencies [ca6d384]
-  - @sphinx-labs/contracts@0.5.1
+  - @hujw77/contracts@0.5.1
 
 ## 0.6.0
 
@@ -857,7 +857,7 @@
 - Updated dependencies [263b34d]
 - Updated dependencies [fa3f420]
 - Updated dependencies [57a327d]
-  - @sphinx-labs/contracts@0.5.0
+  - @hujw77/contracts@0.5.0
 
 ## 0.5.6
 
@@ -900,7 +900,7 @@
 - Updated dependencies [4265ae4]
 - Updated dependencies [4554d0c]
 - Updated dependencies [591e7da]
-  - @sphinx-labs/contracts@0.4.3
+  - @hujw77/contracts@0.4.3
 
 ## 0.5.0
 
@@ -916,7 +916,7 @@
 - 4029daf: Change `target` to `referenceName` everywhere
 - a37d5c3: Add discord link to output
 - Updated dependencies [4029daf]
-  - @sphinx-labs/contracts@0.4.2
+  - @hujw77/contracts@0.4.2
 
 ## 0.4.2
 
@@ -960,7 +960,7 @@
 - Updated dependencies [60d7adc]
 - Updated dependencies [0443459]
 - Updated dependencies [40f0d0a]
-  - @sphinx-labs/contracts@0.4.0
+  - @hujw77/contracts@0.4.0
 
 ## 0.3.24
 
@@ -968,7 +968,7 @@
 
 - 2267ec4: Bump versions
 - Updated dependencies [2267ec4]
-  - @sphinx-labs/contracts@0.3.17
+  - @hujw77/contracts@0.3.17
 
 ## 0.3.23
 
@@ -987,7 +987,7 @@
 - Updated dependencies [fdf512b]
 - Updated dependencies [88e9465]
 - Updated dependencies [a60020a]
-  - @sphinx-labs/contracts@0.3.16
+  - @hujw77/contracts@0.3.16
 
 ## 0.3.21
 
@@ -1000,7 +1000,7 @@
 - c9eeb47: Make configPath a normal parameter on all tasks
 - Updated dependencies [74a61c0]
 - Updated dependencies [3ec7a05]
-  - @sphinx-labs/contracts@0.3.15
+  - @hujw77/contracts@0.3.15
 
 ## 0.3.20
 
@@ -1014,7 +1014,7 @@
 - ba24573: Add list-proposers and add-proposers tasks
 - 276d5ea: Adds function comments to several type checking functions
 - Updated dependencies [c5cf649]
-  - @sphinx-labs/contracts@0.3.14
+  - @hujw77/contracts@0.3.14
 
 ## 0.3.19
 
@@ -1027,7 +1027,7 @@
 - 2652df5: Fixes circular dependency issue caused by `isContractDeployed`
 - Updated dependencies [7047b9d]
 - Updated dependencies [b55ab15]
-  - @sphinx-labs/contracts@0.3.13
+  - @hujw77/contracts@0.3.13
 
 ## 0.3.18
 
@@ -1035,7 +1035,7 @@
 
 - e105ea9: Updates Hardhat tasks to reflect proposer/owner requirement
 - Updated dependencies [40c7bfb]
-  - @sphinx-labs/contracts@0.3.12
+  - @hujw77/contracts@0.3.12
 
 ## 0.3.17
 
@@ -1047,7 +1047,7 @@
 - Updated dependencies [b1850ad]
 - Updated dependencies [e1dc2ec]
 - Updated dependencies [da79232]
-  - @sphinx-labs/contracts@0.3.11
+  - @hujw77/contracts@0.3.11
 
 ## 0.3.16
 
@@ -1078,7 +1078,7 @@
 - Updated dependencies [6f83489]
 - Updated dependencies [16348b2]
 - Updated dependencies [9be91c3]
-  - @sphinx-labs/contracts@0.3.10
+  - @hujw77/contracts@0.3.10
 
 ## 0.3.15
 
@@ -1086,7 +1086,7 @@
 
 - 457b19a: Improve sphinx-deploy hardhat task
 - Updated dependencies [ed7babc]
-  - @sphinx-labs/contracts@0.3.9
+  - @hujw77/contracts@0.3.9
 
 ## 0.3.14
 
@@ -1112,7 +1112,7 @@
 
 - 9d38797: Update sphinx-register task to work locally
 - Updated dependencies [6a6f0c0]
-  - @sphinx-labs/contracts@0.3.8
+  - @hujw77/contracts@0.3.8
 
 ## 0.3.10
 
@@ -1125,7 +1125,7 @@
 - Updated dependencies [273d4c3]
 - Updated dependencies [c08a950]
 - Updated dependencies [78acb9a]
-  - @sphinx-labs/contracts@0.3.7
+  - @hujw77/contracts@0.3.7
 
 ## 0.3.9
 
@@ -1170,7 +1170,7 @@
 
 - 123d9c1: Add support for deployments on live networks
 - Updated dependencies [123d9c1]
-  - @sphinx-labs/contracts@0.3.5
+  - @hujw77/contracts@0.3.5
 
 ## 0.3.3
 
@@ -1180,7 +1180,7 @@
 - 2c5b238: Change config file names
 - 2c5b238: Support demo
 - Updated dependencies [2c5b238]
-  - @sphinx-labs/contracts@0.3.3
+  - @hujw77/contracts@0.3.3
 
 ## 0.3.2
 
@@ -1188,7 +1188,7 @@
 
 - 03d557c: Bump all versions
 - Updated dependencies [03d557c]
-  - @sphinx-labs/contracts@0.3.2
+  - @hujw77/contracts@0.3.2
 
 ## 0.3.1
 
@@ -1197,7 +1197,7 @@
 - 557e3bd: Bump versions
 - Updated dependencies [557e3bd]
 - Updated dependencies [cd310fe]
-  - @sphinx-labs/contracts@0.3.1
+  - @hujw77/contracts@0.3.1
 
 ## 0.3.0
 
@@ -1208,7 +1208,7 @@
 ### Patch Changes
 
 - Updated dependencies [52c7f6c]
-  - @sphinx-labs/contracts@0.3.0
+  - @hujw77/contracts@0.3.0
 
 ## 0.2.1
 
@@ -1228,7 +1228,7 @@
 - Updated dependencies [416d41b]
 - Updated dependencies [19cf359]
 - Updated dependencies [53e1514]
-  - @sphinx-labs/contracts@0.2.0
+  - @hujw77/contracts@0.2.0
 
 ## 0.1.1
 

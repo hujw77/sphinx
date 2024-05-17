@@ -12,22 +12,22 @@
       "packages/demo"
     ],
     "nohoist": [
-      "@sphinx-labs/contracts/solmate",
-      "@sphinx-labs/{contracts,plugins,demo}/forge-std",
-      "@sphinx-labs/{contracts,plugins,demo}/ds-test",
-      "@sphinx-labs/{contracts,plugins}/@openzeppelin/contracts",
-      "@sphinx-labs/plugins/@openzeppelin/contracts-upgradeable",
-      "@sphinx-labs/{contracts,plugins}/@eth-optimism/contracts",
-      "@sphinx-labs/{plugins,demo}/@sphinx-labs/contracts",
-      "@sphinx-labs/demo/@sphinx-labs/plugins",
-      "@sphinx-labs/{contracts,plugins}/sphinx-forge-std",
-      "@sphinx-labs/{plugins,demo}/sphinx-solmate",
-      "@sphinx-labs/demo/@sphinx-labs/plugins",
-      "@sphinx-labs/plugins/solidity-stringutils",
-      "@sphinx-labs/plugins/@layerzerolabs/solidity-examples",
-      "@sphinx-labs/contracts/@gnosis.pm/safe-contracts",
-      "@sphinx-labs/contracts/@gnosis.pm/safe-contracts-1.4.1",
-      "@sphinx-labs/contracts/@eth-optimism/contracts-bedrock"
+      "@hujw77/contracts/solmate",
+      "@hujw77/{contracts,plugins,demo}/forge-std",
+      "@hujw77/{contracts,plugins,demo}/ds-test",
+      "@hujw77/{contracts,plugins}/@openzeppelin/contracts",
+      "@hujw77/plugins/@openzeppelin/contracts-upgradeable",
+      "@hujw77/{contracts,plugins}/@eth-optimism/contracts",
+      "@hujw77/{plugins,demo}/@hujw77/contracts",
+      "@hujw77/demo/@hujw77/plugins",
+      "@hujw77/{contracts,plugins}/sphinx-forge-std",
+      "@hujw77/{plugins,demo}/sphinx-solmate",
+      "@hujw77/demo/@hujw77/plugins",
+      "@hujw77/plugins/solidity-stringutils",
+      "@hujw77/plugins/@layerzerolabs/solidity-examples",
+      "@hujw77/contracts/@gnosis.pm/safe-contracts",
+      "@hujw77/contracts/@gnosis.pm/safe-contracts-1.4.1",
+      "@hujw77/contracts/@eth-optimism/contracts-bedrock"
     ]
   },
   "scripts": {
@@ -39,7 +39,7 @@
     "clean": "yarn workspaces run clean",
     "lint": "yarn workspaces run lint",
     "lint:fix": "yarn workspaces run lint:fix",
-    "changeset:version:custom": "yarn changeset version && yarn workspace @sphinx-labs/contracts run write-version && yarn workspace @sphinx-labs/plugins run write-version"
+    "changeset:version:custom": "yarn changeset version && yarn workspace @hujw77/contracts run write-version && yarn workspace @hujw77/plugins run write-version"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",

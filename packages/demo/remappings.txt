@@ -1,6 +1,6 @@
 forge-std/=node_modules/forge-std/src/
 ds-test/=node_modules/ds-test/src/
-@sphinx-labs/contracts/=../contracts/contracts/foundry
+@hujw77/contracts/=../contracts/contracts/foundry
 
 @openzeppelin/contracts-upgradeable/=../../node_modules/@openzeppelin/contracts-upgradeable/
 @openzeppelin/contracts/=../../node_modules/@openzeppelin/contracts/

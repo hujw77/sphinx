@@ -1,13 +1,12 @@
 import { ethers, toBeHex } from 'ethers'
 
 export const OWNER_MULTISIG_ADDRESS =
-  '0x226F14C3e19788934Ff37C653Cf5e24caD198341'
+  '0x0f14341a7f464320319025540e8fe48ad0fe5aec'
 export const getOwnerAddress = () => {
   return process.env.SPHINX_INTERNAL__OWNER_PRIVATE_KEY
     ? new ethers.Wallet(process.env.SPHINX_INTERNAL__OWNER_PRIVATE_KEY).address
     : OWNER_MULTISIG_ADDRESS
 }
-export const EXECUTOR = '0x42761facf5e6091fca0e38f450adfb1e22bd8c3c'
 
 export const DEFAULT_ADMIN_ROLE = ethers.ZeroHash
 
@@ -41,6 +40,6 @@ export const CREATE3_PROXY_INITCODE = '0x67363d3d37363d34f03d5260086018f3'
 export const EXECUTION_LOCK_TIME = 15 * 60
 
 export const RECOMMENDED_REMAPPING =
-  '@sphinx-labs/contracts/=lib/sphinx/packages/contracts/contracts/foundry'
+  '@hujw77/contracts/=lib/sphinx/packages/contracts/contracts/foundry'
 
 export const MAX_CONTRACT_SIZE_LIMIT = 24576

@@ -42,7 +42,7 @@ import {
   FunctionCallActionInput,
   CreateActionInput,
   encodeCreateCall,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers } from 'ethers'
 import {
   getSphinxModuleImplAddress,
@@ -62,7 +62,7 @@ import {
   getCreateCallAddress,
   getGnosisSafeProxyAddress,
   getGnosisSafeInitializerData,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import { expect } from 'chai'
 
 import * as Reverter from '../../out/artifacts/Reverter.sol/Reverter.json'

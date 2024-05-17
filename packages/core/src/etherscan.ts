@@ -10,7 +10,7 @@ import {
   optimismPeripheryBuildInfo,
   remove0x,
   sphinxBuildInfo,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import { Logger } from '@eth-optimism/common-ts'
 import { ChainConfig } from '@nomicfoundation/hardhat-verify/types'
 import { Etherscan } from '@nomicfoundation/hardhat-verify/etherscan'
@@ -235,7 +235,7 @@ export const attemptVerification = async (
    * return true for contracts have been verified through source code matching. However, the source code
    * won't always appear in the Etherscan UI. We've found that in this situation if we simply attempt to
    * verify the contract, the source code will appear in the Etherscan UI.
-   * See this repo to replicate that issue: https://github.com/sphinx-labs/etherscan_verification_bug
+   * See this repo to replicate that issue: https://github.com/hujw77/etherscan_verification_bug
    *
    * It's useful to note that when attempting to verify a contract on Etherscan, an error may be thrown
    * if the contract is already verified. So to handle that, we call `etherscan.isVerified()`in the catch

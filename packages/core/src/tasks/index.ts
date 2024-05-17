@@ -3,7 +3,7 @@ import {
   DeploymentData,
   SphinxMerkleTree,
   SphinxTransaction,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import {
   BuildInfos,

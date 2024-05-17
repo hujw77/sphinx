@@ -291,7 +291,7 @@ contract SphinxUtils is SphinxConstants {
         // function, but not actually configure any options in it.
         if (isConfigObjectEmpty(_config)) {
             revert(
-                "Sphinx: Detected missing Sphinx config. Are you sure you implemented the `configureSphinx` function correctly?\nSee the configuration options reference for more information:\nhttps://github.com/sphinx-labs/sphinx/blob/master/docs/writing-scripts.md#configuration-options"
+                "Sphinx: Detected missing Sphinx config. Are you sure you implemented the `configureSphinx` function correctly?\nSee the configuration options reference for more information:\nhttps://github.com/hujw77/sphinx/blob/master/docs/writing-scripts.md#configuration-options"
             );
         }
 

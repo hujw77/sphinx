@@ -1,7 +1,7 @@
 import { join, resolve } from 'path'
 import { existsSync, mkdirSync } from 'fs'
 
-import { spawnAsync } from '@sphinx-labs/core'
+import { spawnAsync } from '@hujw77/core'
 
 import { FoundryToml } from './types'
 import { replaceEnvVariables } from './utils'

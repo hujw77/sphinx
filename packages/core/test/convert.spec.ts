@@ -2,7 +2,7 @@ import { exec } from 'child_process'
 
 import { expect } from 'chai'
 import { ethers } from 'ethers'
-import { SPHINX_NETWORKS } from '@sphinx-labs/contracts'
+import { SPHINX_NETWORKS } from '@hujw77/contracts'
 
 import {
   convertEthersTransactionReceipt,

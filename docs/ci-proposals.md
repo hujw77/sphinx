@@ -23,8 +23,8 @@ This guide will show you how to integrate proposals into your GitHub Actions CI 
 The Sphinx DevOps Platform is currently invite-only, so you need an invite link to follow along with this guide.  If you haven't already, you can [request access on our website](https://sphinx.dev).
 
 Make sure that you've already completed one of the following guides:
-- [Getting Started in a New Repository](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-quickstart.md)
-- [Getting Started in an Existing Repository](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-existing-project.md)
+- [Getting Started in a New Repository](https://github.com/hujw77/sphinx/blob/main/docs/cli-quickstart.md)
+- [Getting Started in an Existing Repository](https://github.com/hujw77/sphinx/blob/main/docs/cli-existing-project.md)
 
 Also, make sure that your `foundry.toml` has an `[rpc_endpoints]` section containing an RPC endpoint for each network you want to deploy on.
 

@@ -1,6 +1,6 @@
 import chai, { expect } from 'chai'
 import { ethers } from 'ethers'
-import { recursivelyConvertResult } from '@sphinx-labs/contracts'
+import { recursivelyConvertResult } from '@hujw77/contracts'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
 

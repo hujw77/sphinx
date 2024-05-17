@@ -1,4 +1,4 @@
-import { RECOMMENDED_REMAPPING } from '@sphinx-labs/contracts'
+import { RECOMMENDED_REMAPPING } from '@hujw77/contracts'
 
 const standardRemappings = [
   'forge-std/=node_modules/forge-std/src/',

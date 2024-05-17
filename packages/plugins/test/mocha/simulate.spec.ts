@@ -12,12 +12,9 @@ import {
   InvariantError,
   sphinxCoreExecute,
   sphinxCoreUtils,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers } from 'ethers'
-import {
-  SPHINX_NETWORKS,
-  getGnosisSafeProxyAddress,
-} from '@sphinx-labs/contracts'
+import { SPHINX_NETWORKS, getGnosisSafeProxyAddress } from '@hujw77/contracts'
 import sinon from 'sinon'
 import { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider'
 import sinonChai from 'sinon-chai'
@@ -336,7 +333,7 @@ describe('createHardhatEthersProviderProxy', () => {
     expect(timeSum % 1000).equals(0)
 
     // The following is a regression test for the 'nonce too low' bug described in this pull request
-    // description: https://github.com/sphinx-labs/sphinx/pull/1565
+    // description: https://github.com/hujw77/sphinx/pull/1565
     //
     // We check that each iteration follows the pattern: evm_snapshot -> forwarded method ->
     // evm_revert.

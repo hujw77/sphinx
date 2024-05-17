@@ -35,7 +35,7 @@ In this guide, you'll propose the deployment on the command line and then approv
 ## 1. Prerequisites
 
 * You must have an invite link to the DevOps platform because it's currently invite-only. [Request access on Sphinx's website.](https://sphinx.dev)
-* You must have an existing Foundry project that includes a Forge script. If you don't, we recommend following the [Getting Started in a New Repository guide](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-quickstart.md) instead.
+* You must have an existing Foundry project that includes a Forge script. If you don't, we recommend following the [Getting Started in a New Repository guide](https://github.com/hujw77/sphinx/blob/main/docs/cli-quickstart.md) instead.
 * You must have an RPC node provider API key. If you don't already have one, we recommend [Alchemy](https://www.alchemy.com/) or [Infura](https://www.infura.io/).
 * You must have an account that exists on live networks. This account will own your Gnosis Safe.
 * The following must be installed on your machine:
@@ -51,17 +51,17 @@ Then, install Sphinx using your preferred package manager.
 
 Yarn:
 ```
-yarn add --dev @sphinx-labs/plugins
+yarn add --dev @hujw77/plugins
 ```
 
 npm:
 ```
-npm install --save-dev @sphinx-labs/plugins
+npm install --save-dev @hujw77/plugins
 ```
 
 pnpm:
 ```
-pnpm add -D @sphinx-labs/plugins
+pnpm add -D @hujw77/plugins
 ```
 
 
@@ -101,7 +101,7 @@ node_modules/
 Configure the following remapping in either your `foundry.toml` file or `remappings.txt` file:
 
 ```
-@sphinx-labs/contracts/=lib/sphinx/packages/contracts/contracts/foundry
+@hujw77/contracts/=lib/sphinx/packages/contracts/contracts/foundry
 ```
 
 ## 7. Create a new Sphinx project
@@ -128,7 +128,7 @@ Navigate to your deployment script. In this section, we'll update it to be compa
 Add the following import in your deployment script:
 
 ```sol
-import "@sphinx-labs/contracts/SphinxPlugin.sol";
+import "@hujw77/contracts/SphinxPlugin.sol";
 ```
 
 ### b. Inherit from `Sphinx`
@@ -206,7 +206,7 @@ fs_permissions = [{ access = "read-write", path = "./"}]
 Use one of the command templates below to propose your deployment. Make sure to update the following parts of the command:
 * Replace `<PATH_TO_FORGE_SCRIPT>` with the path to your Forge script.
 * Replace `<NETWORK_NAMES>` with the testnets you want to deploy on, which must match the network names in the `rpc_endpoints` section of your `foundry.toml`.
-* If your script's entry point is a function other than `run()`, add `--sig [PARAMETERS]` to the command, where `[PARAMETERS]` is either the signature of the function to call in the script, or raw calldata. Sphinx's `--sig` parameter accepts the same arguments as Foundry's `--sig` parameter; see docs [here](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-propose.md#options).
+* If your script's entry point is a function other than `run()`, add `--sig [PARAMETERS]` to the command, where `[PARAMETERS]` is either the signature of the function to call in the script, or raw calldata. Sphinx's `--sig` parameter accepts the same arguments as Foundry's `--sig` parameter; see docs [here](https://github.com/hujw77/sphinx/blob/main/docs/cli-propose.md#options).
 
 Using Yarn or npm:
 
@@ -229,4 +229,4 @@ When the proposal is finished, go to the [Sphinx UI](https://sphinx.dev) to appr
 
 ## 13. Next steps
 
-Before you use Sphinx in production, we recommend reading the [Writing Deployment Scripts with Sphinx guide](https://github.com/sphinx-labs/sphinx/blob/main/docs/writing-scripts.md), which covers essential information for using Sphinx.
+Before you use Sphinx in production, we recommend reading the [Writing Deployment Scripts with Sphinx guide](https://github.com/hujw77/sphinx/blob/main/docs/writing-scripts.md), which covers essential information for using Sphinx.

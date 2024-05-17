@@ -7,8 +7,8 @@ Sphinx uses a custom Merkle tree data structure to allow teams to approve arbitr
 - A leaf _index_ refers to the explicit `index` field on the `SphinxLeaf` data type. It does _not_ refer to the leaf's position within the tree. [^1]
 
 ### Relevant Files
-- Merkle Tree Generation Logic: [`merkle-tree.ts`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/src/merkle-tree.ts)
-- Unit tests: [`merkle-tree.spec.ts`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/test/mocha/merkle-tree.spec.ts)
+- Merkle Tree Generation Logic: [`merkle-tree.ts`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/src/merkle-tree.ts)
+- Unit tests: [`merkle-tree.spec.ts`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/test/mocha/merkle-tree.spec.ts)
 
 ## Table of Contents
 - [Merkle Tree Architecture](#merkle-tree-architecture)
@@ -57,7 +57,7 @@ You'll notice that each Merkle leaf has an `index`. The Merkle leaves must be ex
 
 ### Merkle Leaf Types
 
-On-chain, all leaf types are represented as a [`SphinxLeaf`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol#L28). Each leaf in the Merkle tree contains the following fields:
+On-chain, all leaf types are represented as a [`SphinxLeaf`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol#L28). Each leaf in the Merkle tree contains the following fields:
 * `uint256 chainId`: The target chain id.
 * `uint256 index`: The index of the leaf.
 * `SphinxLeafType leafType`: The type of the leaf, either `APPROVE`, `EXECUTE`, or `CANCEL`.
@@ -100,7 +100,7 @@ These invariants aim to define an unambiguous, consistent structure for Sphinx M
 ### 1. Must be executable on all chains for which there is at least one Merkle leaf.
 We assume that the input Merkle leaf data satisfies the on-chain conditions in the corresponding `SphinxModuleProxy` contract and that the executor is not buggy. See the [Assumptions section](#assumptions) for more information.
 
-Notice this invariant is not tested in [`merkle-tree.spec.ts`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/test/mocha/merkle-tree.spec.ts). Instead, we test this invariant by using our Merkle tree generation logic for the [main `SphinxModuleProxy` tests](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol). These tests cover a wide variety of single and multichain cases.
+Notice this invariant is not tested in [`merkle-tree.spec.ts`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/test/mocha/merkle-tree.spec.ts). Instead, we test this invariant by using our Merkle tree generation logic for the [main `SphinxModuleProxy` tests](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol). These tests cover a wide variety of single and multichain cases.
 
 ### 2. If `arbitraryChain` is false in every `APPROVE` leaf, then there must be exactly one `APPROVE` leaf or `CANCEL` leaf per `chainId`
 Constructing a tree that contains `APPROVE` or `CANCEL` leaves that approve or cancel multiple separate deployments on a single chain would lead to an ambiguous situation for the executor. It would be unclear which leaf should be approved or canceled. So we impose the restriction that in a valid Merkle tree, there must be exactly one `APPROVE` or `CANCEL` leaf per chain.
@@ -126,7 +126,7 @@ To ensure that all the `EXECUTE` leaves are executed in the correct order, they 
 ### 9. Merkle tree leaves must be ordered in the tree by the leaf's hash descending
 We enforce that each leaf in a Sphinx Merkle tree must be ordered by the leaf's hash descending. This ordering ensures the Merkle tree can be reproduced reliably by off-chain tooling.
 
-The leaf's hash is defined as the ABI encoded [`SphinxLeaf`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol#L28) double-hashed using `keccak256`. For reference, the hash of the `SphinxLeaf` is [calculated by the `SphinxModule` in the `_getLeafHash` function](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxModule.sol#L414).
+The leaf's hash is defined as the ABI encoded [`SphinxLeaf`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol#L28) double-hashed using `keccak256`. For reference, the hash of the `SphinxLeaf` is [calculated by the `SphinxModule` in the `_getLeafHash` function](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxModule.sol#L414).
 
 Note that for the Sphinx Merkle tree generation logic we assume the `@openzeppelin/merkle-tree` dependency properly hashes and sorts the tree leaves. See the [Dependencies](#dependencies) for more details.
 
@@ -136,13 +136,13 @@ We provide a utility for generating Sphinx Merkle trees used by the official Sph
 #### `const makeSphinxMerkleTree = (deploymentData: DeploymentData): SphinxMerkleTree`
 
 #### Input
-Accepts a [DeploymentData](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/src/merkle-tree.ts#L45) object where the keys are canonical chain ids, and the values are deployment data objects which contain all of the necessary info to assemble a `SphinxMerkleTree`. The Merkle tree generation function should be agnostic to the transaction data source so anyone can generate a tree based on transactions from any scripting framework (i.e. Foundry, Hardhat Ignition, some arbitrary future framework).
+Accepts a [DeploymentData](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/src/merkle-tree.ts#L45) object where the keys are canonical chain ids, and the values are deployment data objects which contain all of the necessary info to assemble a `SphinxMerkleTree`. The Merkle tree generation function should be agnostic to the transaction data source so anyone can generate a tree based on transactions from any scripting framework (i.e. Foundry, Hardhat Ignition, some arbitrary future framework).
 
 #### Output
-Outputs a [SphinxMerkleTree](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/src/merkle-tree.ts#L128) object that follows the above [architecture](#merkle-tree-architecture) and [invariants](#high-level-merkle-tree-invariants).
+Outputs a [SphinxMerkleTree](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/src/merkle-tree.ts#L128) object that follows the above [architecture](#merkle-tree-architecture) and [invariants](#high-level-merkle-tree-invariants).
 
 ## Dependencies
-The Merkle tree generation utility makes calls to external libraries. We use [`ethers` version 6.7.0](https://github.com/ethers-io/ethers.js/releases/tag/v6.7.0) to handle ABI encoding tree leaf `data` and [`@openzeppelin/merkle-tree` version 1.0.5](https://github.com/OpenZeppelin/merkle-tree/releases/tag/v1.0.5) to assemble the Merkle tree. We test that interactions with these libraries work correctly in our [SphinxModuleProxy tests](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol) which test that Merkle trees generated by this logic have data that is encoded correctly and that they are executable on-chain. However, we do not test the internals of these libraries and instead rely on the assumption that they are robust and bug-free.
+The Merkle tree generation utility makes calls to external libraries. We use [`ethers` version 6.7.0](https://github.com/ethers-io/ethers.js/releases/tag/v6.7.0) to handle ABI encoding tree leaf `data` and [`@openzeppelin/merkle-tree` version 1.0.5](https://github.com/OpenZeppelin/merkle-tree/releases/tag/v1.0.5) to assemble the Merkle tree. We test that interactions with these libraries work correctly in our [SphinxModuleProxy tests](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol) which test that Merkle trees generated by this logic have data that is encoded correctly and that they are executable on-chain. However, we do not test the internals of these libraries and instead rely on the assumption that they are robust and bug-free.
 
 Specifically, the Sphinx Merkle tree generation logic relies on the `@openzeppelin/merkle-tree` dependency to [sort](https://github.com/OpenZeppelin/merkle-tree/blob/7734be7008d0669d73a5e09c0823b32290409e3d/src/standard.ts#L39-L43) the tree leaves in descending order by their [hash](https://github.com/OpenZeppelin/merkle-tree/blob/7734be7008d0669d73a5e09c0823b32290409e3d/src/standard.ts#L9). This is required to satisfy [invariant 9](#9-merkle-tree-leaves-must-be-ordered-in-the-tree-by-the-leafs-hash-descending). We assume that their hashing and sorting logic is robust and bug-free.
 
@@ -161,7 +161,7 @@ We assume that executors like the Sphinx DevOps Platform will use the invariants
 Merkle trees generated with this logic are only valid to the extent that the data used to create them is accurate. We assume that the input data is correct with respect to the current state of the `SphinxModuleProxy` on any given network. I.e. we assume that the input `safeProxy` and `moduleProxy` addresses are valid, that the `nonce` is correct, etc. Furthermore, we assume that the input transaction data itself is valid.
 
 ### Bug-Free Executors
-The Merkle trees generated with this logic are executable to the extent that the process used to execute them is bug-free. For example, a buggy executor could take a valid Merkle tree leaf and attempt to execute it on the incorrect chain or against the incorrect `SphinxModuleProxy`. This would result in the transaction reverting. So, for this document, we assume that the executor is bug-free. For more information on buggy executors, see the [Assumptions section of the SphinxModuleProxy specification](https://github.com/sphinx-labs/sphinx/blob/develop/specs/sphinx-module-proxy.md#assumptions).
+The Merkle trees generated with this logic are executable to the extent that the process used to execute them is bug-free. For example, a buggy executor could take a valid Merkle tree leaf and attempt to execute it on the incorrect chain or against the incorrect `SphinxModuleProxy`. This would result in the transaction reverting. So, for this document, we assume that the executor is bug-free. For more information on buggy executors, see the [Assumptions section of the SphinxModuleProxy specification](https://github.com/hujw77/sphinx/blob/develop/specs/sphinx-module-proxy.md#assumptions).
 
 ## Footnotes
 [^1]: Because the Sphinx Merkle tree contains leaves intended to be executed across multiple networks and not all leaves will be executed on all networks, we cannot rely on the position of the leaves within the tree to determine the leaf index. Instead, we use an explicit `index` field on each leaf.

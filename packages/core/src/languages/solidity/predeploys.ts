@@ -11,7 +11,7 @@ import {
   getManagedServiceAddress,
   getOwnerAddress,
   getSphinxConstants,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider'
 import ora from 'ora'
 

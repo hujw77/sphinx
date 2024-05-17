@@ -1,10 +1,10 @@
 import { expect } from 'chai'
 import { ConstructorFragment, ethers, parseUnits } from 'ethers'
-import { ConfigArtifacts } from '@sphinx-labs/core'
+import { ConfigArtifacts } from '@hujw77/core'
 import {
   CREATE3_PROXY_INITCODE,
   parseFoundryContractArtifact,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import { makeAddress } from '../common'
 import * as MyContract1FoundryArtifact from '../../../out/artifacts/MyContracts.sol/MyContract1.json'

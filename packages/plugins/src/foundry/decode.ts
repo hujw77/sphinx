@@ -17,7 +17,7 @@ import {
   getMaxGasLimit,
   prettyFunctionCall,
   calculateMerkleLeafGas,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { AbiCoder, ConstructorFragment, ethers } from 'ethers'
 import {
   DETERMINISTIC_DEPLOYMENT_PROXY_ADDRESS,
@@ -25,7 +25,7 @@ import {
   recursivelyConvertResult,
   getCreateCallAddress,
   AccountAccessKind,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import {
   convertLibraryFormat,

@@ -1,6 +1,6 @@
 # `SphinxModuleProxy` Contract Specification
 
-> This document assumes that you have read the [Sphinx Merkle Tree specification](https://github.com/sphinx-labs/sphinx/blob/develop/specs/merkle-tree.md). Please read it before continuing.
+> This document assumes that you have read the [Sphinx Merkle Tree specification](https://github.com/hujw77/sphinx/blob/develop/specs/merkle-tree.md). Please read it before continuing.
 
 The `SphinxModuleProxy` submits transactions in a Gnosis Safe and verifies that the Gnosis Safe owners have approved the transactions. Each `SphinxModuleProxy` belongs to a single Gnosis Safe.
 
@@ -32,10 +32,10 @@ through it.
 
 ## Relevant Files
 
-- The interface: [`ISphinxModule.sol`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/interfaces/ISphinxModule.sol)
-- The implementation contract: [`SphinxModule.sol`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxModule.sol)
-- Unit tests: [`SphinxModuleProxy.t.sol`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol)
-- Key data structures: [`SphinxDataTypes.sol`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol)
+- The interface: [`ISphinxModule.sol`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/interfaces/ISphinxModule.sol)
+- The implementation contract: [`SphinxModule.sol`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxModule.sol)
+- Unit tests: [`SphinxModuleProxy.t.sol`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol)
+- Key data structures: [`SphinxDataTypes.sol`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol)
 
 _Note_: There is no source file for the `SphinxModuleProxy` because we use OpenZeppelin's [`Clones.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.3/contracts/proxy/Clones.sol) for deploying EIP-1167 proxies.
 
@@ -113,7 +113,7 @@ In this flow chart, you'll notice that it's possible to approve a Merkle root th
   - Rationale: This prevents the possibility that an attacker could take over an uninitialized `SphinxModule` implementation contract.
 - The `SphinxModuleProxy` must be initialized with a Gnosis Safe singleton that has a version compatible with Sphinx.[^4]
   - Rationale: This prevents the user from mistakenly adding a `SphinxModuleProxy` to an incompatible Gnosis Safe, which could potentially lead to vulnerabilities in the Gnosis Safe.
-- All of the behavior described in this specification must apply to all [Gnosis Safe contracts supported by Sphinx](https://github.com/sphinx-labs/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions).
+- All of the behavior described in this specification must apply to all [Gnosis Safe contracts supported by Sphinx](https://github.com/hujw77/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions).
 
 ## Function-Level Invariants
 
@@ -121,7 +121,7 @@ In this flow chart, you'll notice that it's possible to approve a Merkle root th
 
 - Must revert if this function has already been successfully called.
 - Must revert if the input Gnosis Safe proxy is the zero address.
-- Must revert if the input Gnosis Safe proxy's singleton has a `VERSION()` function that does not equal the version of a [Gnosis Safe contract supported by Sphinx](https://github.com/sphinx-labs/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions).
+- Must revert if the input Gnosis Safe proxy's singleton has a `VERSION()` function that does not equal the version of a [Gnosis Safe contract supported by Sphinx](https://github.com/hujw77/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions).
 - A successful call must set the Gnosis Safe proxy address in the `SphinxModuleProxy`.
 
 #### `function approve(bytes32 _root, SphinxLeafWithProof memory _leafWithProof, bytes memory _signatures) public`
@@ -145,7 +145,7 @@ In this flow chart, you'll notice that it's possible to approve a Merkle root th
 - Must revert if an insufficient number of Gnosis Safe owners have signed the EIP-712 data that contains the input Merkle root.
 - A successful call must:
   - Emit a `SphinxMerkleRootApproved` event in the `SphinxModuleProxy`.
-  - Set all of the fields in the [`MerkleRootState` struct](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol#L68).
+  - Set all of the fields in the [`MerkleRootState` struct](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol#L68).
   - Increment the Merkle root nonce in the `SphinxModuleProxy`.
 - If there is a single leaf in the Merkle tree for the current chain, a successful call must also:
   - Emit a `SphinxMerkleRootCompleted` event in the `SphinxModuleProxy` using the input Merkle root.
@@ -177,7 +177,7 @@ In this flow chart, you'll notice that it's possible to approve a Merkle root th
   - Set the active Merkle root's status to `CANCELED`.
   - Set the active Merkle root to `bytes32(0)`.
   - Emit a `SphinxMerkleRootCompleted` event in the `SphinxModuleProxy`.
-  - Set all of the fields in the [`MerkleRootState` struct](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol) for the input Merkle root.
+  - Set all of the fields in the [`MerkleRootState` struct](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxDataTypes.sol) for the input Merkle root.
   - Increment the Merkle root nonce in the `SphinxModuleProxy`.
 
 #### `function execute(SphinxLeafWithProof[] memory _leavesWithProofs) public`
@@ -194,7 +194,7 @@ In this flow chart, you'll notice that it's possible to approve a Merkle root th
   - Must revert if the Merkle root can be executed on an arbitrary chain (as indicated by the `arbitraryChain` field) _and_ the leaf's chain ID field is not `0`.
     - Rationale: This is just a convention. When `arbitraryChain` is `true`, the leaf's chain ID must be `0`.
   - Must revert if the current Merkle leaf is executed in the incorrect order (i.e. its index isn't correct).
-  - Must revert if the transaction has an [insufficient amount of gas](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/contracts/core/SphinxModule.sol#L335-L352).
+  - Must revert if the transaction has an [insufficient amount of gas](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/contracts/core/SphinxModule.sol#L335-L352).
   - A successful iteration must:
     - Increment the number of leaves executed for the active Merkle root by `1`.
     - Attempt to execute a transaction in the user's Gnosis Safe using the data in the current Merkle leaf.
@@ -202,7 +202,7 @@ In this flow chart, you'll notice that it's possible to approve a Merkle root th
       - Rationale: This would cause the Merkle root to be active indefinitely until they manually cancel it.
       - Assumptions:
         - The user-supplied `gas` amount is low enough to execute on the current network (e.g. it's not greater than the current block gas limit).
-        - The account at the Gnosis Safe's address is one of the [Gnosis Safe contracts supported by Sphinx](https://github.com/sphinx-labs/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions).
+        - The account at the Gnosis Safe's address is one of the [Gnosis Safe contracts supported by Sphinx](https://github.com/hujw77/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions).
     - If the call to the Gnosis Safe is successful:
       - Must emit a `SphinxActionSucceeded` event in the `SphinxModuleProxy`.
     - If the call to the Gnosis Safe is unsuccessful for any reason:
@@ -254,14 +254,14 @@ which would prevent the deployment from being executable.
 
 ### Dependencies
 
-The `SphinxModuleProxy` makes several calls to OpenZeppelin's Contracts library and Gnosis Safe's contracts. We test that the interactions with these contracts work properly in the [unit tests for the `SphinxModuleProxy`](https://github.com/sphinx-labs/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol), but we don't thoroughly test the internals of these external contracts. Instead, we assume that they're secure and have been thoroughly tested by their authors. These contracts are:
+The `SphinxModuleProxy` makes several calls to OpenZeppelin's Contracts library and Gnosis Safe's contracts. We test that the interactions with these contracts work properly in the [unit tests for the `SphinxModuleProxy`](https://github.com/hujw77/sphinx/blob/develop/packages/contracts/test/SphinxModuleProxy.t.sol), but we don't thoroughly test the internals of these external contracts. Instead, we assume that they're secure and have been thoroughly tested by their authors. These contracts are:
 - OpenZeppelin v4.9.3:
   - [`Initializable`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.9.3/contracts/proxy/utils/Initializable.sol): Initializes the `SphinxModuleProxy` and prevents the `SphinxModule` implementation from being initialized directly.
   - [`ReentrancyGuard`](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard): Prevents re-entrancy attacks in the `approve` and `execute` functions in the `SphinxModuleProxy`.
   - [`MerkleProof`](https://docs.openzeppelin.com/contracts/4.x/api/utils#MerkleProof): Verifies that a Merkle leaf belongs to a Merkle root, given a Merkle proof.
 - Gnosis Safe:
   - `Enum` ([v1.3.0](https://github.com/safe-global/safe-contracts/blob/v1.3.0-libs.0/contracts/common/Enum.sol), [v1.4.1](https://github.com/safe-global/safe-contracts/blob/v1.4.1-build.0/contracts/common/Enum.sol)): Contains the types of operations that can occur in a Gnosis Safe (i.e. `Call` and `DelegateCall`).
-  - [`GnosisSafe`](https://github.com/sphinx-labs/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions): Contains the logic for verifying Gnosis Safe owner signature and executing the user's transactions.
+  - [`GnosisSafe`](https://github.com/hujw77/sphinx/blob/develop/specs/introduction.md#supported-gnosis-safe-versions): Contains the logic for verifying Gnosis Safe owner signature and executing the user's transactions.
 
 ### Malicious Gnosis Safe Singleton
 
@@ -275,4 +275,4 @@ The `SphinxModuleProxy`'s `initializer` function checks that the user's Gnosis S
 
 [^3]: It's not possible to reuse a signed Merkle root in a different Gnosis Safe because the Merkle root can only be executed in one `SphinxModuleProxy`, and each `SphinxModuleProxy` can only execute transactions on one Gnosis Safe.
 
-[^4]: We check that a Gnosis Safe singleton has a compatible version by checking its string `VERSION()` function. We considered checking the `codehash` of the Gnosis Safe proxy and singleton instead, since this provides additional protection against using an invalid Gnosis Safe. However, we decided not to use the `codehash` because one chain that we intend to support (Polygon zkEVM) appears to use a different calculation for the `codehash`. This is a difference that appears to be undocumented. An alternative solution is to pass an array of valid code hashes into the constructor of the `SphinxModule`, which would allow us to support chains with non-standard code hashes like Polygon zkEVM. However, we decided not to do this because it would change the address of the `SphinxModule` on these chains, which would change the address of the user's Gnosis Safe when deploying with [Sphinx's standard Gnosis Safe deployment method](https://github.com/sphinx-labs/sphinx/blob/develop/specs/sphinx-module-proxy-factory.md#2-deploy-a-gnosis-safe-and-enable-a-sphinxmoduleproxy-in-a-single-transaction).
+[^4]: We check that a Gnosis Safe singleton has a compatible version by checking its string `VERSION()` function. We considered checking the `codehash` of the Gnosis Safe proxy and singleton instead, since this provides additional protection against using an invalid Gnosis Safe. However, we decided not to use the `codehash` because one chain that we intend to support (Polygon zkEVM) appears to use a different calculation for the `codehash`. This is a difference that appears to be undocumented. An alternative solution is to pass an array of valid code hashes into the constructor of the `SphinxModule`, which would allow us to support chains with non-standard code hashes like Polygon zkEVM. However, we decided not to do this because it would change the address of the `SphinxModule` on these chains, which would change the address of the user's Gnosis Safe when deploying with [Sphinx's standard Gnosis Safe deployment method](https://github.com/hujw77/sphinx/blob/develop/specs/sphinx-module-proxy-factory.md#2-deploy-a-gnosis-safe-and-enable-a-sphinxmoduleproxy-in-a-single-transaction).

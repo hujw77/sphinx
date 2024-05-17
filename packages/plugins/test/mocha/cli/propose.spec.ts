@@ -12,9 +12,9 @@ import {
   fetchChainIdForNetwork,
   getSphinxWalletPrivateKey,
   isLiveNetwork,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers } from 'ethers'
-import { DETERMINISTIC_DEPLOYMENT_PROXY_ADDRESS } from '@sphinx-labs/contracts'
+import { DETERMINISTIC_DEPLOYMENT_PROXY_ADDRESS } from '@hujw77/contracts'
 
 import * as MyContract2Artifact from '../../../out/artifacts/MyContracts.sol/MyContract2.json'
 import * as MyLargeContractArtifact from '../../../out/artifacts/MyContracts.sol/MyLargeContract.json'

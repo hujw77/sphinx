@@ -2,15 +2,15 @@ import * as fs from 'fs'
 import path from 'path'
 import { exec } from 'child_process'
 
-import { SphinxJsonRpcProvider, execAsync } from '@sphinx-labs/core'
+import { SphinxJsonRpcProvider, execAsync } from '@hujw77/core'
 import {
   sampleTestFileName,
   sampleScriptFileName,
   sampleContractFileName,
-} from '@sphinx-labs/plugins'
+} from '@hujw77/plugins'
 import { expect } from 'chai'
 import { ethers } from 'ethers'
-import { getGnosisSafeProxyAddress } from '@sphinx-labs/contracts'
+import { getGnosisSafeProxyAddress } from '@hujw77/contracts'
 import * as dotenv from 'dotenv'
 
 import { deleteForgeProject } from './common'

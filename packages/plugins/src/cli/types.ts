@@ -7,7 +7,7 @@ import {
   NetworkConfig,
   BuildInfos,
   NetworkGasEstimate,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 
 import { FoundryToml } from '../foundry/types'
 import { SphinxContext } from './context'
@@ -30,6 +30,10 @@ export interface DeployCommandArgs {
   verify: boolean
   targetContract?: string
   sig?: Array<string>
+}
+
+export interface ExecuteCommandArgs {
+  proposalPath: string
 }
 
 export interface FetchArtifactsArgs {

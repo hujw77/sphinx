@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { ethers, parseUnits } from 'ethers'
-import { CREATE3_PROXY_INITCODE, Operation } from '@sphinx-labs/contracts'
+import { CREATE3_PROXY_INITCODE, Operation } from '@hujw77/contracts'
 
 import {
   Create2ActionInput,

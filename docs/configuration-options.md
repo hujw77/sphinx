@@ -43,7 +43,7 @@ The number of owners required to approve transactions.
 sphinxConfig.projectName = "My_Project";
 ```
 
-The name of your project, which is the top-level directory for your [deployment artifacts](https://github.com/sphinx-labs/sphinx/blob/main/docs/deployment-artifacts.md).
+The name of your project, which is the top-level directory for your [deployment artifacts](https://github.com/hujw77/sphinx/blob/main/docs/deployment-artifacts.md).
 
 ### `uint256 saltNonce` (Required)
 

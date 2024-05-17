@@ -49,7 +49,7 @@ function configureSphinx() public override {
 }
 ```
 
-See the [Configuration Reference](https://github.com/sphinx-labs/sphinx/blob/main/docs/configuration-options.md) if you'd like to learn more about these fields.
+See the [Configuration Reference](https://github.com/hujw77/sphinx/blob/main/docs/configuration-options.md) if you'd like to learn more about these fields.
 
 ## Deployment failures
 

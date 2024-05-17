@@ -1,6 +1,6 @@
 {
-  "name": "@sphinx-labs/plugins",
-  "version": "0.32.2",
+  "name": "@hujw77/plugins",
+  "version": "0.1.0",
   "description": "Sphinx plugins",
   "main": "dist/index",
   "types": "dist/index",
@@ -33,7 +33,7 @@
     "sync:rpc": "infisical export --path='/RPC' --env=dev >> .env",
     "write-version": "npx ts-node script/write-version.ts > src/cli/version.ts"
   },
-  "homepage": "https://github.com/sphinx-labs/sphinx/tree/main/packages/plugins#readme",
+  "homepage": "https://github.com/hujw77/sphinx/tree/main/packages/plugins#readme",
   "license": "MIT",
   "author": "Kelvin Fichter",
   "repository": {
@@ -42,12 +42,13 @@
   },
   "dependencies": {
     "@eth-optimism/contracts": "^0.5.40",
+    "@eth-optimism/common-ts": "^0.7.1",
     "@ethersproject/bignumber": "^5.7.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.5",
     "@openzeppelin/contracts": "^4.8.1",
     "@openzeppelin/hardhat-upgrades": "^1.22.1",
-    "@sphinx-labs/contracts": "^0.22.0",
-    "@sphinx-labs/core": "^0.25.2",
+    "@hujw77/contracts": "^0.1.0",
+    "@hujw77/core": "^0.1.0",
     "@swc/core": "1.3.75",
     "chalk": "^4.1.2",
     "core-js": "^3.31.1",

@@ -1,4 +1,4 @@
-import { BuildInfo } from '@sphinx-labs/core'
+import { BuildInfo } from '@hujw77/core'
 
 /**
  * This function is used to trim down the build info file to exactly the fields we specify in our type.

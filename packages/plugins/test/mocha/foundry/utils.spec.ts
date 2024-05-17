@@ -13,12 +13,12 @@ import {
   MAX_CONTRACT_SIZE_LIMIT,
   parseFoundryContractArtifact,
   remove0x,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import {
   GetConfigArtifacts,
   SphinxJsonRpcProvider,
   getBytesLength,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 
 chai.use(chaiAsPromised)
 const expect = chai.expect
@@ -349,11 +349,11 @@ describe('Utils', async () => {
         out: 'out',
         libs: ['node_modules'],
         remappings: [
-          '@sphinx-labs/plugins/=node_modules/@sphinx-labs/plugins/contracts/foundry/',
-          '@sphinx-labs/contracts/=node_modules/@sphinx-labs/contracts/',
+          '@hujw77/plugins/=node_modules/@hujw77/plugins/contracts/foundry/',
+          '@hujw77/contracts/=node_modules/@hujw77/contracts/',
           'forge-std/=node_modules/forge-std/src/',
-          'sphinx-forge-std/=node_modules/@sphinx-labs/plugins/node_modules/sphinx-forge-std/src/',
-          'sphinx-solmate/=node_modules/@sphinx-labs/plugins/node_modules/sphinx-solmate/src/',
+          'sphinx-forge-std/=node_modules/@hujw77/plugins/node_modules/sphinx-forge-std/src/',
+          'sphinx-solmate/=node_modules/@hujw77/plugins/node_modules/sphinx-solmate/src/',
           'ds-test/=node_modules/ds-test/src/',
           '@openzeppelin/contracts-upgradeable/=../../node_modules/@openzeppelin/contracts-upgradeable/',
           '@openzeppelin/contracts/=../../node_modules/@openzeppelin/contracts/',
@@ -500,11 +500,11 @@ describe('Utils', async () => {
         out: 'out',
         libs: ['node_modules'],
         remappings: [
-          '@sphinx-labs/plugins/=node_modules/@sphinx-labs/plugins/contracts/foundry/',
-          '@sphinx-labs/contracts/=node_modules/@sphinx-labs/contracts/',
+          '@hujw77/plugins/=node_modules/@hujw77/plugins/contracts/foundry/',
+          '@hujw77/contracts/=node_modules/@hujw77/contracts/',
           'forge-std/=node_modules/forge-std/src/',
-          'sphinx-forge-std/=node_modules/@sphinx-labs/plugins/node_modules/sphinx-forge-std/src/',
-          'sphinx-solmate/=node_modules/@sphinx-labs/plugins/node_modules/sphinx-solmate/src/',
+          'sphinx-forge-std/=node_modules/@hujw77/plugins/node_modules/sphinx-forge-std/src/',
+          'sphinx-solmate/=node_modules/@hujw77/plugins/node_modules/sphinx-solmate/src/',
           'ds-test/=node_modules/ds-test/src/',
           '@openzeppelin/contracts-upgradeable/=../../node_modules/@openzeppelin/contracts-upgradeable/',
           '@openzeppelin/contracts/=../../node_modules/@openzeppelin/contracts/',

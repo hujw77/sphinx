@@ -7,7 +7,7 @@ import {
   isLinkReferences,
   isNonNullObject,
   remove0x,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import axios from 'axios'
 
 import {

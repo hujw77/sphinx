@@ -1,4 +1,4 @@
-# @sphinx-labs/plugins
+# @hujw77/plugins
 
 ## 0.32.2
 
@@ -6,7 +6,7 @@
 
 - fbf95a5: Rollback internal hardhat sim change
 - Updated dependencies [fbf95a5]
-  - @sphinx-labs/core@0.25.2
+  - @hujw77/core@0.25.2
 
 ## 0.32.1
 
@@ -14,7 +14,7 @@
 
 - e65fb7a: Improve reliability of internal hardhat simulation in monorepos
 - Updated dependencies [e65fb7a]
-  - @sphinx-labs/core@0.25.1
+  - @hujw77/core@0.25.1
 
 ## 0.32.0
 
@@ -25,8 +25,8 @@
 ### Patch Changes
 
 - Updated dependencies [a978b3b]
-  - @sphinx-labs/contracts@0.22.0
-  - @sphinx-labs/core@0.25.0
+  - @hujw77/contracts@0.22.0
+  - @hujw77/core@0.25.0
 
 ## 0.31.12
 
@@ -38,8 +38,8 @@
 - Updated dependencies [01f4d34]
 - Updated dependencies [b54c683]
 - Updated dependencies [89d421b]
-  - @sphinx-labs/contracts@0.21.11
-  - @sphinx-labs/core@0.24.9
+  - @hujw77/contracts@0.21.11
+  - @hujw77/core@0.24.9
 
 ## 0.31.11
 
@@ -49,8 +49,8 @@
 - 9fa2e5c: Temporarily remove tx data from proposal requests
 - Updated dependencies [4052629]
 - Updated dependencies [9fa2e5c]
-  - @sphinx-labs/contracts@0.21.10
-  - @sphinx-labs/core@0.24.8
+  - @hujw77/contracts@0.21.10
+  - @hujw77/core@0.24.8
 
 ## 0.31.10
 
@@ -58,8 +58,8 @@
 
 - 6656771: Allow generating artifacts for deprecated networks
 - Updated dependencies [6656771]
-  - @sphinx-labs/contracts@0.21.9
-  - @sphinx-labs/core@0.24.7
+  - @hujw77/contracts@0.21.9
+  - @hujw77/core@0.24.7
 
 ## 0.31.9
 
@@ -69,8 +69,8 @@
 - f6e0e06: Deprecate Polygon Mumbai
 - Updated dependencies [cc5e9e6]
 - Updated dependencies [f6e0e06]
-  - @sphinx-labs/contracts@0.21.8
-  - @sphinx-labs/core@0.24.6
+  - @hujw77/contracts@0.21.8
+  - @hujw77/core@0.24.6
 
 ## 0.31.8
 
@@ -80,8 +80,8 @@
 - caf22d4: Support Polygon Amoy
 - Updated dependencies [50162e5]
 - Updated dependencies [caf22d4]
-  - @sphinx-labs/contracts@0.21.7
-  - @sphinx-labs/core@0.24.5
+  - @hujw77/contracts@0.21.7
+  - @hujw77/core@0.24.5
 
 ## 0.31.7
 
@@ -89,7 +89,7 @@
 
 - 7f8beaa: Remove depth from Sphinx validate
 - Updated dependencies [7f8beaa]
-  - @sphinx-labs/contracts@0.21.6
+  - @hujw77/contracts@0.21.6
 
 ## 0.31.6
 
@@ -97,7 +97,7 @@
 
 - 957a108: Bump core package version
 - Updated dependencies [957a108]
-  - @sphinx-labs/core@0.24.4
+  - @hujw77/core@0.24.4
 
 ## 0.31.5
 
@@ -105,7 +105,7 @@
 
 - c0fec2d: Lower hardcoded merkle leaf gas on Pangolin
 - Updated dependencies [c0fec2d]
-  - @sphinx-labs/contracts@0.21.5
+  - @hujw77/contracts@0.21.5
 
 ## 0.31.4
 
@@ -113,8 +113,8 @@
 
 - ddfec4c: Update gas heuristics to support large contracts on Rootstock
 - Updated dependencies [ddfec4c]
-  - @sphinx-labs/contracts@0.21.4
-  - @sphinx-labs/core@0.24.3
+  - @hujw77/contracts@0.21.4
+  - @hujw77/core@0.24.3
 
 ## 0.31.3
 
@@ -123,8 +123,8 @@
 - 72f363e: Hardcode merkle leaf gas on Darwinia Pangolin
 - Updated dependencies [0c375c0]
 - Updated dependencies [72f363e]
-  - @sphinx-labs/core@0.24.2
-  - @sphinx-labs/contracts@0.21.3
+  - @hujw77/core@0.24.2
+  - @hujw77/contracts@0.21.3
 
 ## 0.31.2
 
@@ -138,8 +138,8 @@
 - Updated dependencies [52ae5f1]
 - Updated dependencies [c7af7ef]
 - Updated dependencies [4f5a1fc]
-  - @sphinx-labs/core@0.24.1
-  - @sphinx-labs/contracts@0.21.2
+  - @hujw77/core@0.24.1
+  - @hujw77/contracts@0.21.2
 
 ## 0.31.1
 
@@ -147,7 +147,7 @@
 
 - 19370da: Add support for Darwinia Pangolin
 - Updated dependencies [19370da]
-  - @sphinx-labs/contracts@0.21.1
+  - @hujw77/contracts@0.21.1
 
 ## 0.31.0
 
@@ -166,8 +166,8 @@
 - Updated dependencies [dd0cfcc]
 - Updated dependencies [28b6111]
 - Updated dependencies [dead3ae]
-  - @sphinx-labs/core@0.24.0
-  - @sphinx-labs/contracts@0.21.0
+  - @hujw77/core@0.24.0
+  - @hujw77/contracts@0.21.0
 
 ## 0.30.12
 
@@ -175,8 +175,8 @@
 
 - 8e2d3fe: Add support for Support Taiko Katla, Darwinia Pangolin, Mode, Mode Sepolia, Polygon ZKEVM Cardona, Linea Sepolia
 - Updated dependencies [8e2d3fe]
-  - @sphinx-labs/contracts@0.20.8
-  - @sphinx-labs/core@0.23.10
+  - @hujw77/contracts@0.20.8
+  - @hujw77/core@0.23.10
 
 ## 0.30.11
 
@@ -184,8 +184,8 @@
 
 - 3446011: Support sending funds to Safe during deployment
 - Updated dependencies [3446011]
-  - @sphinx-labs/contracts@0.20.7
-  - @sphinx-labs/core@0.23.8
+  - @hujw77/contracts@0.20.7
+  - @hujw77/core@0.23.8
 
 ## 0.30.10
 
@@ -197,8 +197,8 @@
 - Updated dependencies [f176e46]
 - Updated dependencies [d8ffb22]
 - Updated dependencies [c8e5320]
-  - @sphinx-labs/contracts@0.20.6
-  - @sphinx-labs/core@0.23.7
+  - @hujw77/contracts@0.20.6
+  - @hujw77/core@0.23.7
 
 ## 0.30.9
 
@@ -208,8 +208,8 @@
 - d3057c7: Hardcode Merkle leaf gas field on Moonbeam networks
 - Updated dependencies [643bcb4]
 - Updated dependencies [d3057c7]
-  - @sphinx-labs/core@0.23.6
-  - @sphinx-labs/contracts@0.20.5
+  - @hujw77/core@0.23.6
+  - @hujw77/contracts@0.20.5
 
 ## 0.30.8
 
@@ -223,7 +223,7 @@
 
 - e2fc1e9: Fix simulation bugs
 - Updated dependencies [e2fc1e9]
-  - @sphinx-labs/core@0.23.5
+  - @hujw77/core@0.23.5
 
 ## 0.30.6
 
@@ -241,8 +241,8 @@
 - Updated dependencies [edf33c0]
 - Updated dependencies [4e2ae6d]
 - Updated dependencies [ff4a186]
-  - @sphinx-labs/core@0.23.4
-  - @sphinx-labs/contracts@0.20.4
+  - @hujw77/core@0.23.4
+  - @hujw77/contracts@0.20.4
 
 ## 0.30.5
 
@@ -256,8 +256,8 @@
 - Updated dependencies [f33d464]
 - Updated dependencies [b036600]
 - Updated dependencies [bdfb0d1]
-  - @sphinx-labs/contracts@0.20.3
-  - @sphinx-labs/core@0.23.3
+  - @hujw77/contracts@0.20.3
+  - @hujw77/core@0.23.3
 
 ## 0.30.4
 
@@ -274,8 +274,8 @@
 - Updated dependencies [0d8af8f]
 - Updated dependencies [a6e1473]
 - Updated dependencies [caa8515]
-  - @sphinx-labs/core@0.23.2
-  - @sphinx-labs/contracts@0.20.2
+  - @hujw77/core@0.23.2
+  - @hujw77/contracts@0.20.2
 
 ## 0.30.2
 
@@ -283,7 +283,7 @@
 
 - fb439d6: Support installing Sphinx Library contracts via NPM
 - Updated dependencies [fb439d6]
-  - @sphinx-labs/contracts@0.20.1
+  - @hujw77/contracts@0.20.1
 
 ## 0.30.1
 
@@ -291,7 +291,7 @@
 
 - b304407: Use fixed hardhat version
 - Updated dependencies [b304407]
-  - @sphinx-labs/core@0.23.1
+  - @hujw77/core@0.23.1
 
 ## 0.30.0
 
@@ -318,8 +318,8 @@
 - Updated dependencies [dc2b2a6]
 - Updated dependencies [5b6ae62]
 - Updated dependencies [8e5a590]
-  - @sphinx-labs/contracts@0.20.0
-  - @sphinx-labs/core@0.23.0
+  - @hujw77/contracts@0.20.0
+  - @hujw77/core@0.23.0
 
 ## 0.29.6
 
@@ -333,7 +333,7 @@
 
 - 38249c2: Resolve block.number bug on Arbitrum
 - Updated dependencies [38249c2]
-  - @sphinx-labs/contracts@0.19.1
+  - @hujw77/contracts@0.19.1
 
 ## 0.29.4
 
@@ -341,7 +341,7 @@
 
 - f980cc2: Handle bytecodeHash=none during etherscan verification
 - Updated dependencies [f980cc2]
-  - @sphinx-labs/core@0.22.3
+  - @hujw77/core@0.22.3
 
 ## 0.29.3
 
@@ -361,7 +361,7 @@
 
 - 16e3ef9: Bump compiler config version
 - Updated dependencies [16e3ef9]
-  - @sphinx-labs/core@0.22.1
+  - @hujw77/core@0.22.1
 
 ## 0.29.0
 
@@ -385,8 +385,8 @@
 - Updated dependencies [83b4974]
 - Updated dependencies [2406ced]
 - Updated dependencies [f5fac9c]
-  - @sphinx-labs/contracts@0.19.0
-  - @sphinx-labs/core@0.22.0
+  - @hujw77/contracts@0.19.0
+  - @hujw77/core@0.22.0
 
 ## 0.28.1
 
@@ -397,8 +397,8 @@
 - 9d0c02c: Recommend using github action in CI
 - Updated dependencies [437e2d3]
 - Updated dependencies [e1445ae]
-  - @sphinx-labs/contracts@0.18.1
-  - @sphinx-labs/core@0.21.5
+  - @hujw77/contracts@0.18.1
+  - @hujw77/core@0.21.5
 
 ## 0.28.0
 
@@ -419,8 +419,8 @@
 - Updated dependencies [ce65752]
 - Updated dependencies [bca86ea]
 - Updated dependencies [1d7e5ac]
-  - @sphinx-labs/contracts@0.18.0
-  - @sphinx-labs/core@0.21.4
+  - @hujw77/contracts@0.18.0
+  - @hujw77/core@0.21.4
 
 ## 0.27.3
 
@@ -434,15 +434,15 @@
 
 - c289baa: Add handling for previously installed incorrect version
 - Updated dependencies [7f49d54]
-  - @sphinx-labs/core@0.21.2
+  - @hujw77/core@0.21.2
 
 ## 0.27.1
 
 ### Patch Changes
 
 - Updated dependencies [952f4bb]
-  - @sphinx-labs/contracts@0.17.0
-  - @sphinx-labs/core@0.21.1
+  - @hujw77/contracts@0.17.0
+  - @hujw77/core@0.21.1
 
 ## 0.27.0
 
@@ -458,8 +458,8 @@
 - Updated dependencies [e6b4e01]
 - Updated dependencies [9107c65]
 - Updated dependencies [3094d17]
-  - @sphinx-labs/contracts@0.16.0
-  - @sphinx-labs/core@0.21.0
+  - @hujw77/contracts@0.16.0
+  - @hujw77/core@0.21.0
 
 ## 0.26.5
 
@@ -483,8 +483,8 @@
 - Updated dependencies [d7aa858]
 - Updated dependencies [1d2d46d]
 - Updated dependencies [57e0dbd]
-  - @sphinx-labs/contracts@0.15.2
-  - @sphinx-labs/core@0.20.4
+  - @hujw77/contracts@0.15.2
+  - @hujw77/core@0.20.4
 
 ## 0.26.4
 
@@ -495,7 +495,7 @@
 - 15b9a25: Display error from child process in simulation
 - d529b1f: Remove force recompilation in deploy and propose CLI commands
 - Updated dependencies [7bbe520]
-  - @sphinx-labs/core@0.20.3
+  - @hujw77/core@0.20.3
 
 ## 0.26.3
 
@@ -504,7 +504,7 @@
 - 108866c: Make block numbers more accurate in simulation
 - 3a8c30a: Skip the manual confirmation step in proposal dry run
 - Updated dependencies [3a8c30a]
-  - @sphinx-labs/core@0.20.2
+  - @hujw77/core@0.20.2
 
 ## 0.26.2
 
@@ -512,7 +512,7 @@
 
 - dbbd869: Temporarily remove simulation test suite to prevent rate limits
 - Updated dependencies [8fe3fd9]
-  - @sphinx-labs/contracts@0.15.1
+  - @hujw77/contracts@0.15.1
 
 ## 0.26.1
 
@@ -529,7 +529,7 @@
 - Updated dependencies [9e587b9]
 - Updated dependencies [3f6f20c]
 - Updated dependencies [b7614c6]
-  - @sphinx-labs/core@0.20.1
+  - @hujw77/core@0.20.1
 
 ## 0.26.0
 
@@ -543,8 +543,8 @@
 - ecededa: Stop requiring the user to override the `run()` function in their script.
 - Updated dependencies [ace53d7]
 - Updated dependencies [187c913]
-  - @sphinx-labs/contracts@0.15.0
-  - @sphinx-labs/core@0.20.0
+  - @hujw77/contracts@0.15.0
+  - @hujw77/core@0.20.0
 
 ## 0.25.1
 
@@ -566,8 +566,8 @@
 - 4a57beb: Support IR compilation pipeline
 - Updated dependencies [5aa6895]
 - Updated dependencies [4a57beb]
-  - @sphinx-labs/contracts@0.14.2
-  - @sphinx-labs/core@0.19.1
+  - @hujw77/contracts@0.14.2
+  - @hujw77/core@0.19.1
 
 ## 0.24.0
 
@@ -591,8 +591,8 @@
 - Updated dependencies [5b511e9]
 - Updated dependencies [9d5d0a4]
 - Updated dependencies [013c0f9]
-  - @sphinx-labs/contracts@0.14.0
-  - @sphinx-labs/core@0.19.0
+  - @hujw77/contracts@0.14.0
+  - @hujw77/core@0.19.0
 
 ## 0.23.6
 
@@ -614,8 +614,8 @@
 - 77a18fac: Change all docs to link to the main branch instead of develop
 - Updated dependencies [77a18fac]
 - Updated dependencies [22581a16]
-  - @sphinx-labs/contracts@0.13.3
-  - @sphinx-labs/core@0.18.3
+  - @hujw77/contracts@0.13.3
+  - @hujw77/core@0.18.3
 
 ## 0.23.3
 
@@ -623,8 +623,8 @@
 
 - 0ea4e001: Support native forge scripts
 - Updated dependencies [0ea4e001]
-  - @sphinx-labs/contracts@0.13.2
-  - @sphinx-labs/core@0.18.2
+  - @hujw77/contracts@0.13.2
+  - @hujw77/core@0.18.2
 
 ## 0.23.2
 
@@ -641,8 +641,8 @@
 - f2c5d280: Remove @eth-optimism/contracts-bedrock dependency due to a breaking change in a minor version update in their package
 - Updated dependencies [431d6ef0]
 - Updated dependencies [f2c5d280]
-  - @sphinx-labs/core@0.18.1
-  - @sphinx-labs/contracts@0.13.1
+  - @hujw77/core@0.18.1
+  - @hujw77/contracts@0.13.1
 
 ## 0.23.0
 
@@ -654,8 +654,8 @@
 
 - b15ad66c: Add .gitignore to config files generated in the `sphinx init` task
 - Updated dependencies [330dcc28]
-  - @sphinx-labs/contracts@0.13.0
-  - @sphinx-labs/core@0.18.0
+  - @hujw77/contracts@0.13.0
+  - @hujw77/core@0.18.0
 
 ## 0.22.0
 
@@ -668,8 +668,8 @@
 - 767b7c0f: Cancel active deployments via proposals
 - Updated dependencies [767b7c0f]
 - Updated dependencies [275ca040]
-  - @sphinx-labs/core@0.17.0
-  - @sphinx-labs/contracts@0.12.0
+  - @hujw77/core@0.17.0
+  - @hujw77/contracts@0.12.0
 
 ## 0.21.2
 
@@ -683,7 +683,7 @@
 
 - c13da7ce: Fix gas price overrides on Linea and Polygon POS
 - Updated dependencies [c13da7ce]
-  - @sphinx-labs/core@0.16.2
+  - @hujw77/core@0.16.2
 
 ## 0.21.0
 
@@ -707,8 +707,8 @@
 - Updated dependencies [0685a903]
 - Updated dependencies [5de8fa58]
 - Updated dependencies [385bd8b8]
-  - @sphinx-labs/contracts@0.11.0
-  - @sphinx-labs/core@0.16.0
+  - @hujw77/contracts@0.11.0
+  - @hujw77/core@0.16.0
 
 ## 0.20.1
 
@@ -717,7 +717,7 @@
 - 79ecfdf7: Detect invalid network names for overrides
 - Updated dependencies [230f6597]
 - Updated dependencies [79ecfdf7]
-  - @sphinx-labs/core@0.15.1
+  - @hujw77/core@0.15.1
 
 ## 0.20.0
 
@@ -734,8 +734,8 @@
 - Updated dependencies [eb0cc1c3]
 - Updated dependencies [2b80792b]
 - Updated dependencies [2d0dbe78]
-  - @sphinx-labs/core@0.15.0
-  - @sphinx-labs/contracts@0.10.0
+  - @hujw77/core@0.15.0
+  - @hujw77/contracts@0.10.0
 
 ## 0.19.3
 
@@ -745,7 +745,7 @@
 - 7ed7d07c: Add support for Base
 - Updated dependencies [0506a2e7]
 - Updated dependencies [7ed7d07c]
-  - @sphinx-labs/core@0.14.2
+  - @hujw77/core@0.14.2
 
 ## 0.19.2
 
@@ -753,7 +753,7 @@
 
 - 28075dd4: Support Linea, Avax, Polygon ZKEvm, Fantom
 - Updated dependencies [28075dd4]
-  - @sphinx-labs/core@0.14.1
+  - @hujw77/core@0.14.1
 
 ## 0.19.1
 
@@ -770,7 +770,7 @@
 ### Patch Changes
 
 - Updated dependencies [5046395a]
-  - @sphinx-labs/core@0.14.0
+  - @hujw77/core@0.14.0
 
 ## 0.18.0
 
@@ -781,7 +781,7 @@
 ### Patch Changes
 
 - Updated dependencies [3e7bff4a]
-  - @sphinx-labs/core@0.13.0
+  - @hujw77/core@0.13.0
 
 ## 0.17.7
 
@@ -789,7 +789,7 @@
 
 - 0b309f0c: Support proposals in CI
 - Updated dependencies [0b309f0c]
-  - @sphinx-labs/core@0.12.7
+  - @hujw77/core@0.12.7
 
 ## 0.17.6
 
@@ -797,7 +797,7 @@
 
 - 264bbc23: Handle unexpected response code from sphinx platform api
 - Updated dependencies [264bbc23]
-  - @sphinx-labs/core@0.12.6
+  - @hujw77/core@0.12.6
 
 ## 0.17.5
 
@@ -808,8 +808,8 @@
 - 99fd9f09: Remove dependency on inherited forge-std contracts in Sphinx.sol
 - Updated dependencies [ec24a7b6]
 - Updated dependencies [99fd9f09]
-  - @sphinx-labs/contracts@0.9.4
-  - @sphinx-labs/core@0.12.4
+  - @hujw77/contracts@0.9.4
+  - @hujw77/core@0.12.4
 
 ## 0.17.4
 
@@ -819,7 +819,7 @@
 - d8818e28: Parse env vars in rpc endpoints in foundry.toml
 - Updated dependencies [e9fc6c67]
 - Updated dependencies [ad8a9dd6]
-  - @sphinx-labs/core@0.12.3
+  - @hujw77/core@0.12.3
 
 ## 0.17.3
 
@@ -827,7 +827,7 @@
 
 - d88ec605: Fix bugs in getting started guides
 - Updated dependencies [d88ec605]
-  - @sphinx-labs/contracts@0.9.3
+  - @hujw77/contracts@0.9.3
 
 ## 0.17.2
 
@@ -835,19 +835,19 @@
 
 - a778e4ff: Include build during release process
 - Updated dependencies [a778e4ff]
-  - @sphinx-labs/contracts@0.9.2
-  - @sphinx-labs/core@0.12.2
+  - @hujw77/contracts@0.9.2
+  - @hujw77/core@0.12.2
 
 ## 0.17.1
 
 ### Patch Changes
 
 - 02674b8e: Include readme in release
-- edf822d7: Rename scope to sphinx-labs
+- edf822d7: Rename scope to hujw77
 - Updated dependencies [02674b8e]
 - Updated dependencies [edf822d7]
-  - @sphinx-labs/contracts@0.9.1
-  - @sphinx-labs/core@0.12.1
+  - @hujw77/contracts@0.9.1
+  - @hujw77/core@0.12.1
 
 ## 0.17.0
 
@@ -887,8 +887,8 @@
 - Updated dependencies [c53f22dd]
 - Updated dependencies [b93b5a91]
 - Updated dependencies [02a360d9]
-  - @sphinx-labs/core@0.12.0
-  - @sphinx-labs/contracts@0.9.0
+  - @hujw77/core@0.12.0
+  - @hujw77/contracts@0.9.0
 
 ## 0.16.5
 
@@ -910,7 +910,7 @@
 - 8d2bf40: Fix issues with sample project generation
 - 586c823: Minimize size of Sphinx.sol and allow Solidity versions >= 0.7.4
 - Updated dependencies [586c823]
-  - @sphinx-labs/contracts@0.8.2
+  - @hujw77/contracts@0.8.2
 
 ## 0.16.2
 
@@ -918,7 +918,7 @@
 
 - 60d60bc: Specify compiler version range for foundry library contracts
 - Updated dependencies [60d60bc]
-  - @sphinx-labs/contracts@0.8.1
+  - @hujw77/contracts@0.8.1
 
 ## 0.16.1
 
@@ -935,8 +935,8 @@
 ### Patch Changes
 
 - Updated dependencies [b6d1f76]
-  - @sphinx-labs/contracts@0.8.0
-  - @sphinx-labs/core@0.11.0
+  - @hujw77/contracts@0.8.0
+  - @hujw77/core@0.11.0
 
 ## 0.15.1
 
@@ -944,7 +944,7 @@
 
 - f13070f: Use Optimism contracts-bedrock package canary version in all Sphinx packages
 - Updated dependencies [f13070f]
-  - @sphinx-labs/core@0.10.1
+  - @hujw77/core@0.10.1
 
 ## 0.15.0
 
@@ -957,7 +957,7 @@
 - 1dafc2c: Add support for mapping keys that are contract or enum types
 - Updated dependencies [1dafc2c]
 - Updated dependencies [6b975e7]
-  - @sphinx-labs/core@0.10.0
+  - @hujw77/core@0.10.0
 
 ## 0.14.1
 
@@ -1081,8 +1081,8 @@
 - Updated dependencies [ab983d4]
 - Updated dependencies [be43435]
 - Updated dependencies [c69aa51]
-  - @sphinx-labs/core@0.9.0
-  - @sphinx-labs/contracts@0.7.0
+  - @hujw77/core@0.9.0
+  - @hujw77/contracts@0.7.0
 
 ## 0.13.0
 
@@ -1102,9 +1102,9 @@
 - Updated dependencies [c76142e]
 - Updated dependencies [22c24d2]
 - Updated dependencies [35c7a63]
-  - @sphinx-labs/core@0.8.0
-  - @sphinx-labs/contracts@0.6.0
-  - @sphinx-labs/executor@0.8.0
+  - @hujw77/core@0.8.0
+  - @hujw77/contracts@0.6.0
+  - @hujw77/executor@0.8.0
 
 ## 0.12.0
 
@@ -1126,9 +1126,9 @@
 - Updated dependencies [80b1a53]
 - Updated dependencies [6a48dd7]
 - Updated dependencies [736b859]
-  - @sphinx-labs/core@0.7.0
-  - @sphinx-labs/contracts@0.5.2
-  - @sphinx-labs/executor@0.7.0
+  - @hujw77/core@0.7.0
+  - @hujw77/contracts@0.5.2
+  - @hujw77/executor@0.7.0
 
 ## 0.11.1
 
@@ -1137,9 +1137,9 @@
 - d30ebdf: Change the task for displaying bundles into a script
 - ca6d384: Bump contracts
 - Updated dependencies [ca6d384]
-  - @sphinx-labs/contracts@0.5.1
-  - @sphinx-labs/core@0.6.1
-  - @sphinx-labs/executor@0.6.1
+  - @hujw77/contracts@0.5.1
+  - @hujw77/core@0.6.1
+  - @hujw77/executor@0.6.1
 
 ## 0.11.0
 
@@ -1162,9 +1162,9 @@
 - Updated dependencies [263b34d]
 - Updated dependencies [fa3f420]
 - Updated dependencies [57a327d]
-  - @sphinx-labs/executor@0.6.0
-  - @sphinx-labs/core@0.6.0
-  - @sphinx-labs/contracts@0.5.0
+  - @hujw77/executor@0.6.0
+  - @hujw77/core@0.6.0
+  - @hujw77/contracts@0.5.0
 
 ## 0.10.7
 
@@ -1173,7 +1173,7 @@
 - c30b8ef: Fix bug caused by logic that gets the minimum compiler input for a bundle
 - Updated dependencies [c30b8ef]
 - Updated dependencies [90e5c0b]
-  - @sphinx-labs/core@0.5.6
+  - @hujw77/core@0.5.6
 
 ## 0.10.6
 
@@ -1181,8 +1181,8 @@
 
 - 2caf51e: Change minimum compiler input logic to fix bug that generated incomplete inputs
 - Updated dependencies [2caf51e]
-  - @sphinx-labs/executor@0.5.5
-  - @sphinx-labs/core@0.5.5
+  - @hujw77/executor@0.5.5
+  - @hujw77/core@0.5.5
 
 ## 0.10.5
 
@@ -1196,7 +1196,7 @@
 
 - 4cf40e5: Bump plugins and executor versions
 - Updated dependencies [4cf40e5]
-  - @sphinx-labs/executor@0.5.4
+  - @hujw77/executor@0.5.4
 
 ## 0.10.3
 
@@ -1204,7 +1204,7 @@
 
 - ecfe984: Bump core and plugins versions
 - Updated dependencies [ecfe984]
-  - @sphinx-labs/core@0.5.3
+  - @hujw77/core@0.5.3
 
 ## 0.10.2
 
@@ -1223,8 +1223,8 @@
 - Updated dependencies [e56b684]
 - Updated dependencies [a892f24]
 - Updated dependencies [fd70a56]
-  - @sphinx-labs/contracts@0.4.3
-  - @sphinx-labs/core@0.5.1
+  - @hujw77/contracts@0.4.3
+  - @hujw77/core@0.5.1
 
 ## 0.10.0
 
@@ -1245,9 +1245,9 @@
 - Updated dependencies [4029daf]
 - Updated dependencies [a37d5c3]
 - Updated dependencies [b343641]
-  - @sphinx-labs/core@0.5.0
-  - @sphinx-labs/executor@0.5.3
-  - @sphinx-labs/contracts@0.4.2
+  - @hujw77/core@0.5.0
+  - @hujw77/executor@0.5.3
+  - @hujw77/contracts@0.4.2
 
 ## 0.9.0
 
@@ -1289,9 +1289,9 @@
 - Updated dependencies [0443459]
 - Updated dependencies [40f0d0a]
 - Updated dependencies [2201f3a]
-  - @sphinx-labs/core@0.4.0
-  - @sphinx-labs/executor@0.5.0
-  - @sphinx-labs/contracts@0.4.0
+  - @hujw77/core@0.4.0
+  - @hujw77/executor@0.5.0
+  - @hujw77/contracts@0.4.0
 
 ## 0.8.9
 
@@ -1299,9 +1299,9 @@
 
 - 2267ec4: Bump versions
 - Updated dependencies [2267ec4]
-  - @sphinx-labs/contracts@0.3.17
-  - @sphinx-labs/core@0.3.24
-  - @sphinx-labs/executor@0.4.14
+  - @hujw77/contracts@0.3.17
+  - @hujw77/core@0.3.24
+  - @hujw77/executor@0.4.14
 
 ## 0.8.8
 
@@ -1318,8 +1318,8 @@
 - Updated dependencies [7cd5e1b]
 - Updated dependencies [d6984ec]
 - Updated dependencies [532d586]
-  - @sphinx-labs/executor@0.4.13
-  - @sphinx-labs/core@0.3.23
+  - @hujw77/executor@0.4.13
+  - @hujw77/core@0.3.23
 
 ## 0.8.6
 
@@ -1336,9 +1336,9 @@
 - Updated dependencies [88e9465]
 - Updated dependencies [a60020a]
 - Updated dependencies [64e57d6]
-  - @sphinx-labs/contracts@0.3.16
-  - @sphinx-labs/core@0.3.22
-  - @sphinx-labs/executor@0.4.12
+  - @hujw77/contracts@0.3.16
+  - @hujw77/core@0.3.22
+  - @hujw77/executor@0.4.12
 
 ## 0.8.5
 
@@ -1359,9 +1359,9 @@
 - Updated dependencies [89cd352]
 - Updated dependencies [dba31f7]
 - Updated dependencies [c9eeb47]
-  - @sphinx-labs/contracts@0.3.15
-  - @sphinx-labs/core@0.3.21
-  - @sphinx-labs/executor@0.4.11
+  - @hujw77/contracts@0.3.15
+  - @hujw77/core@0.3.21
+  - @hujw77/executor@0.4.11
 
 ## 0.8.4
 
@@ -1382,9 +1382,9 @@
 - Updated dependencies [335dfc7]
 - Updated dependencies [ba24573]
 - Updated dependencies [276d5ea]
-  - @sphinx-labs/contracts@0.3.14
-  - @sphinx-labs/core@0.3.20
-  - @sphinx-labs/executor@0.4.10
+  - @hujw77/contracts@0.3.14
+  - @hujw77/core@0.3.20
+  - @hujw77/executor@0.4.10
 
 ## 0.8.3
 
@@ -1400,9 +1400,9 @@
 - Updated dependencies [38c62b5]
 - Updated dependencies [e7ae731]
 - Updated dependencies [2652df5]
-  - @sphinx-labs/core@0.3.19
-  - @sphinx-labs/executor@0.4.9
-  - @sphinx-labs/contracts@0.3.13
+  - @hujw77/core@0.3.19
+  - @hujw77/executor@0.4.9
+  - @hujw77/contracts@0.3.13
 
 ## 0.8.2
 
@@ -1411,8 +1411,8 @@
 - e105ea9: Updates Hardhat tasks to reflect proposer/owner requirement
 - Updated dependencies [40c7bfb]
 - Updated dependencies [e105ea9]
-  - @sphinx-labs/contracts@0.3.12
-  - @sphinx-labs/core@0.3.18
+  - @hujw77/contracts@0.3.12
+  - @hujw77/core@0.3.18
 
 ## 0.8.1
 
@@ -1429,9 +1429,9 @@
 - Updated dependencies [7e8dd1e]
 - Updated dependencies [e1dc2ec]
 - Updated dependencies [da79232]
-  - @sphinx-labs/contracts@0.3.11
-  - @sphinx-labs/core@0.3.17
-  - @sphinx-labs/executor@0.4.8
+  - @hujw77/contracts@0.3.11
+  - @hujw77/core@0.3.17
+  - @hujw77/executor@0.4.8
 
 ## 0.8.0
 
@@ -1500,9 +1500,9 @@
 - Updated dependencies [ec41164]
 - Updated dependencies [da5cb35]
 - Updated dependencies [5406b7b]
-  - @sphinx-labs/core@0.3.16
-  - @sphinx-labs/executor@0.4.7
-  - @sphinx-labs/contracts@0.3.10
+  - @hujw77/core@0.3.16
+  - @hujw77/executor@0.4.7
+  - @hujw77/contracts@0.3.10
 
 ## 0.7.0
 
@@ -1519,8 +1519,8 @@
 - 457b19a: Improve sphinx-deploy hardhat task
 - Updated dependencies [ed7babc]
 - Updated dependencies [457b19a]
-  - @sphinx-labs/contracts@0.3.9
-  - @sphinx-labs/core@0.3.15
+  - @hujw77/contracts@0.3.9
+  - @hujw77/core@0.3.15
 
 ## 0.6.0
 
@@ -1531,7 +1531,7 @@
 ### Patch Changes
 
 - Updated dependencies [8323afb]
-  - @sphinx-labs/core@0.3.14
+  - @hujw77/core@0.3.14
 
 ## 0.5.14
 
@@ -1539,7 +1539,7 @@
 
 - 15ebe78: Hardhat task bug fixes and improvements
 - Updated dependencies [15ebe78]
-  - @sphinx-labs/core@0.3.13
+  - @hujw77/core@0.3.13
 
 ## 0.5.13
 
@@ -1558,7 +1558,7 @@
 - a43e0e3: Add Docker configuration for executor
 - 12a7f34: Improve execution speed with parallelization
 - Updated dependencies [ecafe45]
-  - @sphinx-labs/core@0.3.12
+  - @hujw77/core@0.3.12
 
 ## 0.5.11
 
@@ -1570,8 +1570,8 @@
 - 9d38797: Update sphinx-register task to work locally
 - Updated dependencies [6a6f0c0]
 - Updated dependencies [9d38797]
-  - @sphinx-labs/contracts@0.3.8
-  - @sphinx-labs/core@0.3.11
+  - @hujw77/contracts@0.3.8
+  - @hujw77/core@0.3.11
 
 ## 0.5.10
 
@@ -1593,8 +1593,8 @@
 - Updated dependencies [6daea1a]
 - Updated dependencies [c08a950]
 - Updated dependencies [78acb9a]
-  - @sphinx-labs/contracts@0.3.7
-  - @sphinx-labs/core@0.3.10
+  - @hujw77/contracts@0.3.7
+  - @hujw77/core@0.3.10
 
 ## 0.5.9
 
@@ -1602,7 +1602,7 @@
 
 - 5ad574b: Fixes a bug that would break deterministic deployment on non-hardhat networks
 - Updated dependencies [062a439]
-  - @sphinx-labs/core@0.3.9
+  - @hujw77/core@0.3.9
 
 ## 0.5.8
 
@@ -1612,7 +1612,7 @@
 - 5e74723: Add support for mappings
 - 138f0cd: Small bug fixes for immutable handling
 - Updated dependencies [5e74723]
-  - @sphinx-labs/core@0.3.8
+  - @hujw77/core@0.3.8
 
 ## 0.5.7
 
@@ -1632,7 +1632,7 @@
 - Updated dependencies [3a64b82]
 - Updated dependencies [bbe3639]
 - Updated dependencies [1b88270]
-  - @sphinx-labs/core@0.3.7
+  - @hujw77/core@0.3.7
 
 ## 0.5.5
 
@@ -1653,7 +1653,7 @@
 - Updated dependencies [02c7a39]
 - Updated dependencies [6f53f35]
 - Updated dependencies [233f960]
-  - @sphinx-labs/core@0.3.6
+  - @hujw77/core@0.3.6
 
 ## 0.5.3
 
@@ -1669,7 +1669,7 @@
 - dc88439: Improved error handling in deployment task
 - Updated dependencies [3b3ae5a]
 - Updated dependencies [dc88439]
-  - @sphinx-labs/core@0.3.5
+  - @hujw77/core@0.3.5
 
 ## 0.5.1
 
@@ -1686,8 +1686,8 @@
 ### Patch Changes
 
 - Updated dependencies [123d9c1]
-  - @sphinx-labs/contracts@0.3.5
-  - @sphinx-labs/core@0.3.4
+  - @hujw77/contracts@0.3.5
+  - @hujw77/core@0.3.4
 
 ## 0.4.4
 
@@ -1704,8 +1704,8 @@
 - Updated dependencies [4ce753b]
 - Updated dependencies [2c5b238]
 - Updated dependencies [2c5b238]
-  - @sphinx-labs/core@0.3.3
-  - @sphinx-labs/contracts@0.3.3
+  - @hujw77/core@0.3.3
+  - @hujw77/contracts@0.3.3
 
 ## 0.4.2
 
@@ -1713,8 +1713,8 @@
 
 - 03d557c: Bump all versions
 - Updated dependencies [03d557c]
-  - @sphinx-labs/contracts@0.3.2
-  - @sphinx-labs/core@0.3.2
+  - @hujw77/contracts@0.3.2
+  - @hujw77/core@0.3.2
 
 ## 0.4.1
 
@@ -1723,8 +1723,8 @@
 - 557e3bd: Bump versions
 - Updated dependencies [557e3bd]
 - Updated dependencies [cd310fe]
-  - @sphinx-labs/contracts@0.3.1
-  - @sphinx-labs/core@0.3.1
+  - @hujw77/contracts@0.3.1
+  - @hujw77/core@0.3.1
 
 ## 0.4.0
 
@@ -1735,8 +1735,8 @@
 ### Patch Changes
 
 - Updated dependencies [52c7f6c]
-  - @sphinx-labs/contracts@0.3.0
-  - @sphinx-labs/core@0.3.0
+  - @hujw77/contracts@0.3.0
+  - @hujw77/core@0.3.0
 
 ## 0.3.1
 
@@ -1746,7 +1746,7 @@
 - f7a4a24: Bump core and plugins packages
 - Updated dependencies [f7a4a24]
 - Updated dependencies [f7a4a24]
-  - @sphinx-labs/core@0.2.1
+  - @hujw77/core@0.2.1
 
 ## 0.3.0
 
@@ -1759,8 +1759,8 @@
 - Updated dependencies [416d41b]
 - Updated dependencies [19cf359]
 - Updated dependencies [53e1514]
-  - @sphinx-labs/contracts@0.2.0
-  - @sphinx-labs/core@0.2.0
+  - @hujw77/contracts@0.2.0
+  - @hujw77/core@0.2.0
 
 ## 0.2.1
 
@@ -1791,8 +1791,8 @@
 - Updated dependencies [f92ff76]
 - Updated dependencies [04ada98]
 - Updated dependencies [2cc3bc9]
-  - @sphinx-labs/contracts@0.2.0
-  - @sphinx-labs/core@0.1.1
+  - @hujw77/contracts@0.2.0
+  - @hujw77/core@0.1.1
 
 ## 0.1.2
 
@@ -1804,4 +1804,4 @@
 - e5fe498: Brings back the SphinxManager contract
 - Updated dependencies [6403ed2]
 - Updated dependencies [e5fe498]
-  - @sphinx-labs/contracts@0.1.1
+  - @hujw77/contracts@0.1.1

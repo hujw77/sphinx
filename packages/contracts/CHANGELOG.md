@@ -1,4 +1,4 @@
-# @sphinx-labs/contracts
+# @hujw77/contracts
 
 ## 0.22.0
 
@@ -365,7 +365,7 @@
 ### Patch Changes
 
 - 02674b8e: Include readme in release
-- edf822d7: Rename scope to sphinx-labs
+- edf822d7: Rename scope to hujw77
 
 ## 0.9.0
 
