@@ -49,26 +49,26 @@ Sphinx is currently invite-only. [Request access on our website.](https://sphinx
 
 ### Getting started
 
-- [Getting Started in a New Repository](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-quickstart.md)
-- [Getting Started in an Existing Repository](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-existing-project.md)
-- [The Sphinx DevOps Platform](https://github.com/sphinx-labs/sphinx/blob/main/docs/ops-getting-started.md)
+- [Getting Started in a New Repository](https://github.com/hujw77/sphinx/blob/main/docs/cli-quickstart.md)
+- [Getting Started in an Existing Repository](https://github.com/hujw77/sphinx/blob/main/docs/cli-existing-project.md)
+- [The Sphinx DevOps Platform](https://github.com/hujw77/sphinx/blob/main/docs/ops-getting-started.md)
 
 ### Reference guides
 
-- [Writing Deployment Scripts](https://github.com/sphinx-labs/sphinx/blob/main/docs/writing-scripts.md)
-- [Configuration Options](https://github.com/sphinx-labs/sphinx/blob/main/docs/configuration-options.md)
-- [Using Sphinx in a CI Process](https://github.com/sphinx-labs/sphinx/blob/main/docs/ci-proposals.md)
+- [Writing Deployment Scripts](https://github.com/hujw77/sphinx/blob/main/docs/writing-scripts.md)
+- [Configuration Options](https://github.com/hujw77/sphinx/blob/main/docs/configuration-options.md)
+- [Using Sphinx in a CI Process](https://github.com/hujw77/sphinx/blob/main/docs/ci-proposals.md)
 - [Deploying on Anvil](TODO(md))
 - [How Sphinx Works](TODO(md))
-- [Troubleshooting Guide](https://github.com/sphinx-labs/sphinx/blob/main/docs/troubleshooting-guide.md)
+- [Troubleshooting Guide](https://github.com/hujw77/sphinx/blob/main/docs/troubleshooting-guide.md)
 
 ### Specifications
 
-- [Introduction](https://github.com/sphinx-labs/sphinx/blob/develop/specs/introduction.md)
-- [Sphinx Merkle Tree](https://github.com/sphinx-labs/sphinx/blob/develop/specs/merkle-tree.md)
-- [`SphinxModuleProxy` Contract](https://github.com/sphinx-labs/sphinx/blob/develop/specs/sphinx-module-proxy.md)
-- [`SphinxModuleProxyFactory` Contract](https://github.com/sphinx-labs/sphinx/blob/develop/specs/sphinx-module-proxy-factory.md)
-- [`ManagedService` Contract](https://github.com/sphinx-labs/sphinx/blob/develop/specs/managed-service.md)
+- [Introduction](https://github.com/hujw77/sphinx/blob/develop/specs/introduction.md)
+- [Sphinx Merkle Tree](https://github.com/hujw77/sphinx/blob/develop/specs/merkle-tree.md)
+- [`SphinxModuleProxy` Contract](https://github.com/hujw77/sphinx/blob/develop/specs/sphinx-module-proxy.md)
+- [`SphinxModuleProxyFactory` Contract](https://github.com/hujw77/sphinx/blob/develop/specs/sphinx-module-proxy-factory.md)
+- [`ManagedService` Contract](https://github.com/hujw77/sphinx/blob/develop/specs/managed-service.md)
 
 ## Current limitations
 
@@ -116,7 +116,7 @@ More networks are on the way! Please feel free to reach out in our [Discord](htt
 
 ## Contributing
 
-Contributions to Sphinx are greatly appreciated! Please read our [contributing guide](https://github.com/sphinx-labs/sphinx/blob/main/CONTRIBUTING.md) to get started. Then, check out the list of [Good First Issues](https://github.com/sphinx-labs/sphinx/contribute). Let us know if you have any questions!
+Contributions to Sphinx are greatly appreciated! Please read our [contributing guide](https://github.com/hujw77/sphinx/blob/main/CONTRIBUTING.md) to get started. Then, check out the list of [Good First Issues](https://github.com/hujw77/sphinx/contribute). Let us know if you have any questions!
 
 ## Reach Out
 
@@ -125,4 +125,4 @@ If you have any questions or feature requests, send us a message in our [Discord
 ## License
 We use the Gnosis Safe contracts as a library, licensed under [LGPL v3](https://github.com/safe-global/safe-contracts/blob/main/LICENSE). You can access the Gnosis Safe contracts in their [public repo](https://github.com/safe-global/safe-contracts).
 
-The Sphinx Safe Module and all other code in this repository is licensed under [MIT](https://github.com/sphinx-labs/sphinx/blob/develop/LICENSE).
+The Sphinx Safe Module and all other code in this repository is licensed under [MIT](https://github.com/hujw77/sphinx/blob/develop/LICENSE).

@@ -9,8 +9,8 @@ import {
   readDeploymentArtifactsForNetwork,
   signMerkleRoot,
   spawnAsync,
-} from '@sphinx-labs/core/dist/utils'
-import { SphinxJsonRpcProvider } from '@sphinx-labs/core/dist/provider'
+} from '@hujw77/core/dist/utils'
+import { SphinxJsonRpcProvider } from '@hujw77/core/dist/provider'
 import {
   getPreview,
   getPreviewString,
@@ -39,11 +39,11 @@ import {
   removeRoles,
   NetworkConfig,
   DeploymentArtifacts,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { red } from 'chalk'
 import ora from 'ora'
 import { ethers } from 'ethers'
-import { SphinxMerkleTree, makeSphinxMerkleTree } from '@sphinx-labs/contracts'
+import { SphinxMerkleTree, makeSphinxMerkleTree } from '@hujw77/contracts'
 
 import {
   assertValidVersions,

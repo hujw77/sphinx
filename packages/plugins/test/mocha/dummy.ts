@@ -3,7 +3,7 @@ import {
   AccountAccessKind,
   Operation,
   SphinxMerkleTree,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import {
   ActionInputType,
   BuildInfo,
@@ -20,7 +20,7 @@ import {
   SolcInput,
   SphinxJsonRpcProvider,
   SphinxTransactionReceipt,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers } from 'ethers'
 import sinon from 'sinon'
 

@@ -6,9 +6,9 @@ import {
   sampleContractFileName,
   sampleScriptFileName,
   sampleTestFileName,
-} from '@sphinx-labs/plugins'
+} from '@hujw77/plugins'
 import { SemVer, coerce, gt, lte } from 'semver'
-import { spawnAsync } from '@sphinx-labs/core'
+import { spawnAsync } from '@hujw77/core'
 import pLimit from 'p-limit'
 
 import { deleteForgeProject } from './common'

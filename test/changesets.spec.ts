@@ -7,10 +7,10 @@ type ReleaseType = 'major' | 'minor' | 'patch'
 
 type Release = {
   name:
-    | '@sphinx-labs/plugins'
-    | '@sphinx-labs/core'
-    | '@sphinx-labs/contracts'
-    | '@sphinx-labs/demo'
+    | '@hujw77/plugins'
+    | '@hujw77/core'
+    | '@hujw77/contracts'
+    | '@hujw77/demo'
   type: ReleaseType
   oldVersion: string
   changesets: Array<string>
@@ -81,13 +81,13 @@ describe('Changesets', () => {
 
   it('If core or contracts bumped, then plugins also bumped', async () => {
     const contractsRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/contracts'
+      (release) => release.name === '@hujw77/contracts'
     )
     const coreRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/core'
+      (release) => release.name === '@hujw77/core'
     )
     const pluginsRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/plugins'
+      (release) => release.name === '@hujw77/plugins'
     )
 
     if (contractsRelease || coreRelease) {
@@ -97,10 +97,10 @@ describe('Changesets', () => {
 
   it('contracts release type >= core', async () => {
     const contractsRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/contracts'
+      (release) => release.name === '@hujw77/contracts'
     )
     const coreRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/core'
+      (release) => release.name === '@hujw77/core'
     )
 
     if (contractsRelease && coreRelease) {
@@ -112,10 +112,10 @@ describe('Changesets', () => {
 
   it('core release type >= plugins', async () => {
     const coreRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/core'
+      (release) => release.name === '@hujw77/core'
     )
     const pluginsRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/plugins'
+      (release) => release.name === '@hujw77/plugins'
     )
 
     if (coreRelease && pluginsRelease) {
@@ -127,10 +127,10 @@ describe('Changesets', () => {
 
   it('contract release type >= plugins', async () => {
     const contractsRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/contracts'
+      (release) => release.name === '@hujw77/contracts'
     )
     const pluginsRelease = changesets.releases.find(
-      (release) => release.name === '@sphinx-labs/plugins'
+      (release) => release.name === '@hujw77/plugins'
     )
 
     if (contractsRelease && pluginsRelease) {

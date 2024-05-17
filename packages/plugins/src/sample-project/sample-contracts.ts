@@ -37,7 +37,7 @@ pragma solidity ^0.8.0;
 
 import { Script } from "forge-std/Script.sol";
 import { HelloSphinx } from "${relativeSrcPath}/HelloSphinx.sol";
-import "@sphinx-labs/contracts/SphinxPlugin.sol";
+import "@hujw77/contracts/SphinxPlugin.sol";
 
 contract HelloSphinxScript is Sphinx, Script {
     HelloSphinx helloSphinx;

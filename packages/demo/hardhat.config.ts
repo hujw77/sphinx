@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv'
 
 // Hardhat plugins
 import '@nomiclabs/hardhat-ethers'
-import '@sphinx-labs/plugins'
+import '@hujw77/plugins'
 
 // Load environment variables from .env
 dotenv.config()

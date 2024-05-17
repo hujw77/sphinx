@@ -1,7 +1,7 @@
 import {
   FoundryBroadcastTransaction,
   FoundryDryRunTransaction,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 
 export type FoundryTransactionReceipt = {
   transactionHash: string

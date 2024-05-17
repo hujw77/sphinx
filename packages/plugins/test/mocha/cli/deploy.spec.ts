@@ -22,7 +22,7 @@ import {
   getContractAddressesFromNetworkConfig,
   ActionInputType,
   ActionInput,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers, keccak256, parseEther } from 'ethers'
 import {
   CREATE3_PROXY_INITCODE,
@@ -30,7 +30,7 @@ import {
   SphinxMerkleTree,
   getGnosisSafeProxyAddress,
   parseFoundryContractArtifact,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import * as MyContract2Artifact from '../../../out/artifacts/MyContracts.sol/MyContract2.json'
 import * as FallbackArtifact from '../../../out/artifacts/Fallback.sol/Fallback.json'

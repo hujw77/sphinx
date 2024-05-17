@@ -40,6 +40,6 @@ export const CREATE3_PROXY_INITCODE = '0x67363d3d37363d34f03d5260086018f3'
 export const EXECUTION_LOCK_TIME = 15 * 60
 
 export const RECOMMENDED_REMAPPING =
-  '@sphinx-labs/contracts/=lib/sphinx/packages/contracts/contracts/foundry'
+  '@hujw77/contracts/=lib/sphinx/packages/contracts/contracts/foundry'
 
 export const MAX_CONTRACT_SIZE_LIMIT = 24576

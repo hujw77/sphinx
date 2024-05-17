@@ -16,7 +16,7 @@ import {
   BuildInfo,
   CompilerOutputContracts,
   SphinxTransactionResponse,
-} from '@sphinx-labs/core/dist/languages/solidity/types'
+} from '@hujw77/core/dist/languages/solidity/types'
 import {
   decodeDeterministicDeploymentProxyData,
   exceedsContractSizeLimit,
@@ -32,7 +32,7 @@ import {
   spawnAsync,
   trimQuotes,
   zeroOutLibraryReferences,
-} from '@sphinx-labs/core/dist/utils'
+} from '@hujw77/core/dist/utils'
 import {
   ActionInput,
   DeploymentConfig,
@@ -45,7 +45,7 @@ import {
   InternalSphinxConfig,
   UserSphinxConfigWithAddresses,
   BuildInfos,
-} from '@sphinx-labs/core/dist/config/types'
+} from '@hujw77/core/dist/config/types'
 import { parse } from 'semver'
 import chain from 'stream-chain'
 import parser from 'stream-json'
@@ -60,7 +60,7 @@ import {
   SphinxJsonRpcProvider,
   EstimateGasTransactionData,
   TransactionEstimatedGas,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import ora from 'ora'
 import {
   ContractArtifact,
@@ -76,7 +76,7 @@ import {
   ParsedAccountAccess,
   AccountAccessKind,
   AccountAccess,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import { ConstructorFragment, ethers } from 'ethers'
 
 import {

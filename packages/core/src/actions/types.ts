@@ -1,5 +1,5 @@
 import { ethers } from 'ethers'
-import { SphinxLeafWithProof } from '@sphinx-labs/contracts'
+import { SphinxLeafWithProof } from '@hujw77/contracts'
 
 import { SphinxPreview } from '../preview'
 import { ExecutionMode } from '../constants'

@@ -5,7 +5,7 @@ import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 import { AccessControl } from "@openzeppelin/contracts/access/AccessControl.sol";
 import { ERC721 } from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import { Governor } from "@openzeppelin/contracts/governance/Governor.sol";
-import { SphinxUtils } from "@sphinx-labs/contracts/contracts/foundry/SphinxUtils.sol";
+import { SphinxUtils } from "@hujw77/contracts/contracts/foundry/SphinxUtils.sol";
 
 struct TopLevelStruct {
     int256 a;

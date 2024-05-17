@@ -3,8 +3,8 @@ pragma solidity ^0.8.0;
 
 import { Script } from "sphinx-forge-std/Script.sol";
 import { MyContract1, MyContract2 } from "../../../contracts/test/MyContracts.sol";
-import { Sphinx } from "@sphinx-labs/contracts/contracts/foundry/Sphinx.sol";
-import { Network } from "@sphinx-labs/contracts/contracts/foundry/SphinxPluginTypes.sol";
+import { Sphinx } from "@hujw77/contracts/contracts/foundry/Sphinx.sol";
+import { Network } from "@hujw77/contracts/contracts/foundry/SphinxPluginTypes.sol";
 
 contract Simple1 is Script, Sphinx {
     function configureSphinx() public override {

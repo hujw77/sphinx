@@ -17,7 +17,7 @@ Deployments with Sphinx are a three-step process:
 
 * **Deploy via Gnosis Safe**: The Sphinx protocol is a [Gnosis Safe Module](https://docs.safe.global/safe-smart-account/modules) designed for deployments. With the Sphinx Module, your Gnosis Safe owners can approve multi-chain deployments by signing a single meta transaction. Sphinx will deploy a Gnosis Safe on your behalf at a consistent address using `CREATE2`.
 
-* **Trustless**: It's impossible to execute anything your Gnosis Safe owners have not explicitly approved. Spearbit has audited our system; see our audit report [here](https://github.com/sphinx-labs/sphinx/blob/main/audit/spearbit.pdf).
+* **Trustless**: It's impossible to execute anything your Gnosis Safe owners have not explicitly approved. Spearbit has audited our system; see our audit report [here](https://github.com/hujw77/sphinx/blob/main/audit/spearbit.pdf).
 
 * **Compatible with Forge Scripts**: You can integrate Sphinx by adding a few lines of code to your existing Forge scripts.
 
@@ -35,7 +35,7 @@ Sphinx is currently invite-only. [Request access on our website](https://sphinx.
 
 Pricing for the DevOps Platform is on the [website's landing page](https://sphinx.dev).
 
-Sphinx does not charge for the [Deploy CLI Command](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-deploy.md), which executes the deployment from your local machine without using the DevOps Platform. However, since it doesn't use the DevOps Platform, you'll need native gas tokens for the deployment.
+Sphinx does not charge for the [Deploy CLI Command](https://github.com/hujw77/sphinx/blob/main/docs/cli-deploy.md), which executes the deployment from your local machine without using the DevOps Platform. However, since it doesn't use the DevOps Platform, you'll need native gas tokens for the deployment.
 
 ## Demo
 
@@ -45,36 +45,36 @@ A demo of the DevOps Platform is on the [website's landing page](https://sphinx.
 
 ### Getting Started
 
-- [Getting Started in a New Repository](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-quickstart.md)
-- [Getting Started with an Existing Foundry Project](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-existing-project.md)
+- [Getting Started in a New Repository](https://github.com/hujw77/sphinx/blob/main/docs/cli-quickstart.md)
+- [Getting Started with an Existing Foundry Project](https://github.com/hujw77/sphinx/blob/main/docs/cli-existing-project.md)
 
 ### References
 
-- [Writing Deployment Scripts](https://github.com/sphinx-labs/sphinx/blob/main/docs/writing-scripts.md)
-- [CLI Propose Command](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-propose.md)
-- [Propose in CI](https://github.com/sphinx-labs/sphinx/blob/main/docs/ci-proposals.md)
-- [Configuration Options](https://github.com/sphinx-labs/sphinx/blob/main/docs/configuration-options.md)
-- [Deploy from the CLI](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-deploy.md)
-- [Troubleshooting](https://github.com/sphinx-labs/sphinx/blob/main/docs/troubleshooting-guide.md)
-- [FAQ](https://github.com/sphinx-labs/sphinx/blob/main/docs/faq.md)
-- [Architecture Overview](https://github.com/sphinx-labs/sphinx/blob/main/docs/architecture-overview.md)
+- [Writing Deployment Scripts](https://github.com/hujw77/sphinx/blob/main/docs/writing-scripts.md)
+- [CLI Propose Command](https://github.com/hujw77/sphinx/blob/main/docs/cli-propose.md)
+- [Propose in CI](https://github.com/hujw77/sphinx/blob/main/docs/ci-proposals.md)
+- [Configuration Options](https://github.com/hujw77/sphinx/blob/main/docs/configuration-options.md)
+- [Deploy from the CLI](https://github.com/hujw77/sphinx/blob/main/docs/cli-deploy.md)
+- [Troubleshooting](https://github.com/hujw77/sphinx/blob/main/docs/troubleshooting-guide.md)
+- [FAQ](https://github.com/hujw77/sphinx/blob/main/docs/faq.md)
+- [Architecture Overview](https://github.com/hujw77/sphinx/blob/main/docs/architecture-overview.md)
 
 ### Specifications
 
-- [Introduction](https://github.com/sphinx-labs/sphinx/blob/develop/specs/introduction.md)
-- [Sphinx Merkle Tree](https://github.com/sphinx-labs/sphinx/blob/develop/specs/merkle-tree.md)
-- [`SphinxModuleProxy` Contract](https://github.com/sphinx-labs/sphinx/blob/develop/specs/sphinx-module-proxy.md)
-- [`SphinxModuleProxyFactory` Contract](https://github.com/sphinx-labs/sphinx/blob/develop/specs/sphinx-module-proxy-factory.md)
-- [`ManagedService` Contract](https://github.com/sphinx-labs/sphinx/blob/develop/specs/managed-service.md)
+- [Introduction](https://github.com/hujw77/sphinx/blob/develop/specs/introduction.md)
+- [Sphinx Merkle Tree](https://github.com/hujw77/sphinx/blob/develop/specs/merkle-tree.md)
+- [`SphinxModuleProxy` Contract](https://github.com/hujw77/sphinx/blob/develop/specs/sphinx-module-proxy.md)
+- [`SphinxModuleProxyFactory` Contract](https://github.com/hujw77/sphinx/blob/develop/specs/sphinx-module-proxy-factory.md)
+- [`ManagedService` Contract](https://github.com/hujw77/sphinx/blob/develop/specs/managed-service.md)
 
 ### Security
 
-- [Spearbit Audit](https://github.com/sphinx-labs/sphinx/blob/main/audit/spearbit.pdf)
+- [Spearbit Audit](https://github.com/hujw77/sphinx/blob/main/audit/spearbit.pdf)
 
 ## Current Limitations
 
 - You cannot deploy [libraries](https://docs.soliditylang.org/en/v0.8.24/contracts.html#libraries).
-- You can only use the [Deploy CLI Command](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-deploy.md) on live networks if your Gnosis Safe has a single owner. (Deployments with the DevOps Platform support an arbitrary number of owners).
+- You can only use the [Deploy CLI Command](https://github.com/hujw77/sphinx/blob/main/docs/cli-deploy.md) on live networks if your Gnosis Safe has a single owner. (Deployments with the DevOps Platform support an arbitrary number of owners).
 
 ## Coming Soon
 
@@ -85,7 +85,7 @@ Please feel free to reach out to us in our [Discord](https://discord.gg/7Gc3DK33
 
 ## Networks Supported by the DevOps Platform
 
-> Note: You can use the [Deploy CLI Command](https://github.com/sphinx-labs/sphinx/blob/main/docs/cli-deploy.md) to deploy on networks that the DevOps Platform doesn't currently support.
+> Note: You can use the [Deploy CLI Command](https://github.com/hujw77/sphinx/blob/main/docs/cli-deploy.md) to deploy on networks that the DevOps Platform doesn't currently support.
 
 - Ethereum
 - Optimism
@@ -153,7 +153,7 @@ More networks are on the way! Please reach out to us in our [Discord](https://di
 
 ## Contributing
 
-Contributions to Sphinx are greatly appreciated! Please read our [contributing guide](https://github.com/sphinx-labs/sphinx/blob/main/CONTRIBUTING.md) to get started. Then, check out the list of [Good First Issues](https://github.com/sphinx-labs/sphinx/contribute). Let us know if you have any questions!
+Contributions to Sphinx are greatly appreciated! Please read our [contributing guide](https://github.com/hujw77/sphinx/blob/main/CONTRIBUTING.md) to get started. Then, check out the list of [Good First Issues](https://github.com/hujw77/sphinx/contribute). Let us know if you have any questions!
 
 ## Reach Out
 
@@ -163,4 +163,4 @@ If you have any questions or feature requests, send us a message in our [Discord
 
 We use the Gnosis Safe contracts as a library. These contracts are licensed under [LGPL v3](https://github.com/safe-global/safe-contracts/blob/main/LICENSE). You can access them in [Gnosis Safe's repository](https://github.com/safe-global/safe-contracts).
 
-All other code in this repository is licensed under [MIT](https://github.com/sphinx-labs/sphinx/blob/develop/LICENSE).
+All other code in this repository is licensed under [MIT](https://github.com/hujw77/sphinx/blob/develop/LICENSE).

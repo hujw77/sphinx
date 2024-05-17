@@ -1,6 +1,6 @@
 import { relative, join } from 'path'
 import { readFileSync } from 'fs'
-import { SphinxModuleABI } from '@sphinx-labs/contracts'
+import { SphinxModuleABI } from '@hujw77/contracts'
 import {
   isFile,
   signMerkleRoot,
@@ -24,7 +24,7 @@ import {
   writeDeploymentArtifacts,
   displayDeploymentTable,
   verifyDeploymentWithRetries,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers } from 'ethers'
 import { red } from 'chalk'
 import { Logger } from '@eth-optimism/common-ts'

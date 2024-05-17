@@ -11,7 +11,7 @@ import {
   getGnosisSafeProxyFactoryAddress,
   SphinxModuleABI,
   decodeExecuteLeafData,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import ora from 'ora'
 import { TransactionReceipt, ethers } from 'ethers'
 
@@ -1368,7 +1368,7 @@ export const attemptDeployment = async (
  * `attemptDeployment`. To mock `attemptDeployment` when testing `myFunction`,
  * we'd write:
  * ```
- * import * as sphinxCore from '@sphinx-labs/core'
+ * import * as sphinxCore from '@hujw77/core'
  * sinon.stub(sphinxCore, 'attemptDeployment')
  * ```
  * However, the above code will fail with the following error: "TypeError: Descriptor for property
@@ -1377,7 +1377,7 @@ export const attemptDeployment = async (
  * Then, say we introduce this object and we update `myFunction` to contain
  *  `sphinxCoreExecute.attemptDeployment`. We can sucessfully create the mock by writing:
  * ```
- * import { sphinxCoreExecute } from '@sphinx-labs/core'
+ * import { sphinxCoreExecute } from '@hujw77/core'
  * sinon.stub(sphinxCoreExecute, 'attemptDeployment')
  *```
  */

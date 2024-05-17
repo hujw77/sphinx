@@ -3,7 +3,7 @@ import {
   BuildInfos,
   ConfigArtifacts,
   GetConfigArtifacts,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import sinon from 'sinon'
 
 import { propose } from '../../src/cli/propose'

@@ -1,4 +1,4 @@
-import { CompilerOutputMetadata } from '@sphinx-labs/contracts'
+import { CompilerOutputMetadata } from '@hujw77/contracts'
 
 import { SolcInput } from './types'
 

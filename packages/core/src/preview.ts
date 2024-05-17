@@ -1,5 +1,5 @@
 import { yellow, green, bold } from 'chalk'
-import { CREATE3_PROXY_INITCODE, Operation } from '@sphinx-labs/contracts'
+import { CREATE3_PROXY_INITCODE, Operation } from '@hujw77/contracts'
 
 import {
   ActionInput,

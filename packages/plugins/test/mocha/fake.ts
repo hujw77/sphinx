@@ -4,14 +4,14 @@ import {
   ConfigArtifacts,
   DeploymentConfig,
   SphinxTransactionReceipt,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import {
   AccountAccessKind,
   ContractArtifact,
   Operation,
   ParsedAccountAccess,
   SphinxModuleABI,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import { EventFragment, ethers } from 'ethers'
 
 import {

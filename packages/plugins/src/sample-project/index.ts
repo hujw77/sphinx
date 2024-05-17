@@ -4,7 +4,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 import ora from 'ora'
-import { spawnAsync, syncSphinxLock } from '@sphinx-labs/core'
+import { spawnAsync, syncSphinxLock } from '@hujw77/core'
 
 import {
   fetchDotEnvFile,

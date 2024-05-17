@@ -16,7 +16,7 @@ The following steps occur when this command is run:
 2. **Preview**: Sphinx displays the broadcasted transactions in a preview, which the user will be prompted to confirm.
 3. **Relay**: Sphinx submits the deployment to the Sphinx UI, where the user will approve it.
 
-> Note: The `propose` command is only available on networks supported by Sphinx's DevOps Platform. See the list of supported networks in the main [README](https://github.com/sphinx-labs/sphinx/blob/main/README.md#networks-supported-by-the-devops-platform).
+> Note: The `propose` command is only available on networks supported by Sphinx's DevOps Platform. See the list of supported networks in the main [README](https://github.com/hujw77/sphinx/blob/main/README.md#networks-supported-by-the-devops-platform).
 
 ## Usage
 
@@ -38,8 +38,8 @@ pnpm sphinx propose <SCRIPT_PATH> --networks <NETWORK_NAMES...|testnets|mainnets
 ### Options
 - `--networks <NETWORK_NAMES...|testnets|mainnets>`: **Required**. The network(s) to propose on. Options include:
   - Arbitrary network names (e.g., `ethereum optimism arbitrum`): Propose on one or more networks, which must match the network names in the `rpc_endpoints` section of your `foundry.toml`.
-  - `testnets`: Propose on the test networks in your `sphinxConfig.testnets` array. Provides a convenient way to propose on many networks without specifying them on the command line. Requires additional configuration; see the [Configuration Options section for `sphinxConfig.testnets`](https://github.com/sphinx-labs/sphinx/blob/main/docs/configuration-options.md#string-testnets-optional).
-  - `mainnets`: Propose on the production networks in your `sphinxConfig.mainnets` array. Provides a convenient way to propose on many networks without specifying them on the command line. Requires additional configuration; see the [Configuration Options section for `sphinxConfig.mainnets`](https://github.com/sphinx-labs/sphinx/blob/main/docs/configuration-options.md#string-mainnets-optional).
+  - `testnets`: Propose on the test networks in your `sphinxConfig.testnets` array. Provides a convenient way to propose on many networks without specifying them on the command line. Requires additional configuration; see the [Configuration Options section for `sphinxConfig.testnets`](https://github.com/hujw77/sphinx/blob/main/docs/configuration-options.md#string-testnets-optional).
+  - `mainnets`: Propose on the production networks in your `sphinxConfig.mainnets` array. Provides a convenient way to propose on many networks without specifying them on the command line. Requires additional configuration; see the [Configuration Options section for `sphinxConfig.mainnets`](https://github.com/hujw77/sphinx/blob/main/docs/configuration-options.md#string-mainnets-optional).
 - `--sig <SIGNATURE [PARAMETERS...] | CALLDATA>` (Alias: `-s`): **Optional**. The signature of the function to call in the script, or raw calldata. Matches the interface of Forge Script's `--sig` parameter.
   - **Default**: `run()`
 - `--confirm`: **Optional**. Confirm the proposal without previewing it. Useful for automating proposals.

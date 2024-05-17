@@ -1,4 +1,4 @@
-# @sphinx-labs/demo
+# @hujw77/demo
 
 ## 0.13.0
 
@@ -9,9 +9,9 @@
 ### Patch Changes
 
 - Updated dependencies [a978b3b]
-  - @sphinx-labs/contracts@0.22.0
-  - @sphinx-labs/plugins@0.32.0
-  - @sphinx-labs/core@0.25.0
+  - @hujw77/contracts@0.22.0
+  - @hujw77/plugins@0.32.0
+  - @hujw77/core@0.25.0
 
 ## 0.12.9
 
@@ -24,9 +24,9 @@
 - Updated dependencies [c7af7ef]
 - Updated dependencies [149783c]
 - Updated dependencies [4f5a1fc]
-  - @sphinx-labs/plugins@0.31.2
-  - @sphinx-labs/core@0.24.1
-  - @sphinx-labs/contracts@0.21.2
+  - @hujw77/plugins@0.31.2
+  - @hujw77/core@0.24.1
+  - @hujw77/contracts@0.21.2
 
 ## 0.12.8
 
@@ -39,9 +39,9 @@
 - Updated dependencies [dd0cfcc]
 - Updated dependencies [28b6111]
 - Updated dependencies [dead3ae]
-  - @sphinx-labs/plugins@0.31.0
-  - @sphinx-labs/core@0.24.0
-  - @sphinx-labs/contracts@0.21.0
+  - @hujw77/plugins@0.31.0
+  - @hujw77/core@0.24.0
+  - @hujw77/contracts@0.21.0
 
 ## 0.12.7
 
@@ -49,8 +49,8 @@
 
 - b304407: Use fixed hardhat version
 - Updated dependencies [b304407]
-  - @sphinx-labs/plugins@0.30.1
-  - @sphinx-labs/core@0.23.1
+  - @hujw77/plugins@0.30.1
+  - @hujw77/core@0.23.1
 
 ## 0.12.6
 
@@ -67,9 +67,9 @@
 - Updated dependencies [8e5a590]
 - Updated dependencies [342864a]
 - Updated dependencies [56bae32]
-  - @sphinx-labs/plugins@0.30.0
-  - @sphinx-labs/contracts@0.20.0
-  - @sphinx-labs/core@0.23.0
+  - @hujw77/plugins@0.30.0
+  - @hujw77/contracts@0.20.0
+  - @hujw77/core@0.23.0
 
 ## 0.12.5
 
@@ -83,9 +83,9 @@
 - Updated dependencies [83b4974]
 - Updated dependencies [2406ced]
 - Updated dependencies [f5fac9c]
-  - @sphinx-labs/plugins@0.29.0
-  - @sphinx-labs/contracts@0.19.0
-  - @sphinx-labs/core@0.22.0
+  - @hujw77/plugins@0.29.0
+  - @hujw77/contracts@0.19.0
+  - @hujw77/core@0.22.0
 
 ## 0.12.4
 
@@ -101,18 +101,18 @@
 - Updated dependencies [9c71c5e]
 - Updated dependencies [bca86ea]
 - Updated dependencies [1d7e5ac]
-  - @sphinx-labs/plugins@0.28.0
-  - @sphinx-labs/contracts@0.18.0
-  - @sphinx-labs/core@0.21.4
+  - @hujw77/plugins@0.28.0
+  - @hujw77/contracts@0.18.0
+  - @hujw77/core@0.21.4
 
 ## 0.12.3
 
 ### Patch Changes
 
 - Updated dependencies [952f4bb]
-  - @sphinx-labs/contracts@0.17.0
-  - @sphinx-labs/core@0.21.1
-  - @sphinx-labs/plugins@0.27.1
+  - @hujw77/contracts@0.17.0
+  - @hujw77/core@0.21.1
+  - @hujw77/plugins@0.27.1
 
 ## 0.12.2
 
@@ -124,9 +124,9 @@
 - Updated dependencies [ce5c34a]
 - Updated dependencies [9107c65]
 - Updated dependencies [3094d17]
-  - @sphinx-labs/plugins@0.27.0
-  - @sphinx-labs/contracts@0.16.0
-  - @sphinx-labs/core@0.21.0
+  - @hujw77/plugins@0.27.0
+  - @hujw77/contracts@0.16.0
+  - @hujw77/core@0.21.0
 
 ## 0.12.1
 
@@ -137,8 +137,8 @@
 - Updated dependencies [7bbe520]
 - Updated dependencies [15b9a25]
 - Updated dependencies [d529b1f]
-  - @sphinx-labs/plugins@0.26.4
-  - @sphinx-labs/core@0.20.3
+  - @hujw77/plugins@0.26.4
+  - @hujw77/core@0.20.3
 
 ## 0.12.0
 
@@ -152,9 +152,9 @@
 - Updated dependencies [30a1296]
 - Updated dependencies [187c913]
 - Updated dependencies [ecededa]
-  - @sphinx-labs/contracts@0.15.0
-  - @sphinx-labs/plugins@0.26.0
-  - @sphinx-labs/core@0.20.0
+  - @hujw77/contracts@0.15.0
+  - @hujw77/plugins@0.26.0
+  - @hujw77/core@0.20.0
 
 ## 0.11.1
 
@@ -166,9 +166,9 @@
 - Updated dependencies [111e376]
 - Updated dependencies [059071e]
 - Updated dependencies [4a57beb]
-  - @sphinx-labs/plugins@0.25.0
-  - @sphinx-labs/contracts@0.14.2
-  - @sphinx-labs/core@0.19.1
+  - @hujw77/plugins@0.25.0
+  - @hujw77/contracts@0.14.2
+  - @hujw77/core@0.19.1
 
 ## 0.11.0
 
@@ -189,9 +189,9 @@
 - Updated dependencies [5b511e9]
 - Updated dependencies [9d5d0a4]
 - Updated dependencies [013c0f9]
-  - @sphinx-labs/plugins@0.24.0
-  - @sphinx-labs/contracts@0.14.0
-  - @sphinx-labs/core@0.19.0
+  - @hujw77/plugins@0.24.0
+  - @hujw77/contracts@0.14.0
+  - @hujw77/core@0.19.0
 
 ## 0.10.3
 
@@ -200,9 +200,9 @@
 - 77a18fac: Change all docs to link to the main branch instead of develop
 - Updated dependencies [77a18fac]
 - Updated dependencies [22581a16]
-  - @sphinx-labs/contracts@0.13.3
-  - @sphinx-labs/plugins@0.23.4
-  - @sphinx-labs/core@0.18.3
+  - @hujw77/contracts@0.13.3
+  - @hujw77/plugins@0.23.4
+  - @hujw77/core@0.18.3
 
 ## 0.10.2
 
@@ -210,9 +210,9 @@
 
 - 0ea4e001: Support native forge scripts
 - Updated dependencies [0ea4e001]
-  - @sphinx-labs/contracts@0.13.2
-  - @sphinx-labs/plugins@0.23.3
-  - @sphinx-labs/core@0.18.2
+  - @hujw77/contracts@0.13.2
+  - @hujw77/plugins@0.23.3
+  - @hujw77/core@0.18.2
 
 ## 0.10.1
 
@@ -222,9 +222,9 @@
 - Updated dependencies [431d6ef0]
 - Updated dependencies [b938c2d8]
 - Updated dependencies [f2c5d280]
-  - @sphinx-labs/plugins@0.23.1
-  - @sphinx-labs/core@0.18.1
-  - @sphinx-labs/contracts@0.13.1
+  - @hujw77/plugins@0.23.1
+  - @hujw77/core@0.18.1
+  - @hujw77/contracts@0.13.1
 
 ## 0.10.0
 
@@ -236,9 +236,9 @@
 
 - Updated dependencies [330dcc28]
 - Updated dependencies [b15ad66c]
-  - @sphinx-labs/contracts@0.13.0
-  - @sphinx-labs/plugins@0.23.0
-  - @sphinx-labs/core@0.18.0
+  - @hujw77/contracts@0.13.0
+  - @hujw77/plugins@0.23.0
+  - @hujw77/core@0.18.0
 
 ## 0.9.2
 
@@ -246,9 +246,9 @@
 
 - Updated dependencies [767b7c0f]
 - Updated dependencies [275ca040]
-  - @sphinx-labs/plugins@0.22.0
-  - @sphinx-labs/core@0.17.0
-  - @sphinx-labs/contracts@0.12.0
+  - @hujw77/plugins@0.22.0
+  - @hujw77/core@0.17.0
+  - @hujw77/contracts@0.12.0
 
 ## 0.9.1
 
@@ -264,9 +264,9 @@
 - Updated dependencies [0685a903]
 - Updated dependencies [5de8fa58]
 - Updated dependencies [385bd8b8]
-  - @sphinx-labs/contracts@0.11.0
-  - @sphinx-labs/plugins@0.21.0
-  - @sphinx-labs/core@0.16.0
+  - @hujw77/contracts@0.11.0
+  - @hujw77/plugins@0.21.0
+  - @hujw77/core@0.16.0
 
 ## 0.9.0
 
@@ -281,9 +281,9 @@
 - Updated dependencies [eb0cc1c3]
 - Updated dependencies [2b80792b]
 - Updated dependencies [2d0dbe78]
-  - @sphinx-labs/plugins@0.20.0
-  - @sphinx-labs/core@0.15.0
-  - @sphinx-labs/contracts@0.10.0
+  - @hujw77/plugins@0.20.0
+  - @hujw77/core@0.15.0
+  - @hujw77/contracts@0.10.0
 
 ## 0.8.7
 
@@ -292,24 +292,24 @@
 - 0506a2e7: Incorporate feedback post-prod deployment
 - Updated dependencies [0506a2e7]
 - Updated dependencies [7ed7d07c]
-  - @sphinx-labs/plugins@0.19.3
-  - @sphinx-labs/core@0.14.2
+  - @hujw77/plugins@0.19.3
+  - @hujw77/core@0.14.2
 
 ## 0.8.6
 
 ### Patch Changes
 
 - Updated dependencies [5046395a]
-  - @sphinx-labs/plugins@0.19.0
-  - @sphinx-labs/core@0.14.0
+  - @hujw77/plugins@0.19.0
+  - @hujw77/core@0.14.0
 
 ## 0.8.5
 
 ### Patch Changes
 
 - Updated dependencies [3e7bff4a]
-  - @sphinx-labs/plugins@0.18.0
-  - @sphinx-labs/core@0.13.0
+  - @hujw77/plugins@0.18.0
+  - @hujw77/core@0.13.0
 
 ## 0.8.4
 
@@ -321,9 +321,9 @@
 - Updated dependencies [3ee9949e]
 - Updated dependencies [ec24a7b6]
 - Updated dependencies [99fd9f09]
-  - @sphinx-labs/plugins@0.17.5
-  - @sphinx-labs/contracts@0.9.4
-  - @sphinx-labs/core@0.12.4
+  - @hujw77/plugins@0.17.5
+  - @hujw77/contracts@0.9.4
+  - @hujw77/core@0.12.4
 
 ## 0.8.3
 
@@ -331,8 +331,8 @@
 
 - d88ec605: Fix bugs in getting started guides
 - Updated dependencies [d88ec605]
-  - @sphinx-labs/contracts@0.9.3
-  - @sphinx-labs/plugins@0.17.3
+  - @hujw77/contracts@0.9.3
+  - @hujw77/plugins@0.17.3
 
 ## 0.8.2
 
@@ -340,21 +340,21 @@
 
 - a778e4ff: Include build during release process
 - Updated dependencies [a778e4ff]
-  - @sphinx-labs/contracts@0.9.2
-  - @sphinx-labs/core@0.12.2
-  - @sphinx-labs/plugins@0.17.2
+  - @hujw77/contracts@0.9.2
+  - @hujw77/core@0.12.2
+  - @hujw77/plugins@0.17.2
 
 ## 0.8.1
 
 ### Patch Changes
 
 - 02674b8e: Include readme in release
-- edf822d7: Rename scope to sphinx-labs
+- edf822d7: Rename scope to hujw77
 - Updated dependencies [02674b8e]
 - Updated dependencies [edf822d7]
-  - @sphinx-labs/contracts@0.9.1
-  - @sphinx-labs/plugins@0.17.1
-  - @sphinx-labs/core@0.12.1
+  - @hujw77/contracts@0.9.1
+  - @hujw77/plugins@0.17.1
+  - @hujw77/core@0.12.1
 
 ## 0.8.0
 
@@ -387,9 +387,9 @@
 - Updated dependencies [4e6a91e7]
 - Updated dependencies [b93b5a91]
 - Updated dependencies [02a360d9]
-  - @sphinx-labs/plugins@0.17.0
-  - @sphinx-labs/core@0.12.0
-  - @sphinx-labs/contracts@0.9.0
+  - @hujw77/plugins@0.17.0
+  - @hujw77/core@0.12.0
+  - @hujw77/contracts@0.9.0
 
 ## 0.7.0
 
@@ -400,9 +400,9 @@
 ### Patch Changes
 
 - Updated dependencies [b6d1f76]
-  - @sphinx-labs/contracts@0.8.0
-  - @sphinx-labs/plugins@0.16.0
-  - @sphinx-labs/core@0.11.0
+  - @hujw77/contracts@0.8.0
+  - @hujw77/plugins@0.16.0
+  - @hujw77/core@0.11.0
 
 ## 0.6.0
 
@@ -414,8 +414,8 @@
 
 - Updated dependencies [1dafc2c]
 - Updated dependencies [6b975e7]
-  - @sphinx-labs/plugins@0.15.0
-  - @sphinx-labs/core@0.10.0
+  - @hujw77/plugins@0.15.0
+  - @hujw77/core@0.10.0
 
 ## 0.5.0
 
@@ -503,9 +503,9 @@
 - Updated dependencies [ab983d4]
 - Updated dependencies [be43435]
 - Updated dependencies [c69aa51]
-  - @sphinx-labs/core@0.9.0
-  - @sphinx-labs/plugins@0.14.0
-  - @sphinx-labs/contracts@0.7.0
+  - @hujw77/core@0.9.0
+  - @hujw77/plugins@0.14.0
+  - @hujw77/contracts@0.7.0
 
 ## 0.4.5
 
@@ -517,8 +517,8 @@
 - Updated dependencies [3e923a0]
 - Updated dependencies [22c24d2]
 - Updated dependencies [35c7a63]
-  - @sphinx-labs/core@0.8.0
-  - @sphinx-labs/plugins@0.13.0
+  - @hujw77/core@0.8.0
+  - @hujw77/plugins@0.13.0
 
 ## 0.4.4
 
@@ -532,8 +532,8 @@
 - Updated dependencies [80b1a53]
 - Updated dependencies [6a48dd7]
 - Updated dependencies [736b859]
-  - @sphinx-labs/plugins@0.12.0
-  - @sphinx-labs/core@0.7.0
+  - @hujw77/plugins@0.12.0
+  - @hujw77/core@0.7.0
 
 ## 0.4.3
 
@@ -549,8 +549,8 @@
 - Updated dependencies [fa3f420]
 - Updated dependencies [a9d3337]
 - Updated dependencies [57a327d]
-  - @sphinx-labs/core@0.6.0
-  - @sphinx-labs/plugins@0.11.0
+  - @hujw77/core@0.6.0
+  - @hujw77/plugins@0.11.0
 
 ## 0.4.2
 
@@ -558,7 +558,7 @@
 
 - fd98872: Update demo package to reflect latest `getContract` function
 - Updated dependencies [fd98872]
-  - @sphinx-labs/plugins@0.10.5
+  - @hujw77/plugins@0.10.5
 
 ## 0.4.1
 
@@ -573,8 +573,8 @@
 - Updated dependencies [b343641]
 - Updated dependencies [ed17785]
 - Updated dependencies [120327d]
-  - @sphinx-labs/core@0.5.0
-  - @sphinx-labs/plugins@0.10.0
+  - @hujw77/core@0.5.0
+  - @hujw77/plugins@0.10.0
 
 ## 0.4.0
 
@@ -609,8 +609,8 @@
 - Updated dependencies [89fd479]
 - Updated dependencies [40f0d0a]
 - Updated dependencies [2201f3a]
-  - @sphinx-labs/core@0.4.0
-  - @sphinx-labs/plugins@0.9.0
+  - @hujw77/core@0.4.0
+  - @hujw77/plugins@0.9.0
 
 ## 0.3.22
 
@@ -618,8 +618,8 @@
 
 - 2267ec4: Bump versions
 - Updated dependencies [2267ec4]
-  - @sphinx-labs/core@0.3.24
-  - @sphinx-labs/plugins@0.8.9
+  - @hujw77/core@0.3.24
+  - @hujw77/plugins@0.8.9
 
 ## 0.3.21
 
@@ -632,8 +632,8 @@
 - Updated dependencies [fdf512b]
 - Updated dependencies [a60020a]
 - Updated dependencies [64e57d6]
-  - @sphinx-labs/plugins@0.8.6
-  - @sphinx-labs/core@0.3.22
+  - @hujw77/plugins@0.8.6
+  - @hujw77/core@0.3.22
 
 ## 0.3.20
 
@@ -650,8 +650,8 @@
 - Updated dependencies [dba31f7]
 - Updated dependencies [4c04d0a]
 - Updated dependencies [c9eeb47]
-  - @sphinx-labs/core@0.3.21
-  - @sphinx-labs/plugins@0.8.5
+  - @hujw77/core@0.3.21
+  - @hujw77/plugins@0.8.5
 
 ## 0.3.19
 
@@ -670,8 +670,8 @@
 - Updated dependencies [2182a3c]
 - Updated dependencies [276d5ea]
 - Updated dependencies [4b8d25d]
-  - @sphinx-labs/plugins@0.8.4
-  - @sphinx-labs/core@0.3.20
+  - @hujw77/plugins@0.8.4
+  - @hujw77/core@0.3.20
 
 ## 0.3.18
 
@@ -683,8 +683,8 @@
 - Updated dependencies [38c62b5]
 - Updated dependencies [e7ae731]
 - Updated dependencies [2652df5]
-  - @sphinx-labs/core@0.3.19
-  - @sphinx-labs/plugins@0.8.3
+  - @hujw77/core@0.3.19
+  - @hujw77/plugins@0.8.3
 
 ## 0.3.17
 
@@ -698,8 +698,8 @@
 - Updated dependencies [f62dfea]
 - Updated dependencies [bd87e8c]
 - Updated dependencies [d12922d]
-  - @sphinx-labs/core@0.3.17
-  - @sphinx-labs/plugins@0.8.1
+  - @hujw77/core@0.3.17
+  - @hujw77/plugins@0.8.1
 
 ## 0.3.16
 
@@ -746,8 +746,8 @@
 - Updated dependencies [a1ae30f]
 - Updated dependencies [da5cb35]
 - Updated dependencies [5406b7b]
-  - @sphinx-labs/plugins@0.8.0
-  - @sphinx-labs/core@0.3.16
+  - @hujw77/plugins@0.8.0
+  - @hujw77/core@0.3.16
 
 ## 0.3.15
 
@@ -759,8 +759,8 @@
 - Updated dependencies [cf7751d]
 - Updated dependencies [7c367b4]
 - Updated dependencies [457b19a]
-  - @sphinx-labs/plugins@0.7.0
-  - @sphinx-labs/core@0.3.15
+  - @hujw77/plugins@0.7.0
+  - @hujw77/core@0.3.15
 
 ## 0.3.14
 
@@ -768,8 +768,8 @@
 
 - 8323afb: Add deployment artifact generation on the user's side
 - Updated dependencies [8323afb]
-  - @sphinx-labs/plugins@0.6.0
-  - @sphinx-labs/core@0.3.14
+  - @hujw77/plugins@0.6.0
+  - @hujw77/core@0.3.14
 
 ## 0.3.13
 
@@ -777,8 +777,8 @@
 
 - 15ebe78: Hardhat task bug fixes and improvements
 - Updated dependencies [15ebe78]
-  - @sphinx-labs/core@0.3.13
-  - @sphinx-labs/plugins@0.5.14
+  - @hujw77/core@0.3.13
+  - @hujw77/plugins@0.5.14
 
 ## 0.3.12
 
@@ -786,7 +786,7 @@
 
 - b653177: Remove parallel deployments due to bug on live networks
 - Updated dependencies [b653177]
-  - @sphinx-labs/plugins@0.5.13
+  - @hujw77/plugins@0.5.13
 
 ## 0.3.11
 
@@ -799,8 +799,8 @@
 - Updated dependencies [e862925]
 - Updated dependencies [a43e0e3]
 - Updated dependencies [12a7f34]
-  - @sphinx-labs/core@0.3.12
-  - @sphinx-labs/plugins@0.5.12
+  - @hujw77/core@0.3.12
+  - @hujw77/plugins@0.5.12
 
 ## 0.3.10
 
@@ -808,7 +808,7 @@
 
 - 6bc37b3: Bump demo and plugins versions
 - Updated dependencies [6bc37b3]
-  - @sphinx-labs/plugins@0.5.7
+  - @hujw77/plugins@0.5.7
 
 ## 0.3.9
 
@@ -816,7 +816,7 @@
 
 - 86be8a3: Update versions
 - Updated dependencies [86be8a3]
-  - @sphinx-labs/plugins@0.5.5
+  - @hujw77/plugins@0.5.5
 
 ## 0.3.8
 
@@ -831,8 +831,8 @@
 - Updated dependencies [02c7a39]
 - Updated dependencies [6f53f35]
 - Updated dependencies [233f960]
-  - @sphinx-labs/core@0.3.6
-  - @sphinx-labs/plugins@0.5.4
+  - @hujw77/core@0.3.6
+  - @hujw77/plugins@0.5.4
 
 ## 0.3.7
 
@@ -840,7 +840,7 @@
 
 - 6cb309d: Bump versions
 - Updated dependencies [6cb309d]
-  - @sphinx-labs/plugins@0.5.3
+  - @hujw77/plugins@0.5.3
 
 ## 0.3.6
 
@@ -850,8 +850,8 @@
 - dc88439: Improved error handling in deployment task
 - Updated dependencies [3b3ae5a]
 - Updated dependencies [dc88439]
-  - @sphinx-labs/core@0.3.5
-  - @sphinx-labs/plugins@0.5.2
+  - @hujw77/core@0.3.5
+  - @hujw77/plugins@0.5.2
 
 ## 0.3.5
 
@@ -859,7 +859,7 @@
 
 - 8ccbe35: Bump plugins and demo packages
 - Updated dependencies [8ccbe35]
-  - @sphinx-labs/plugins@0.5.1
+  - @hujw77/plugins@0.5.1
 
 ## 0.3.4
 
@@ -867,8 +867,8 @@
 
 - 123d9c1: Add support for deployments on live networks
 - Updated dependencies [123d9c1]
-  - @sphinx-labs/plugins@0.5.0
-  - @sphinx-labs/core@0.3.4
+  - @hujw77/plugins@0.5.0
+  - @hujw77/core@0.3.4
 
 ## 0.3.3
 
@@ -876,7 +876,7 @@
 
 - ded016a: Update demo readme
 - Updated dependencies [ded016a]
-  - @sphinx-labs/plugins@0.4.4
+  - @hujw77/plugins@0.4.4
 
 ## 0.3.2
 
@@ -888,8 +888,8 @@
 - Updated dependencies [2c5b238]
 - Updated dependencies [2c5b238]
 - Updated dependencies [2285b39]
-  - @sphinx-labs/core@0.3.3
-  - @sphinx-labs/plugins@0.4.3
+  - @hujw77/core@0.3.3
+  - @hujw77/plugins@0.4.3
 
 ## 0.3.1
 
@@ -897,8 +897,8 @@
 
 - 03d557c: Bump all versions
 - Updated dependencies [03d557c]
-  - @sphinx-labs/core@0.3.2
-  - @sphinx-labs/plugins@0.4.2
+  - @hujw77/core@0.3.2
+  - @hujw77/plugins@0.4.2
 
 ## 0.3.0
 
@@ -909,8 +909,8 @@
 ### Patch Changes
 
 - Updated dependencies [52c7f6c]
-  - @sphinx-labs/core@0.3.0
-  - @sphinx-labs/plugins@0.4.0
+  - @hujw77/core@0.3.0
+  - @hujw77/plugins@0.4.0
 
 ## 0.2.0
 
@@ -921,8 +921,8 @@
 ### Patch Changes
 
 - Updated dependencies [19cf359]
-  - @sphinx-labs/core@0.2.0
-  - @sphinx-labs/plugins@0.3.0
+  - @hujw77/core@0.2.0
+  - @hujw77/plugins@0.3.0
 
 ## 0.1.1
 
@@ -930,5 +930,5 @@
 
 - Updated dependencies [3a7b19c]
 - Updated dependencies [04ada98]
-  - @sphinx-labs/plugins@0.2.0
-  - @sphinx-labs/core@0.1.1
+  - @hujw77/plugins@0.2.0
+  - @hujw77/core@0.1.1

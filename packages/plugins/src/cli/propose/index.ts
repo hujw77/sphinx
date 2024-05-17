@@ -18,7 +18,7 @@ import {
   makeDeploymentConfig,
   DEFAULT_CALL_DEPTH,
   syncSphinxLock,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import ora from 'ora'
 import { blue } from 'chalk'
 import { ethers } from 'ethers'
@@ -28,12 +28,12 @@ import {
   DeploymentInfo,
   GetConfigArtifacts,
   NetworkConfig,
-} from '@sphinx-labs/core/dist/config/types'
+} from '@hujw77/core/dist/config/types'
 import {
   SphinxLeafType,
   SphinxMerkleTree,
   makeSphinxMerkleTree,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import { makeNetworkConfig, decodeDeploymentInfo } from '../../foundry/decode'
 import { getFoundryToml } from '../../foundry/options'

@@ -1,7 +1,7 @@
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import ora from 'ora'
-import { getDuplicateElements, syncSphinxLock } from '@sphinx-labs/core'
+import { getDuplicateElements, syncSphinxLock } from '@hujw77/core'
 
 import { init } from '../sample-project'
 import { SphinxContext, makeSphinxContext } from './context'

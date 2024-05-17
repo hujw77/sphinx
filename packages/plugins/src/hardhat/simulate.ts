@@ -32,7 +32,7 @@ import {
   convertEthersTransactionResponse,
   SphinxTransactionResponse,
   sphinxCoreUtils,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers } from 'ethers'
 import { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider'
 import {
@@ -112,7 +112,7 @@ export const simulate = async (
   transactions: SimulationTransactions
 }> => {
   const rootPluginPath =
-    process.env.DEV_FILE_PATH ?? join('node_modules', '@sphinx-labs', 'plugins')
+    process.env.DEV_FILE_PATH ?? join('node_modules', '@hujw77', 'plugins')
 
   const provider = new SphinxJsonRpcProvider(rpcUrl)
 
@@ -486,7 +486,7 @@ export const handleSimulationSuccess = async (
  * a backoff period of two seconds.
  *
  * This function uses the `evm_snapshot` and `evm_revert` RPC methods to prevent a 'nonce too low'
- * bug caused by the Hardhat simulation (context: https://github.com/sphinx-labs/sphinx/pull/1565).
+ * bug caused by the Hardhat simulation (context: https://github.com/hujw77/sphinx/pull/1565).
  * The fact that we use these RPC methods means that an edge case could occur:
  * 1. Say we simultaneously submit state-changing transactions from Account A and Account B (e.g. via
  * `Promise.all`).
@@ -513,7 +513,7 @@ export const createHardhatEthersProviderProxy = (
         const invokeWithRetryAndSnapshot = async () => {
           // We don't allow the 'hardhat_reset' RPC method to avoid an infinite loop bug caused by
           // Hardhat. More context is in this pull request description:
-          // https://github.com/sphinx-labs/sphinx/pull/1565
+          // https://github.com/hujw77/sphinx/pull/1565
           if (args.length > 0 && args[0] === 'hardhat_reset') {
             throw new Error(HardhatResetNotAllowedErrorMessage)
           }
@@ -529,7 +529,7 @@ export const createHardhatEthersProviderProxy = (
             // before calling `target[prop](...args)` to avoid this nonce bug.
             //
             // More info on the nonce error is in this pull request description:
-            // https://github.com/sphinx-labs/sphinx/pull/1565.
+            // https://github.com/hujw77/sphinx/pull/1565.
             //
             // This RPC method is outside of the try...catch statement below because this call
             // should never error, so if it does, it'd preferable to throw the error immediately.
@@ -539,7 +539,7 @@ export const createHardhatEthersProviderProxy = (
               // Forward the call to the Hardhat provider. We include a timeout to ensure that an
               // RPC provider with degraded service doesn't cause this call to hang indefinitely.
               // See this pull request description for more info:
-              // https://github.com/sphinx-labs/sphinx/pull/1565
+              // https://github.com/hujw77/sphinx/pull/1565
 
               const result = await sphinxCoreUtils.callWithTimeout(
                 target[prop](...args),
@@ -569,7 +569,7 @@ export const createHardhatEthersProviderProxy = (
               // changes made by the failed RPC request. There should be no state changes because
               // the call threw an error. This is a precaution against the "nonce too low" error,
               // which is described in this pull request description:
-              // https://github.com/sphinx-labs/sphinx/pull/1565
+              // https://github.com/hujw77/sphinx/pull/1565
               const success = await target.send('evm_revert', [snapshotId])
               if (!success) {
                 throw new InvariantError(`Failed to call 'evm_revert'.`)

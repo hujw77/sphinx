@@ -10,13 +10,13 @@ import {
   isContractDeploymentArtifact,
   makeDeploymentArtifacts,
   isExecutionArtifact,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { ethers } from 'ethers'
 import {
   ParsedAccountAccess,
   getGnosisSafeProxyAddress,
   remove0x,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 import sinon from 'sinon'
 import { expect } from 'chai'
 

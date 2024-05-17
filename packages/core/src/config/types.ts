@@ -10,7 +10,7 @@ import {
   ContractArtifact,
   SphinxMerkleTree,
   ParsedAccountAccess,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import { BuildInfo, CompilerInput } from '../languages/solidity/types'
 import { SphinxJsonRpcProvider } from '../provider'

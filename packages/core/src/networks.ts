@@ -7,7 +7,7 @@ import {
   SPHINX_LOCAL_NETWORKS,
   SPHINX_NETWORKS,
   SupportedNetwork,
-} from '@sphinx-labs/contracts/dist/networks'
+} from '@hujw77/contracts/dist/networks'
 
 export type SupportedLocalNetworkName = 'anvil'
 

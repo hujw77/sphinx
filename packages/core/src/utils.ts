@@ -36,7 +36,7 @@ import {
   DETERMINISTIC_DEPLOYMENT_PROXY_ADDRESS,
   CreateCallArtifact,
   MAX_CONTRACT_SIZE_LIMIT,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import {
   DeploymentConfig,

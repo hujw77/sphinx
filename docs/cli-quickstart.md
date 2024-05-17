@@ -53,17 +53,17 @@ Install Sphinx, forge-std, and ds-test using your preferred package manager.
 
 Yarn:
 ```
-yarn add --dev @sphinx-labs/plugins https://github.com/foundry-rs/forge-std.git#v1.7.1 https://github.com/dapphub/ds-test.git#e282159d5170298eb2455a6c05280ab5a73a4ef0
+yarn add --dev @hujw77/plugins https://github.com/foundry-rs/forge-std.git#v1.7.1 https://github.com/dapphub/ds-test.git#e282159d5170298eb2455a6c05280ab5a73a4ef0
 ```
 
 npm:
 ```
-npm install --save-dev @sphinx-labs/plugins https://github.com/foundry-rs/forge-std.git#v1.7.1 https://github.com/dapphub/ds-test.git#e282159d5170298eb2455a6c05280ab5a73a4ef0
+npm install --save-dev @hujw77/plugins https://github.com/foundry-rs/forge-std.git#v1.7.1 https://github.com/dapphub/ds-test.git#e282159d5170298eb2455a6c05280ab5a73a4ef0
 ```
 
 pnpm:
 ```
-pnpm add -D @sphinx-labs/plugins https://github.com/foundry-rs/forge-std.git#v1.7.1 https://github.com/dapphub/ds-test.git#e282159d5170298eb2455a6c05280ab5a73a4ef0
+pnpm add -D @hujw77/plugins https://github.com/foundry-rs/forge-std.git#v1.7.1 https://github.com/dapphub/ds-test.git#e282159d5170298eb2455a6c05280ab5a73a4ef0
 ```
 
 ## 5. Create a new Sphinx project
@@ -127,4 +127,4 @@ When the proposal is finished, go to the [Sphinx UI](https://sphinx.dev) to appr
 
 Congrats, you've finished your first deployment with Sphinx!
 
-When you're ready to write your own deployment scripts with Sphinx, see the [Writing Deployment Scripts guide](https://github.com/sphinx-labs/sphinx/blob/main/docs/writing-scripts.md).
+When you're ready to write your own deployment scripts with Sphinx, see the [Writing Deployment Scripts guide](https://github.com/hujw77/sphinx/blob/main/docs/writing-scripts.md).

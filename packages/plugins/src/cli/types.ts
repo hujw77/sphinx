@@ -7,7 +7,7 @@ import {
   NetworkConfig,
   BuildInfos,
   NetworkGasEstimate,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 
 import { FoundryToml } from '../foundry/types'
 import { SphinxContext } from './context'

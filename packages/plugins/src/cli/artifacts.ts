@@ -2,7 +2,7 @@ import {
   ExecutionMode,
   fetchDeploymentArtifacts,
   writeDeploymentArtifacts,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import ora from 'ora'
 
 import { FetchArtifactsArgs } from './types'

@@ -62,7 +62,7 @@ jobs:
         with:
           script: |
             const publishedPackages = JSON.parse(process.env.PUBLISHED_PACKAGES);
-            const contractsPackage = publishedPackages.find((pkg) => pkg.name === '@sphinx-labs/contracts');
+            const contractsPackage = publishedPackages.find((pkg) => pkg.name === '@hujw77/contracts');
             if (contractsPackage) {
               github.rest.git.createRef({
                 owner: context.repo.owner,

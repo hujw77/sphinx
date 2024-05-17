@@ -13,9 +13,9 @@ import {
   relayProposal,
   storeDeploymentConfig,
   userConfirmation,
-} from '@sphinx-labs/core'
+} from '@hujw77/core'
 import { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider'
-import { SphinxMerkleTree } from '@sphinx-labs/contracts'
+import { SphinxMerkleTree } from '@hujw77/contracts'
 
 import {
   assertNoLinkedLibraries,

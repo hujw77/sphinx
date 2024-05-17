@@ -9,7 +9,7 @@ import {
   NetworksUserConfig,
 } from 'hardhat/types'
 import { Logger } from '@eth-optimism/common-ts'
-import { SPHINX_NETWORKS } from '@sphinx-labs/contracts'
+import { SPHINX_NETWORKS } from '@hujw77/contracts'
 import { Wallet } from 'ethers'
 import ora from 'ora'
 

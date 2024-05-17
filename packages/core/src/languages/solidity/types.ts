@@ -2,7 +2,7 @@ import {
   CompilerOutputMetadata,
   LinkReferences,
   SphinxTransaction,
-} from '@sphinx-labs/contracts'
+} from '@hujw77/contracts'
 
 import { ExecutionMode } from '../../constants'
 
