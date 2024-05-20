@@ -23,7 +23,7 @@ import {
   MAX_UINT64,
   makeDeploymentConfig,
   DEFAULT_CALL_DEPTH,
-  syncSphinxLock,
+  // syncSphinxLock,
 } from '@hujw77/core'
 import ora from 'ora'
 // import { blue } from 'chalk'
@@ -315,7 +315,7 @@ export const propose = async (
   // We must synchronize the sphinx.lock file before calling into the users script because they
   // may be using a project which was just created, and doesn't exist in the lock file on their
   // machine yet.
-  await syncSphinxLock(undefined, apiKey)
+  // await syncSphinxLock(undefined, apiKey)
 
   const { safeAddress, testnets, mainnets } = await getSphinxConfigFromScript(
     scriptPath,
