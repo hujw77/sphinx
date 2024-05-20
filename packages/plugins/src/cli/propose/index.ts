@@ -381,6 +381,8 @@ export const propose = async (
   const deploymentData = makeDeploymentData(networkConfigArray)
   const merkleTree = makeSphinxMerkleTree(deploymentData)
 
+  console.log(JSON.stringify(merkleTree, null, 2))
+
   spinner.succeed(`Built proposal.`)
   spinner.start(`Running simulation...`)
 
@@ -487,8 +489,6 @@ export const propose = async (
   }
 
   const deploymentConfigData = JSON.stringify(deploymentConfig, null, 2)
-
-  console.log(deploymentConfig)
 
   if (isDryRun) {
     spinner.succeed(`Proposal dry run succeeded.`)
