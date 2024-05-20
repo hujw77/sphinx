@@ -286,6 +286,11 @@ export const makeCLI = (
             describe: 'Path to the proposal file.',
             type: 'string',
             demandOption: true,
+          })
+          .option('artifact', {
+            describe: 'Whether to save the deployment artifacts.',
+            boolean: true,
+            default: true,
           }),
       async (argv) => executeCommandHandler(argv, sphinxContext)
     )
@@ -373,9 +378,7 @@ const executeCommandHandler = async (
   argv: ExecuteCommandArgs,
   sphinxContext: SphinxContext
 ): Promise<void> => {
-  const { proposalPath } = argv
-
-  await sphinxContext.execute({ proposalPath })
+  await sphinxContext.execute(argv)
 }
 
 const artifactsCommandHandler = async (

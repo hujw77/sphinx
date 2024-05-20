@@ -29,9 +29,11 @@ import ora from 'ora'
 
 export interface ExecuteArgs {
   proposalPath: string
+  artifact: boolean
 }
 
 export const execute = async (args: ExecuteArgs) => {
+  const { proposalPath, artifact } = args;
   const projectRoot = process.cwd()
 
   const spinner = ora({ isSilent: false })
@@ -39,7 +41,7 @@ export const execute = async (args: ExecuteArgs) => {
     name: 'Logger',
   })
 
-  const deploymentPath = relative(projectRoot, args.proposalPath)
+  const deploymentPath = relative(projectRoot, proposalPath)
   const deploymentConfigFile = join(deploymentPath, 'deployment.json')
   const deploymentSigFile = join(deploymentPath, 'signature.json')
 
@@ -146,56 +148,59 @@ export const execute = async (args: ExecuteArgs) => {
       )
     }
 
-    spinner.start(`Building deployment artifacts...`)
+    spinner.succeed(`Deployment executed.`)
 
-    const { projectName } = networkConfig.newConfig
+    if (artifact) {
+      spinner.start(`Building deployment artifacts...`)
 
-    // Get the existing contract deployment artifacts and execution artifacts for the current network.
-    // This object will potentially be modified when we make the new deployment artifacts.
-    // Specifically, the `history` field of the contract deployment artifacts could be modified. Even
-    // though we don't currently modify the execution artifacts, we include them anyways in case we
-    // add logic in the future that modifies them. We don't include the compiler input artifacts
-    // mainly as a performance optimization and because we don't expect to modify them in the future.
-    const networkArtifacts = readDeploymentArtifactsForNetwork(
-      projectName,
-      chainId,
-      networkConfig.executionMode
-    )
-    const deploymentArtifacts = {
-      networks: {
-        [chainId.toString()]: networkArtifacts,
-      },
-      compilerInputs: {},
-    }
+      const { projectName } = networkConfig.newConfig
 
-    await makeDeploymentArtifacts(
-      {
-        [chainId.toString()]: {
-          provider,
-          deploymentConfig,
-          receipts,
+      // Get the existing contract deployment artifacts and execution artifacts for the current network.
+      // This object will potentially be modified when we make the new deployment artifacts.
+      // Specifically, the `history` field of the contract deployment artifacts could be modified. Even
+      // though we don't currently modify the execution artifacts, we include them anyways in case we
+      // add logic in the future that modifies them. We don't include the compiler input artifacts
+      // mainly as a performance optimization and because we don't expect to modify them in the future.
+      const networkArtifacts = readDeploymentArtifactsForNetwork(
+        projectName,
+        chainId,
+        networkConfig.executionMode
+      )
+      const deploymentArtifacts = {
+        networks: {
+          [chainId.toString()]: networkArtifacts,
         },
-      },
-      merkleTree.root,
-      deploymentConfig.configArtifacts,
-      deploymentArtifacts
-    )
+        compilerInputs: {},
+      }
 
-    spinner.succeed(`Built deployment artifacts.`)
-    spinner.start(`Writing deployment artifacts...`)
+      await makeDeploymentArtifacts(
+        {
+          [chainId.toString()]: {
+            provider,
+            deploymentConfig,
+            receipts,
+          },
+        },
+        merkleTree.root,
+        deploymentConfig.configArtifacts,
+        deploymentArtifacts
+      )
 
-    writeDeploymentArtifacts(
-      projectName,
-      networkConfig.executionMode,
-      deploymentArtifacts
-    )
+      spinner.succeed(`Built deployment artifacts.`)
+      spinner.start(`Writing deployment artifacts...`)
 
-    // Note that we don't display the artifact paths for the deployment artifacts because we may not
-    // modify all of the artifacts that we read from the file system earlier.
-    spinner.succeed(`Wrote deployment artifacts.`)
+      writeDeploymentArtifacts(
+        projectName,
+        networkConfig.executionMode,
+        deploymentArtifacts
+      )
 
-    displayDeploymentTable(networkConfig)
+      // Note that we don't display the artifact paths for the deployment artifacts because we may not
+      // modify all of the artifacts that we read from the file system earlier.
+      spinner.succeed(`Wrote deployment artifacts.`)
 
+      displayDeploymentTable(networkConfig)
+    }
     // if (true) {
     //   spinner.info(`Verifying contracts on Etherscan.`)
     //

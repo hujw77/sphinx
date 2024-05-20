@@ -34,6 +34,7 @@ export interface DeployCommandArgs {
 
 export interface ExecuteCommandArgs {
   proposalPath: string
+  artifact: boolean
 }
 
 export interface FetchArtifactsArgs {

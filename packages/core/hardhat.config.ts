@@ -71,11 +71,12 @@ task('deploy-system')
     ) => {
       // Throw an error if we're on the Hardhat network. This ensures that the `url` field is
       // defined for this network.
-      if (!('url' in hre.network.config)) {
+      if (!('url' in hre.network.config) || !hre.network.config.url) {
         throw new Error(
           `Cannot deploy Sphinx on the Hardhat network using this task.`
         )
       }
+
       const provider = new SphinxJsonRpcProvider(hre.network.config.url)
       const signer = new Wallet(process.env.PRIVATE_KEY!).connect(provider)
 
