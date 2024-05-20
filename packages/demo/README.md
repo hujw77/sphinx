@@ -88,28 +88,10 @@ Please feel free to reach out to us in our [Discord](https://discord.gg/7Gc3DK33
 > Note: You can use the [Deploy CLI Command](https://github.com/hujw77/sphinx/blob/main/docs/cli-deploy.md) to deploy on networks that the DevOps Platform doesn't currently support.
 
 - Ethereum
-- Optimism
-- Arbitrum
-- Polygon
-- Polygon zkEVM
 - BNB Smart Chain (aka BSC)
 - Gnosis Chain
-- Avalanche C-Chain
-- Linea
-- Fantom
 - Base
 - Scroll
-- Zora
-- RARI
-- Celo
-- Moonbeam
-- Moonriver
-- Fuse
-- Evmos
-- Kava
-- Rootstock
-- Blast
-- Mode
 - Mantle
 - Darwinia
 - Crab
@@ -118,29 +100,8 @@ Please feel free to reach out to us in our [Discord](https://discord.gg/7Gc3DK33
 Test networks:
 
 - Ethereum Sepolia
-- Optimism Sepolia
 - Arbitrum Sepolia
-- Polygon Amoy
-- Polygon zkEVM Cardona
-- BNB Smart Chain Testnet
-- Gnosis Chiado
-- Avalanche Fuji
-- Linea Sepolia
-- Fantom Testnet
-- Base Sepolia
-- Scroll Sepolia
-- Zora Sepolia
-- Rari Sepolia
-- Celo Alfajores
-- Moonbase Alpha
-- Evmos Testnet
-- Kava Testnet
-- Rootstock Testnet
-- Blast Sepolia
 - Darwinia Pangolin
-- Taiko Katla
-- Mantle Sepolia
-- Astar zKyoto
 
 More networks are on the way! Please reach out to us in our [Discord](https://discord.gg/7Gc3DK33Np) if there are networks you'd like us to add.
 
