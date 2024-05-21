@@ -492,6 +492,8 @@ export const propose = async (
 
   const deploymentConfigData = JSON.stringify(deploymentConfig, null, 2)
 
+  console.log(deploymentConfigData)
+
   if (isDryRun) {
     spinner.succeed(`Proposal dry run succeeded.`)
   } else {
