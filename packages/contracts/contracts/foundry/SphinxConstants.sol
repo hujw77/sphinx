@@ -4,7 +4,7 @@ pragma solidity >=0.6.2 <0.9.0;
 import { NetworkInfo, NetworkType } from "./SphinxPluginTypes.sol";
 
 contract SphinxConstants {
-  string public constant sphinxLibraryVersion = 'v0.1.3';
+  string public constant sphinxLibraryVersion = 'v0.1.9';
   address public constant compatibilityFallbackHandlerAddress = 0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4;
   address public constant multiSendAddress = 0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761;
   address public constant createCallAddress = 0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4;
@@ -14,7 +14,7 @@ contract SphinxConstants {
   address public constant safeSingletonAddress = 0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552;
   address public constant sphinxModuleImplAddress = 0x8f4E4d51B8050B0ff713eff1F88f3dD8b5e8a530;
 
-  uint8 internal constant numSupportedNetworks = 53;
+  uint8 internal constant numSupportedNetworks = 54;
 
   function getNetworkInfoArray() public pure returns (NetworkInfo[] memory) {
     NetworkInfo[] memory all = new NetworkInfo[](numSupportedNetworks);
@@ -363,9 +363,9 @@ contract SphinxConstants {
       dripSizeString: '0.025 ETH'
     });
     all[43] = NetworkInfo({
-      network: Network.taiko_katla,
-      name: "taiko_katla",
-      chainId: 167008,
+      network: Network.taiko_hekla,
+      name: "taiko_hekla",
+      chainId: 167009,
       networkType: NetworkType.Testnet,
       dripSize: 150000000000000000,
       dripSizeString: '0.15 ETH'
@@ -395,6 +395,14 @@ contract SphinxConstants {
       dripSizeString: '1 RING'
     });
     all[47] = NetworkInfo({
+      network: Network.tanssi_pangoro,
+      name: "tanssi_pangoro",
+      chainId: 45,
+      networkType: NetworkType.Testnet,
+      dripSize: 1000000000000000000,
+      dripSizeString: '1 ORING'
+    });
+    all[48] = NetworkInfo({
       network: Network.mantle_sepolia,
       name: "mantle_sepolia",
       chainId: 5003,
@@ -402,7 +410,7 @@ contract SphinxConstants {
       dripSize: 5000000000000000000,
       dripSizeString: '5 MNT'
     });
-    all[48] = NetworkInfo({
+    all[49] = NetworkInfo({
       network: Network.mantle,
       name: "mantle",
       chainId: 5000,
@@ -410,7 +418,7 @@ contract SphinxConstants {
       dripSize: 5000000000000000000,
       dripSizeString: '5 MNT'
     });
-    all[49] = NetworkInfo({
+    all[50] = NetworkInfo({
       network: Network.astar_zkyoto,
       name: "astar_zkyoto",
       chainId: 6038361,
@@ -418,7 +426,7 @@ contract SphinxConstants {
       dripSize: 150000000000000000,
       dripSizeString: '0.15 ETH'
     });
-    all[50] = NetworkInfo({
+    all[51] = NetworkInfo({
       network: Network.astar,
       name: "astar",
       chainId: 3776,
@@ -426,7 +434,7 @@ contract SphinxConstants {
       dripSize: 25000000000000000,
       dripSizeString: '0.025 ETH'
     });
-    all[51] = NetworkInfo({
+    all[52] = NetworkInfo({
       network: Network.crab,
       name: "crab",
       chainId: 44,
@@ -434,7 +442,7 @@ contract SphinxConstants {
       dripSize: 1000000000000000000,
       dripSizeString: '1 CRAB'
     });
-    all[52] = NetworkInfo({
+    all[53] = NetworkInfo({
       network: Network.darwinia,
       name: "darwinia",
       chainId: 46,
@@ -490,10 +498,11 @@ enum Network {
   rari_sepolia,
   blast_sepolia,
   blast,
-  taiko_katla,
+  taiko_hekla,
   mode_sepolia,
   mode,
   darwinia_pangolin,
+  tanssi_pangoro,
   mantle_sepolia,
   mantle,
   astar_zkyoto,

@@ -96,12 +96,18 @@ Please feel free to reach out to us in our [Discord](https://discord.gg/7Gc3DK33
 - Darwinia
 - Crab
 - Astar zkEVM
+- Arbitrum
+- Blast
+- Polygon
+- Moonbeam
 
 Test networks:
 
 - Ethereum Sepolia
 - Arbitrum Sepolia
 - Darwinia Pangolin
+- Tanssi Pangoro
+- Taiko Hekla
 
 More networks are on the way! Please reach out to us in our [Discord](https://discord.gg/7Gc3DK33Np) if there are networks you'd like us to add.
 
