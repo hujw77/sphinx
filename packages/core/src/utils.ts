@@ -206,6 +206,12 @@ export const getGasPriceOverrides = async (
     case 43:
       delete overridden.chainId
 
+    case 44:
+      delete overridden.chainId
+
+    case 46:
+      delete overridden.chainId
+
     // Overrides the gasPrice for Fantom Opera
     case 250:
       if (gasPrice !== null) {
