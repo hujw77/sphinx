@@ -10,6 +10,7 @@ import {
   DeployCommandArgs,
   ProposeCommandArgs,
   ExecuteCommandArgs,
+  VerifyCommandArgs,
 } from './types'
 import {
   BothNetworksSpecifiedError,
@@ -294,6 +295,24 @@ export const makeCLI = (
           }),
       async (argv) => executeCommandHandler(argv, sphinxContext)
     )
+    .command(
+      'verify <deploymentPath>',
+      `verify contracts.`,
+      (y) =>
+        y
+          .usage('Usage: sphinx verify <deploymentPath>')
+          .positional('deploymentPath', {
+            describe: 'Path to the deployment file.',
+            type: 'string',
+            demandOption: true,
+          })
+          .option('network', {
+            describe: 'verify network.',
+            type: 'string',
+            demandOption: true,
+          }),
+      async (argv) => verifyCommandHandler(argv, sphinxContext)
+    )
     // The following command displays the help menu when `npx sphinx` is called with an incorrect
     // argument, e.g. `npx sphinx asdf`.
     .command('*', '', ({ argv }) => {
@@ -378,7 +397,15 @@ const executeCommandHandler = async (
   argv: ExecuteCommandArgs,
   sphinxContext: SphinxContext
 ): Promise<void> => {
-  await sphinxContext.execute(argv)
+  const { proposalPath, artifact } = argv
+  await sphinxContext.execute({ proposalPath, artifact, sphinxContext })
+}
+
+const verifyCommandHandler = async (
+  argv: VerifyCommandArgs,
+  sphinxContext: SphinxContext
+): Promise<void> => {
+  await sphinxContext.verify(argv)
 }
 
 const artifactsCommandHandler = async (

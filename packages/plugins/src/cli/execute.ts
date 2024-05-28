@@ -21,19 +21,20 @@ import {
   makeDeploymentArtifacts,
   writeDeploymentArtifacts,
   displayDeploymentTable,
-  // verifyDeploymentWithRetries,
 } from '@hujw77/core'
 import { ethers } from 'ethers'
 import { Logger } from '@eth-optimism/common-ts'
 import ora from 'ora'
+import { SphinxContext } from './context'
 
 export interface ExecuteArgs {
   proposalPath: string
   artifact: boolean
+  sphinxContext: SphinxContext
 }
 
 export const execute = async (args: ExecuteArgs) => {
-  const { proposalPath, artifact } = args;
+  const { proposalPath, artifact, sphinxContext } = args;
   const projectRoot = process.cwd()
 
   const spinner = ora({ isSilent: false })
@@ -201,29 +202,5 @@ export const execute = async (args: ExecuteArgs) => {
 
       displayDeploymentTable(networkConfig)
     }
-    // if (true) {
-    //   spinner.info(`Verifying contracts on Etherscan.`)
-    //
-    //   const etherscanApiEnvKey = supportedNetwork.blockexplorers.etherscan?.envKey
-    //   if (!etherscanApiEnvKey) {
-    //     continue
-    //   }
-    //   const etherscanApiKey = eval(`process.env.${etherscanApiEnvKey}`)
-    //
-    //   await verifyDeploymentWithRetries(
-    //     deploymentConfig,
-    //     provider,
-    //     etherscanApiKey
-    //   )
-    // }
   }
-
-  // return {
-  //   deploymentConfig,
-  //   merkleTree,
-  //   preview,
-  //   receipts,
-  //   configArtifacts,
-  //   deploymentArtifacts,
-  // }
 }

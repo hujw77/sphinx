@@ -25,6 +25,7 @@ import {
 import { ProposeArgs, buildNetworkConfigArray, propose } from './propose'
 import { DeployArgs, deploy } from './deploy'
 import { ExecuteArgs, execute } from './execute'
+import { VerifyArgs, verify } from './verify'
 import {
   AssertNoLinkedLibraries,
   BuildNetworkConfigArray,
@@ -59,6 +60,7 @@ export type SphinxContext = {
     configArtifacts?: ConfigArtifacts
   }>
   execute: (args: ExecuteArgs) => Promise<void>
+  verify: (args: VerifyArgs) => Promise<void>
   getNetworkGasEstimate: GetNetworkGasEstimate
   buildNetworkConfigArray: BuildNetworkConfigArray
   storeDeploymentConfig: StoreDeploymentConfig
@@ -75,6 +77,7 @@ export const makeSphinxContext = (): SphinxContext => {
     propose,
     deploy,
     execute,
+    verify,
     getNetworkGasEstimate,
     buildNetworkConfigArray,
     storeDeploymentConfig,

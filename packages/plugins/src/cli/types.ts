@@ -37,6 +37,11 @@ export interface ExecuteCommandArgs {
   artifact: boolean
 }
 
+export interface VerifyCommandArgs {
+  deploymentPath: string
+  network: string
+}
+
 export interface FetchArtifactsArgs {
   apiKey: string
   orgId: string

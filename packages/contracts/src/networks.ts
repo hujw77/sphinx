@@ -1256,7 +1256,13 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     chainId: BigInt(43),
     rpcUrl: () => process.env.DARWINIA_PANGOLIN_URL!,
     rpcUrlId: 'DARWINIA_PANGOLIN_URL',
-    blockexplorers: {},
+    blockexplorers: {
+      etherscan: {
+        apiURL: 'https://pangolin.api.subscan.io/api/scan/evm/contract/verifysource',
+        browserURL: 'https://pangolin.subscan.io/',
+        envKey: 'DARWINIA_SUBSCAN_API_KEY',
+      }
+    },
     currency: 'RING',
     dripSize: '1',
     networkType: 'Testnet',
