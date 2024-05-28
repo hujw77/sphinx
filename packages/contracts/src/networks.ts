@@ -1408,7 +1408,13 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     chainId: BigInt(44),
     rpcUrl: () => process.env.DARWINIA_CRAB_MAINNET_URL!,
     rpcUrlId: 'DARWINIA_CRAB_MAINNET_URL',
-    blockexplorers: {},
+    blockexplorers: {
+      etherscan: {
+        apiURL: 'https://crab.api.subscan.io/api/scan/evm/contract/verifysource',
+        browserURL: 'https://crab.subscan.io/',
+        envKey: 'DARWINIA_SUBSCAN_API_KEY',
+      }
+    },
     currency: 'CRAB',
     dripSize: '1',
     networkType: 'Mainnet',
@@ -1427,7 +1433,13 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     chainId: BigInt(46),
     rpcUrl: () => process.env.DARWINIA_MAINNET_URL!,
     rpcUrlId: 'DARWINIA_MAINNET_URL',
-    blockexplorers: {},
+    blockexplorers: {
+      etherscan: {
+        apiURL: 'https://darwinia.api.subscan.io/api/scan/evm/contract/verifysource',
+        browserURL: 'https://darwinia.subscan.io/',
+        envKey: 'DARWINIA_SUBSCAN_API_KEY',
+      }
+    },
     currency: 'RING',
     dripSize: '1',
     networkType: 'Mainnet',
