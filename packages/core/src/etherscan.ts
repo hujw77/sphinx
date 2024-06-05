@@ -98,7 +98,8 @@ export const verifySphinxConfig = async (
 export const verifyDeploymentWithRetries = async (
   deploymentConfig: DeploymentConfig,
   provider: ethers.Provider,
-  apiKey: string
+  apiKey: string,
+  explorer?: ExplorerName
 ): Promise<void> => {
   const maxAttempts = 10
   const networkConfig = fetchNetworkConfigFromDeploymentConfig(
@@ -143,7 +144,8 @@ export const verifyDeploymentWithRetries = async (
           minimumCompilerInput,
           provider,
           networkConfig.chainId,
-          apiKey
+          apiKey,
+          explorer
         )
 
         if (result.success) {

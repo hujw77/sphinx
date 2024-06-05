@@ -310,6 +310,11 @@ export const makeCLI = (
             describe: 'verify network.',
             type: 'string',
             demandOption: true,
+          })
+          .option('explorer', {
+            describe: 'explorer.',
+            type: 'string',
+            demandOption: false,
           }),
       async (argv) => verifyCommandHandler(argv, sphinxContext)
     )

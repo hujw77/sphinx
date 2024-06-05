@@ -1251,19 +1251,20 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     },
   },
   {
-    name: 'darwinia_pangolin',
-    displayName: 'Darwinia Pangolin',
-    chainId: BigInt(43),
-    rpcUrl: () => process.env.DARWINIA_PANGOLIN_URL!,
-    rpcUrlId: 'DARWINIA_PANGOLIN_URL',
+    name: 'darwinia_koi',
+    displayName: 'Darwinia Koi',
+    chainId: BigInt(701),
+    rpcUrl: () => process.env.DARWINIA_KOI_URL!,
+    rpcUrlId: 'DARWINIA_KOI_URL',
     blockexplorers: {
-      etherscan: {
-        apiURL: 'https://pangolin.api.subscan.io/api/scan/evm/contract/verifysource',
-        browserURL: 'https://pangolin.subscan.io/',
-        envKey: 'DARWINIA_SUBSCAN_API_KEY',
+      blockscout: {
+        browserURL: 'https://koi-scan.darwinia.network',
+        apiURL: 'https://koi-scan.darwinia.network/api',
+        envKey: 'DARWINIA_KOI_BLOCKSCOUT_API_KEY',
+        selfHosted: true,
       }
     },
-    currency: 'RING',
+    currency: 'KRING',
     dripSize: '1',
     networkType: 'Testnet',
     dripVersion: 0,
@@ -1411,7 +1412,7 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     blockexplorers: {
       etherscan: {
         apiURL: 'https://crab.api.subscan.io/api/scan/evm/contract/verifysource',
-        browserURL: 'https://crab.subscan.io/',
+        browserURL: 'https://crab.subscan.io',
         envKey: 'DARWINIA_SUBSCAN_API_KEY',
       }
     },
@@ -1436,7 +1437,7 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     blockexplorers: {
       etherscan: {
         apiURL: 'https://darwinia.api.subscan.io/api/scan/evm/contract/verifysource',
-        browserURL: 'https://darwinia.subscan.io/',
+        browserURL: 'https://darwinia.subscan.io',
         envKey: 'DARWINIA_SUBSCAN_API_KEY',
       }
     },

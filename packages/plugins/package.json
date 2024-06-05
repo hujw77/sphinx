@@ -1,6 +1,6 @@
 {
   "name": "@hujw77/plugins",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Sphinx plugins",
   "main": "dist/index",
   "types": "dist/index",
@@ -47,8 +47,8 @@
     "@nomicfoundation/hardhat-ethers": "^3.0.5",
     "@openzeppelin/contracts": "^4.8.1",
     "@openzeppelin/hardhat-upgrades": "^1.22.1",
-    "@hujw77/contracts": "^0.1.11",
-    "@hujw77/core": "^0.1.11",
+    "@hujw77/contracts": "^0.1.12",
+    "@hujw77/core": "^0.1.12",
     "@swc/core": "1.3.75",
     "chalk": "^4.1.2",
     "core-js": "^3.31.1",

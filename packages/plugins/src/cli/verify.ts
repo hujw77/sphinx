@@ -1,6 +1,9 @@
 import { relative, join } from 'path'
 import { readFileSync } from 'fs'
 import {
+  ExplorerName,
+} from '@hujw77/contracts'
+import {
   isFile,
   SphinxJsonRpcProvider,
   fetchSupportedNetworkByName,
@@ -10,10 +13,11 @@ import {
 export interface VerifyArgs {
   deploymentPath: string
   network: string
+  explorer: string | undefined
 }
 
 export const verify = async (args: VerifyArgs) => {
-  const { deploymentPath, network } = args;
+  const { deploymentPath, network, explorer } = args;
   const projectRoot = process.cwd()
   const deploymentConfigFile = relative(projectRoot, deploymentPath)
   if (!isFile(deploymentConfigFile)) {
@@ -41,6 +45,7 @@ export const verify = async (args: VerifyArgs) => {
   await verifyDeploymentWithRetries(
     deploymentConfig,
     provider,
-    etherscanApiKey
+    etherscanApiKey,
+    explorer as ExplorerName
   )
 }

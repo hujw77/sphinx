@@ -40,6 +40,7 @@ export interface ExecuteCommandArgs {
 export interface VerifyCommandArgs {
   deploymentPath: string
   network: string
+  explorer: string | undefined
 }
 
 export interface FetchArtifactsArgs {

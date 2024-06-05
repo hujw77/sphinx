@@ -4,7 +4,7 @@ pragma solidity >=0.6.2 <0.9.0;
 import { NetworkInfo, NetworkType } from "./SphinxPluginTypes.sol";
 
 contract SphinxConstants {
-  string public constant sphinxLibraryVersion = 'v0.1.11';
+  string public constant sphinxLibraryVersion = 'v0.1.12';
   address public constant compatibilityFallbackHandlerAddress = 0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4;
   address public constant multiSendAddress = 0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761;
   address public constant createCallAddress = 0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4;
@@ -387,12 +387,12 @@ contract SphinxConstants {
       dripSizeString: '0.025 ETH'
     });
     all[46] = NetworkInfo({
-      network: Network.darwinia_pangolin,
-      name: "darwinia_pangolin",
-      chainId: 43,
+      network: Network.darwinia_koi,
+      name: "darwinia_koi",
+      chainId: 701,
       networkType: NetworkType.Testnet,
       dripSize: 1000000000000000000,
-      dripSizeString: '1 RING'
+      dripSizeString: '1 KRING'
     });
     all[47] = NetworkInfo({
       network: Network.tanssi_pangoro,
@@ -501,7 +501,7 @@ enum Network {
   taiko_hekla,
   mode_sepolia,
   mode,
-  darwinia_pangolin,
+  darwinia_koi,
   tanssi_pangoro,
   mantle_sepolia,
   mantle,
