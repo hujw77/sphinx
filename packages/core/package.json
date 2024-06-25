@@ -1,6 +1,6 @@
 {
   "name": "@hujw77/core",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Sphinx core library",
   "main": "dist/index",
   "types": "dist/index",
@@ -59,6 +59,6 @@
     "chai": "^4.3.8",
     "sinon": "^17.0.1",
     "sinon-chai": "^3.7.0",
-    "hardhat": "2.20.1"
+    "hardhat": "2.22.5"
   }
 }
