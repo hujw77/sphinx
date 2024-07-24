@@ -1,6 +1,6 @@
 {
   "name": "@hujw77/core",
-  "version": "0.1.13",
+  "version": "0.1.15",
   "description": "Sphinx core library",
   "main": "dist/index",
   "types": "dist/index",
@@ -38,7 +38,7 @@
     "@nomicfoundation/hardhat-verify": "^2.0.2",
     "@openzeppelin/hardhat-upgrades": "^1.22.1",
     "@openzeppelin/merkle-tree": "1.0.5",
-    "@hujw77/contracts": "^0.1.12",
+    "@hujw77/contracts": "^0.1.14",
     "axios": "^1.4.0",
     "chalk": "^4.1.2",
     "core-js": "^3.27.1",
@@ -59,6 +59,6 @@
     "chai": "^4.3.8",
     "sinon": "^17.0.1",
     "sinon-chai": "^3.7.0",
-    "hardhat": "2.22.5"
+    "hardhat": "2.20.1"
   }
 }

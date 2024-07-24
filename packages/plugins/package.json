@@ -1,6 +1,6 @@
 {
   "name": "@hujw77/plugins",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Sphinx plugins",
   "main": "dist/index",
   "types": "dist/index",
@@ -47,8 +47,8 @@
     "@nomicfoundation/hardhat-ethers": "^3.0.5",
     "@openzeppelin/contracts": "^4.8.1",
     "@openzeppelin/hardhat-upgrades": "^1.22.1",
-    "@hujw77/contracts": "^0.1.12",
-    "@hujw77/core": "^0.1.13",
+    "@hujw77/contracts": "^0.1.15",
+    "@hujw77/core": "^0.1.15",
     "@swc/core": "1.3.75",
     "chalk": "^4.1.2",
     "core-js": "^3.31.1",
@@ -66,7 +66,7 @@
     "typescript": "^5.1.3",
     "yargs": "^17.7.2",
     "yesno": "^0.4.0",
-    "hardhat": "2.22.5"
+    "hardhat": "2.22.6"
   },
   "devDependencies": {
     "sphinx-forge-std": "https://github.com/foundry-rs/forge-std.git#v1.7.1",

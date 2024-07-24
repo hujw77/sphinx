@@ -43,6 +43,68 @@ module.exports = {
       // If a user's script uses one of these genesis accounts, Hardhat will fetch its nonce on an
       // as-needed basis, which is the behavior that we want.
       accounts: [],
+      chains: {
+        44: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        46: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        56: {
+          hardforkHistory: {
+            cancun: 0
+          }
+        },
+        100: {
+          hardforkHistory: {
+            cancun: 0
+          }
+        },
+        137: {
+          hardforkHistory: {
+            london: 0
+          }
+        },
+        1284: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        3776: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        5000: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        8453: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        42161: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        81457: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
+        534352: {
+          hardforkHistory: {
+            london: 0
+          }
+        }
+      }
     },
   },
 }

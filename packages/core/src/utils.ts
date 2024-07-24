@@ -256,6 +256,7 @@ export const getGasPriceOverrides = async (
     // On OKC, override nothing b/c it's unnecessary
     case 66:
       return overridden
+
     // Default to overriding with maxFeePerGas and maxPriorityFeePerGas
     default:
       if (maxFeePerGas !== null && maxPriorityFeePerGas !== null) {

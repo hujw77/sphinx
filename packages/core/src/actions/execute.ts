@@ -1195,7 +1195,7 @@ export const fetchExecutionTransactionReceipts = async (
 
   const latestBlock = await provider.getBlockNumber()
   for (const filter of filters) {
-    const startingBlock = latestBlock - 1999 > 0 ? latestBlock - 1999 : 0
+    const startingBlock = latestBlock - 999 > 0 ? latestBlock - 999 : 0
     const events = await module.queryFilter(filter, startingBlock, latestBlock)
 
     for (const event of events) {
