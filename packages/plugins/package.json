@@ -1,6 +1,6 @@
 {
   "name": "@hujw77/plugins",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "Sphinx plugins",
   "main": "dist/index",
   "types": "dist/index",
