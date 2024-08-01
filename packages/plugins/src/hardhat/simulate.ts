@@ -230,6 +230,9 @@ export const simulate = async (
     JSON.stringify(taskParams)
   )
 
+  console.log(stdout)
+  console.log(stderr)
+
   if (code !== 0) {
     const networkName = fetchNameForNetwork(BigInt(chainId))
     let errorMessage: string = `Simulation failed for ${networkName} at block number ${networkConfig.blockNumber}.`
