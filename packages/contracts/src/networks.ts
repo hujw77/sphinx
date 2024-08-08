@@ -1453,6 +1453,30 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     hardcodedMerkleLeafGas: (11200000).toString(),
     actionTransactionBatching: false,
   },
+  {
+    name: 'zircuit',
+    displayName: 'Zircuit',
+    chainId: BigInt(48900),
+    rpcUrl: () => process.env.ZIRCUIT_MAINNET_URL!,
+    rpcUrlId: 'ZIRCUIT_MAINNET_URL',
+    blockexplorers: {
+      etherscan: {
+        apiURL: 'https://explorer.zircuit.com/api/contractVerifyHardhat',
+        browserURL: 'https://explorer.zircuit.com',
+        envKey: 'ZIRCUIT_ETHERSCAN_API_KEY',
+      }
+    },
+    currency: 'ETH',
+    dripSize: '0.001',
+    networkType: 'Mainnet',
+    dripVersion: 0,
+    decimals: 18,
+    queryFilterBlockLimit: 2000,
+    legacyTx: false,
+    actionGasLimitBuffer: false,
+    eip2028: true,
+    actionTransactionBatching: true,
+  },
 ]
 
 export const DEPRECATED_SPHINX_NETWORKS = [
