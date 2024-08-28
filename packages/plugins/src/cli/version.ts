@@ -1,1 +1,1 @@
-export const SPHINX_PLUGINS_VERSION = 'v0.1.20'
+export const SPHINX_PLUGINS_VERSION = 'v0.1.21'
