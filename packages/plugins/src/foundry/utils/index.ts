@@ -1422,6 +1422,7 @@ export const assertValidVersions = async (
   const forkInstalled = output.returns.forkInstalled.value
 
   if (libraryVersion !== CONTRACTS_LIBRARY_VERSION) {
+    console.log(output.returns.libraryVersion.value)
     throw Error(
       `The version of the Sphinx library contracts ${libraryVersion} does not match the Sphinx plugin version ${CONTRACTS_LIBRARY_VERSION}. Please\n` +
         `update the library contracts by running the command:\n` +
