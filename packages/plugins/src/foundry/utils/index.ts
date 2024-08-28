@@ -1423,7 +1423,7 @@ export const assertValidVersions = async (
 
   if (libraryVersion !== CONTRACTS_LIBRARY_VERSION) {
     throw Error(
-      `The version of the Sphinx library contracts does not match the Sphinx plugin version. Please\n` +
+      `The version of the Sphinx library contracts ${libraryVersion} does not match the Sphinx plugin version ${CONTRACTS_LIBRARY_VERSION}. Please\n` +
         `update the library contracts by running the command:\n` +
         `npx sphinx install`
     )
