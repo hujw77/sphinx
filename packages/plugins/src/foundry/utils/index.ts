@@ -1416,7 +1416,7 @@ export const assertValidVersions = async (
     targetContract
   )
 
-  const libraryVersion = output.returns.libraryVersion.value.slice(1, -1)
+  const libraryVersion = output.returns.libraryVersion.value.replace(/^"|"$/g, '')
   const forkInstalled = output.returns.forkInstalled.value
 
   if (libraryVersion !== CONTRACTS_LIBRARY_VERSION) {

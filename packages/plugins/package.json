@@ -1,6 +1,6 @@
 {
   "name": "@hujw77/plugins",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "description": "Sphinx plugins",
   "main": "dist/index",
   "types": "dist/index",
@@ -48,7 +48,7 @@
     "@openzeppelin/contracts": "^4.8.1",
     "@openzeppelin/hardhat-upgrades": "^1.22.1",
     "@hujw77/contracts": "^0.1.20",
-    "@hujw77/core": "^0.1.20",
+    "@hujw77/core": "^0.1.21",
     "@swc/core": "1.3.75",
     "chalk": "^4.1.2",
     "core-js": "^3.31.1",
