@@ -1333,6 +1333,11 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
         envKey: 'MANTLE_BLOCKSCOUT_API_KEY',
         selfHosted: false,
       },
+      etherscan: {
+        apiURL: 'https://mantlescan.xyz/api',
+        browserURL: 'https://mantlescan.xyz',
+        envKey: 'MANTLE_ETHERSCAN_API_KEY',
+      },
     },
     currency: 'MNT',
     dripSize: '5',
