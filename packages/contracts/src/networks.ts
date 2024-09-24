@@ -1419,7 +1419,13 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
         apiURL: 'https://crab.api.subscan.io/api/scan/evm/contract/verifysource',
         browserURL: 'https://crab.subscan.io',
         envKey: 'DARWINIA_SUBSCAN_API_KEY',
-      }
+      },
+      blockscout: {
+        browserURL: 'https://crab-scan.darwinia.network',
+        apiURL: 'https://crab-scan.darwinia.network/api',
+        envKey: 'CRAB_BLOCKSCOUT_API_KEY',
+        selfHosted: true,
+      },
     },
     currency: 'CRAB',
     dripSize: '1',
@@ -1444,7 +1450,13 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
         apiURL: 'https://darwinia.api.subscan.io/api/scan/evm/contract/verifysource',
         browserURL: 'https://darwinia.subscan.io',
         envKey: 'DARWINIA_SUBSCAN_API_KEY',
-      }
+      },
+      blockscout: {
+        browserURL: 'https://explorer.darwinia.network',
+        apiURL: 'https://explorer.darwinia.network/api',
+        envKey: 'DARWINIA_BLOCKSCOUT_API_KEY',
+        selfHosted: true,
+      },
     },
     currency: 'RING',
     dripSize: '1',
