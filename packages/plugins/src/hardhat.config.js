@@ -74,6 +74,11 @@ module.exports = {
             shanghai: 0
           }
         },
+        2818: {
+          hardforkHistory: {
+            shanghai: 0
+          }
+        },
         3776: {
           hardforkHistory: {
             shanghai: 0
