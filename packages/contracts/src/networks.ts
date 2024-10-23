@@ -1494,6 +1494,31 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     eip2028: true,
     actionTransactionBatching: true,
   },
+  {
+    name: 'morph',
+    displayName: 'Morph',
+    chainId: BigInt(2818),
+    rpcUrl: () => process.env.MORPH_MAINNET_URL!,
+    rpcUrlId: 'MORPH_MAINNET_URL',
+    blockexplorers: {
+      blockscout: {
+        browserURL: 'https://explorer.morphl2.io',
+        apiURL: 'https://explorer-api.morphl2.io/api',
+        envKey: 'MORPH_BLOCKSCOUT_API_KEY',
+        selfHosted: true,
+      },
+    },
+    currency: 'ETH',
+    dripSize: '0.001',
+    networkType: 'Mainnet',
+    dripVersion: 0,
+    decimals: 18,
+    queryFilterBlockLimit: 2000,
+    legacyTx: false,
+    actionGasLimitBuffer: false,
+    eip2028: true,
+    actionTransactionBatching: true,
+  },
 ]
 
 export const DEPRECATED_SPHINX_NETWORKS = [

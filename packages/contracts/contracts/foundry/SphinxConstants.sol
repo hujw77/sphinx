@@ -4,7 +4,7 @@ pragma solidity >=0.6.2 <0.9.0;
 import { NetworkInfo, NetworkType } from "./SphinxPluginTypes.sol";
 
 contract SphinxConstants {
-  string public constant sphinxLibraryVersion = 'v0.1.20';
+  string public constant sphinxLibraryVersion = 'v0.1.22';
   address public constant compatibilityFallbackHandlerAddress = 0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4;
   address public constant multiSendAddress = 0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761;
   address public constant createCallAddress = 0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4;
@@ -14,7 +14,7 @@ contract SphinxConstants {
   address public constant safeSingletonAddress = 0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552;
   address public constant sphinxModuleImplAddress = 0x8f4E4d51B8050B0ff713eff1F88f3dD8b5e8a530;
 
-  uint8 internal constant numSupportedNetworks = 55;
+  uint8 internal constant numSupportedNetworks = 56;
 
   function getNetworkInfoArray() public pure returns (NetworkInfo[] memory) {
     NetworkInfo[] memory all = new NetworkInfo[](numSupportedNetworks);
@@ -458,6 +458,14 @@ contract SphinxConstants {
       dripSize: 1000000000000000,
       dripSizeString: '0.001 ETH'
     });
+    all[55] = NetworkInfo({
+      network: Network.morph,
+      name: "morph",
+      chainId: 2818,
+      networkType: NetworkType.Mainnet,
+      dripSize: 1000000000000000,
+      dripSizeString: '0.001 ETH'
+    });
     return all;
   }
 }
@@ -517,5 +525,6 @@ enum Network {
   astar,
   crab,
   darwinia,
-  zircuit
+  zircuit,
+  morph
 }
