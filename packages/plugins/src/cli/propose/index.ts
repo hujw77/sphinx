@@ -148,7 +148,7 @@ export const buildNetworkConfigArray: BuildNetworkConfigArray = async (
       // We specify build info to be false so that calling the script does not cause the users entire
       // project to be rebuilt if they have `build_info=true` defined in their foundry.toml file.
       // We do need the build info, but that is generated when we compile at the beginning of the script.
-      FOUNDRY_BUILD_INFO: 'false',
+      // FOUNDRY_BUILD_INFO: 'false',
     })
 
     if (spawnOutput.code !== 0) {
