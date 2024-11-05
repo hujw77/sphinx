@@ -515,8 +515,8 @@ export const SPHINX_NETWORKS: Array<SupportedNetwork> = [
     rpcUrlId: 'AVALANCHE_MAINNET_URL',
     blockexplorers: {
       etherscan: {
-        apiURL: 'https://api.snowtrace.io/api',
-        browserURL: 'https://snowtrace.io/',
+        apiURL: 'https://api.snowscan.xyz/api',
+        browserURL: 'https://snowscan.xyz',
         envKey: 'AVAX_ETHERSCAN_API_KEY',
       },
     },
