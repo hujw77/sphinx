@@ -18,6 +18,7 @@ export interface ProposeCommandArgs {
   confirm: boolean
   dryRun: boolean
   silent: boolean
+  skip: boolean
   targetContract?: string
   sig?: Array<string>
 }

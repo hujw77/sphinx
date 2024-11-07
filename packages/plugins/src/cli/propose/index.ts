@@ -68,6 +68,7 @@ export interface ProposeArgs {
   networks: Array<string>
   isDryRun: boolean
   silent: boolean
+  skip: boolean
   scriptPath: string
   sphinxContext: SphinxContext
   targetContract?: string
@@ -243,7 +244,7 @@ export const propose = async (
   networkConfigArray?: Array<NetworkConfig>
   merkleTree?: SphinxMerkleTree
 }> => {
-  const { confirm, networks, isDryRun, silent, sphinxContext, targetContract } =
+  const { confirm, networks, isDryRun, silent, sphinxContext, targetContract, skip } =
     args
   const sig = args.sig === undefined ? ['run()'] : args.sig
 
@@ -382,7 +383,6 @@ export const propose = async (
   const merkleTree = makeSphinxMerkleTree(deploymentData)
 
   spinner.succeed(`Built proposal.`)
-  spinner.start(`Running simulation...`)
 
   const deploymentConfig = makeDeploymentConfig(
     networkConfigArray,
@@ -391,18 +391,21 @@ export const propose = async (
     merkleTree
   )
 
-  const gasEstimatesPromises = networkConfigArrayWithRpcUrls
-    .filter(({ networkConfig }) => networkConfig.actionInputs.length > 0)
-    .map(({ networkConfig, rpcUrl }) =>
-      sphinxContext.getNetworkGasEstimate(
-        deploymentConfig,
-        networkConfig.chainId,
-        rpcUrl
+  if (!skip) {
+    spinner.start(`Running simulation...`)
+    const gasEstimatesPromises = networkConfigArrayWithRpcUrls
+      .filter(({ networkConfig }) => networkConfig.actionInputs.length > 0)
+      .map(({ networkConfig, rpcUrl }) =>
+        sphinxContext.getNetworkGasEstimate(
+          deploymentConfig,
+          networkConfig.chainId,
+          rpcUrl
+        )
       )
-    )
-  const gasEstimates = await Promise.all(gasEstimatesPromises)
+    const gasEstimates = await Promise.all(gasEstimatesPromises)
+  }
 
-  spinner.succeed(`Simulation succeeded.`)
+  // spinner.succeed(`Simulation succeeded.`)
   const preview = getPreview(networkConfigArray, merkleTree.root)
   if (confirm || isDryRun) {
     if (!silent) {
@@ -466,25 +469,25 @@ export const propose = async (
     chainIds.push(Number(networkConfig.chainId))
   }
 
-  const proposalRequest: ProposalRequest = {
-    apiKey,
-    orgId: newConfig.orgId,
-    isTestnet,
-    chainIds,
-    projectName: newConfig.projectName,
-    safeAddress,
-    moduleAddress,
-    projectDeployments,
-    gasEstimates,
-    diff: preview,
-    compilerConfigId: undefined,
-    deploymentConfigId: undefined,
-    sphinxPluginVersion: SPHINX_PLUGINS_VERSION,
-    tree: {
-      root: merkleTree.root,
-      chainStatus,
-    },
-  }
+  // const proposalRequest: ProposalRequest = {
+  //   apiKey,
+  //   orgId: newConfig.orgId,
+  //   isTestnet,
+  //   chainIds,
+  //   projectName: newConfig.projectName,
+  //   safeAddress,
+  //   moduleAddress,
+  //   projectDeployments,
+  //   gasEstimates,
+  //   diff: preview,
+  //   compilerConfigId: undefined,
+  //   deploymentConfigId: undefined,
+  //   sphinxPluginVersion: SPHINX_PLUGINS_VERSION,
+  //   tree: {
+  //     root: merkleTree.root,
+  //     chainStatus,
+  //   },
+  // }
 
   const deploymentConfigData = JSON.stringify(deploymentConfig, null, 2)
 
@@ -519,7 +522,6 @@ export const propose = async (
     // )
   }
   return {
-    proposalRequest,
     deploymentConfigData,
     configArtifacts,
     networkConfigArray,

@@ -81,6 +81,11 @@ export const makeCLI = (
             boolean: true,
             default: false,
           })
+          .option('skip', {
+            describe: 'Skip the executeion simulation.',
+            boolean: true,
+            default: false,
+          })
           .check((argv) => {
             const { networks } = argv
 
@@ -339,7 +344,7 @@ const proposeCommandHandler = async (
   argv: ProposeCommandArgs,
   sphinxContext: SphinxContext
 ): Promise<void> => {
-  const { networks, scriptPath, targetContract, silent, dryRun, confirm, sig } =
+  const { networks, scriptPath, targetContract, silent, dryRun, confirm, sig, skip } =
     argv
 
   if (dryRun && confirm) {
@@ -367,6 +372,7 @@ const proposeCommandHandler = async (
     sphinxContext,
     targetContract,
     sig,
+    skip,
   })
 }
 
